@@ -2,16 +2,8 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const planner = window.BeaconPlanner;
-  $('stats').closest('section').classList.add('time-summary-card');
   $('goals').closest('section').classList.add('goals-card');
   $('reminders').closest('section').classList.add('reminders-card');
-  const names = {dashboard: 'Dashboard', calendar: 'Calendar focus', agenda: 'Daily agenda'};
-  const store = (key, value) => {try {localStorage.setItem(key, value);} catch {}};
-  const read = (key, fallback) => {try {return localStorage.getItem(key) || fallback;} catch {return fallback;}};
-  const controls = document.createElement('div');
-  controls.className = 'website-views no-print';
-  controls.innerHTML = `<div><strong>Planner view</strong><span>Choose a layout for your week.</span></div><div class="view-buttons" role="group" aria-label="Planner layout">${Object.entries(names).map(([key, name]) => `<button type="button" data-view="${key}" aria-pressed="false"><i class="view-icon icon-${key}" aria-hidden="true"></i>${name}</button>`).join('')}</div>`;
-  document.querySelector('main.wrap').prepend(controls);
   const agenda = document.createElement('div');
   agenda.id = 'agendaView'; agenda.className = 'agenda-view';
   agenda.innerHTML = '<nav id="agendaDays" class="agenda-days" aria-label="Choose an agenda day"></nav><div class="agenda-heading"><div><span class="section-index">DAILY SCHEDULE</span><h3 id="agendaDate"></h3></div><button id="agendaAdd" type="button">+ Add activity</button></div><div id="agendaEvents" class="agenda-events"></div>';
@@ -52,21 +44,12 @@
     });
   }
   $('agendaAdd').onclick = () => planner.addActivity(selectedDay);
-  function setView(view) {
-    const safe = names[view] ? view : 'dashboard';
-    document.body.dataset.plannerView = safe; store('beacon-planner-view', safe);
-    dashboardAgenda.hidden = safe !== 'dashboard';
-    $('hoursSummaryCard').hidden = safe === 'dashboard';
-    if (safe === 'dashboard') dashboardAgenda.append(agenda);
-    else document.querySelector('.calendar-wrap').before(agenda);
-    document.querySelector('.section-heading h2').textContent = safe === 'agenda' ? 'Daily agenda' : 'Weekly calendar';
-    document.querySelector('.layout > .panel > .sub').textContent = safe === 'agenda' ? 'Select a day. Click an activity to edit its name, time, days, or color.' : 'Click an empty time to add a class or activity. Click a block to edit its name, time, days, or color.';
-    controls.querySelectorAll('[data-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === safe)));
-    renderAgenda();
-  }
-  controls.querySelectorAll('[data-view]').forEach(button => button.onclick = () => setView(button.dataset.view));
+  document.body.dataset.plannerView = 'dashboard';
+  dashboardAgenda.hidden = false;
+  $('hoursSummaryCard').hidden = true;
+  dashboardAgenda.append(agenda);
   document.addEventListener('beacon:render', renderAgenda);
-  setView(read('beacon-planner-view', 'dashboard'));
+  renderAgenda();
 
   const academicBanner = document.createElement('div');
   academicBanner.className = 'academic-banner no-print';

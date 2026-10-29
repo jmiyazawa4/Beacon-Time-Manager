@@ -15,7 +15,7 @@ On Windows, `py server.py` also works. Open `http://localhost:8000` in your brow
 
 ## Website layouts, daily scripture, and schedule downloads
 
-Use **Planner view** to switch between Dashboard (weekly grid with a compact, editable daily agenda in place of the scheduled-hours card), Calendar focus (full-width grid with tools below), and Daily agenda (day selector and larger editable activity cards). The preference stays saved in the same browser. All views use the same saved activities and official competitions.
+Students use one dashboard: the weekly calendar with a compact, editable daily agenda in the sidebar. There is no website-view or theme switcher. Design/color alternatives are review previews for the project owner, not student-facing modes.
 
 The sidebar's **Verse of the day** requests **NIV** from Bible Gateway's public verse-of-the-day widget via the Python server. The server parses the payload as data without executing remote JavaScript, so the publisher's script cannot access personal planner data. It displays the source reference, link, and publisher attribution returned by the provider. No NIV verse collection is bundled or persisted, and another translation is never substituted. The running Python server requires internet access to `www.biblegateway.com`; responses are cached for 15 minutes. The widget is re-requested when the local date changes; the provider determines its daily selection. If the service fails, the card offers retry and a direct NIV link. PDFs may include a successfully loaded verse with its publisher attribution.
 
@@ -34,7 +34,7 @@ Optional verification, with the server running:
 python beacon-planner/tests/browser_features.py
 ```
 
-This exercises all three website layouts, persistent preferences, agenda editing, mobile widths, NIV payload/attribution handling, daily refresh, and provider-failure behavior, actual PDF downloads in all three layouts, A4/grayscale, and the print preview. Artifacts are written under `/tmp/beacon-feature-check`.
+This verifies a single dashboard with no view switcher (even with old saved preferences), agenda editing, mobile widths, NIV payload/attribution handling, daily refresh, and provider-failure behavior, actual PDF downloads in all three layouts, A4/grayscale, and the print preview. Artifacts are written under `/tmp/beacon-feature-check`.
 
 ## Shared academic dates and holiday shading
 

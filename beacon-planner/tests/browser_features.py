@@ -42,46 +42,35 @@ with sync_playwright() as p:
     before = len(niv_calls)
     page.evaluate('BeaconVerses.load()')
     assert len(niv_calls) == before
-    for view in ['dashboard', 'calendar', 'agenda']:
-        page.locator('.view-buttons [data-view="'+view+'"]').click()
-        assert page.locator('body').get_attribute('data-planner-view') == view
-        assert page.locator('.view-buttons [data-view="'+view+'"]').get_attribute('aria-pressed') == 'true'
-        page.reload()
-        assert page.locator('body').get_attribute('data-planner-view') == view
-        if view == 'dashboard':
-            assert page.locator('.dashboard-agenda-card').is_visible()
-            assert not page.locator('.time-summary-card').is_visible()
-            assert page.locator('#hoursSummaryCard').get_attribute('hidden') is not None
-            assert 'Scheduled hours' not in page.locator('.sidebar').inner_text()
-            assert page.locator('.dashboard-agenda-card').count() == 1
-            page.locator('#agendaDays button').nth(1).click()
-            assert 'Biology 101' in page.locator('.dashboard-agenda-card').inner_text()
-            assert 'Fixture university holiday' in page.locator('.dashboard-agenda-card').inner_text()
-            page.locator('.dashboard-agenda-card .agenda-event').filter(has_text='Biology 101').click()
-            assert page.locator('#modal').is_visible()
-            assert page.locator('#evName').input_value().startswith('Biology 101')
-            page.locator('#cancel').click()
-            page.locator('#nextWeek').click()
-            assert 'January 19, 2026' in page.locator('#agendaDate').inner_text()
-            page.locator('#prevWeek').click()
-        if view == 'agenda':
-            assert not page.locator('.calendar-wrap').is_visible()
-            page.locator('#agendaDays button').nth(1).click()
-            assert 'Biology 101' in page.locator('#agendaEvents').inner_text()
-            page.locator('.agenda-event').filter(has_text='Biology 101').click()
-            page.locator('#evName').fill('Updated biology class')
-            page.locator('#evColor').fill('#d946ef')
-            page.locator('#saveEvent').click()
-            assert 'Updated biology class' in page.locator('#agendaEvents').inner_text()
-        else:
-            assert page.locator('.calendar-wrap').is_visible()
-        page.screenshot(path=str(OUT/(view+'-desktop.png')), full_page=True)
-        for width in (375, 390, 768):
-            page.set_viewport_size({'width': width, 'height': 844})
-            assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), (view, width)
-        page.set_viewport_size({'width': 390, 'height': 844})
-        page.screenshot(path=str(OUT/(view+'-mobile.png')), full_page=True)
-        page.set_viewport_size({'width': 1440, 'height': 1000})
+    # Legacy saved view preferences must not restore a student-facing switcher.
+    page.evaluate("localStorage.setItem('beacon-planner-view','agenda')")
+    page.reload()
+    page.wait_for_function("BeaconAcademic.status().verified")
+    assert page.locator('.website-views').count() == 0
+    assert page.locator('.view-buttons').count() == 0
+    assert page.locator('body').get_attribute('data-planner-view') == 'dashboard'
+    assert page.locator('.dashboard-agenda-card').is_visible()
+    assert not page.locator('#hoursSummaryCard').is_visible()
+    assert 'Scheduled hours' not in page.locator('.sidebar').inner_text()
+    assert page.locator('.calendar-wrap').is_visible()
+    page.locator('#agendaDays button').nth(1).click()
+    assert 'Biology 101' in page.locator('.dashboard-agenda-card').inner_text()
+    assert 'Fixture university holiday' in page.locator('.dashboard-agenda-card').inner_text()
+    page.locator('.dashboard-agenda-card .agenda-event').filter(has_text='Biology 101').click()
+    page.locator('#evName').fill('Updated biology class')
+    page.locator('#evColor').fill('#d946ef')
+    page.locator('#saveEvent').click()
+    assert 'Updated biology class' in page.locator('#agendaEvents').inner_text()
+    page.locator('#nextWeek').click()
+    assert 'January 19, 2026' in page.locator('#agendaDate').inner_text()
+    page.locator('#prevWeek').click()
+    page.screenshot(path=str(OUT/'dashboard-desktop.png'), full_page=True)
+    for width in (375,390,768):
+        page.set_viewport_size({'width':width,'height':844})
+        assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'),width
+    page.set_viewport_size({'width':390,'height':844})
+    page.screenshot(path=str(OUT/'dashboard-mobile.png'),full_page=True)
+    page.set_viewport_size({'width':1440,'height':1000})
     page.locator('#print').click()
     assert page.locator('#exportDialog').is_visible()
     for layout in ['grid', 'agenda', 'daily']:
@@ -126,6 +115,6 @@ with sync_playwright() as p:
     failed.locator('#exportDownload').click()
     assert 'NIV verse has not loaded' in failed.locator('#exportError').inner_text()
     failed.close()
-    print('PASS: shared academic fixtures across sports and holiday/break shading; three persistent website views; agenda class/color editing; mobile widths; NIV provider payload/attribution, daily refresh, and unavailable-service behavior; three downloadable PDF layouts; A4/grayscale; dialog dismissal; no JS errors')
+    print('PASS: shared academic fixtures across sports and holiday/break shading; one student dashboard without a view switcher; daily-agenda class/color editing; mobile widths; NIV provider payload/attribution, daily refresh, and unavailable-service behavior; three downloadable PDF layouts; A4/grayscale; dialog dismissal; no JS errors')
     print('Artifacts:', OUT)
     browser.close()
