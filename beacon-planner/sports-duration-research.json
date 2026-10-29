@@ -1,0 +1,237 @@
+{
+  "reviewedOn": "2026-10-29",
+  "scope": "Two early listed games from the 2026 baseball/softball and 2025 or 2025–26 other checked seasons. This convenience sample is not season-wide or representative of every format.",
+  "limitations": [
+    "Only baseball and softball had elapsed durations in the checked summaries. Other values are provisional planning allowances, not researched statistical averages.",
+    "Official valid end times take precedence. Estimates apply only to timed events without ends; all-day, TBA, and multi-day ranges are preserved.",
+    "Travel, warm-ups, pregame duties and postgame duties are excluded. Overtime, extra innings and match formats may change actual finish times.",
+    "Cross-country/track allowances represent meet attendance; golf represents one round. Confirm team-specific commitments with coaches."
+  ],
+  "sports": {
+    "baseball": {
+      "planningMinutes": 195,
+      "format": "game/match",
+      "basis": "small local box-score sample, rounded to nearest 15 minutes",
+      "sampleMeanMinutes": 196.5,
+      "elapsedSampleSize": 2,
+      "checkedBoxScores": [
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6934&path=baseball",
+          "dateLabel": "1/30/2026",
+          "reportedTimeField": "3:31",
+          "elapsedMinutes": 211,
+          "interpretation": "elapsed duration"
+        },
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6935&path=baseball",
+          "dateLabel": "1/30/2026",
+          "reportedTimeField": "3:02",
+          "elapsedMinutes": 182,
+          "interpretation": "elapsed duration"
+        }
+      ]
+    },
+    "softball": {
+      "planningMinutes": 105,
+      "format": "game/match",
+      "basis": "small local box-score sample, rounded to nearest 15 minutes",
+      "sampleMeanMinutes": 107.5,
+      "elapsedSampleSize": 2,
+      "checkedBoxScores": [
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6987&path=softball",
+          "dateLabel": "2/7/2026",
+          "reportedTimeField": "1:25",
+          "elapsedMinutes": 85,
+          "interpretation": "elapsed duration"
+        },
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6988&path=softball",
+          "dateLabel": "2/7/2026",
+          "reportedTimeField": "2:10",
+          "elapsedMinutes": 130,
+          "interpretation": "elapsed duration"
+        }
+      ]
+    },
+    "mens-basketball": {
+      "planningMinutes": 120,
+      "format": "game/match",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": [
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6870&path=mbball",
+          "dateLabel": "10/31/25",
+          "reportedTimeField": "3:15 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        },
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6871&path=mbball",
+          "dateLabel": "11/01/25",
+          "reportedTimeField": "1:00 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        }
+      ]
+    },
+    "womens-basketball": {
+      "planningMinutes": 120,
+      "format": "game/match",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": [
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6831&path=wbball",
+          "dateLabel": "11/01/25",
+          "reportedTimeField": "5:00 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        },
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6832&path=wbball",
+          "dateLabel": "11/03/25",
+          "reportedTimeField": "7:00 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        }
+      ]
+    },
+    "mens-soccer": {
+      "planningMinutes": 120,
+      "format": "game/match",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": [
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6660&path=msoc",
+          "dateLabel": "8/23/2025",
+          "reportedTimeField": "1:00 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        },
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6661&path=msoc",
+          "dateLabel": "8/28/2025",
+          "reportedTimeField": "2:00 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        }
+      ]
+    },
+    "womens-soccer": {
+      "planningMinutes": 120,
+      "format": "game/match",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": [
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6691&path=wsoc",
+          "dateLabel": "8/28/2025",
+          "reportedTimeField": "5:00 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        },
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6692&path=wsoc",
+          "dateLabel": "8/31/2025",
+          "reportedTimeField": "5:00 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        }
+      ]
+    },
+    "womens-volleyball": {
+      "planningMinutes": 120,
+      "format": "game/match",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": [
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6714&path=wvball",
+          "dateLabel": "8/15/2025",
+          "reportedTimeField": "1:35 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        },
+        {
+          "source": "https://bushnellbeacons.com/boxscore.aspx?id=6715&path=wvball",
+          "dateLabel": "8/15/2025",
+          "reportedTimeField": "5:20 PM",
+          "elapsedMinutes": null,
+          "interpretation": "Start time only; no elapsed duration found in checked game summary."
+        }
+      ]
+    },
+    "beach-volleyball": {
+      "planningMinutes": 90,
+      "format": "team dual",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": []
+    },
+    "mens-cross-country": {
+      "planningMinutes": 180,
+      "format": "meet attendance window, not an individual race",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": []
+    },
+    "womens-cross-country": {
+      "planningMinutes": 180,
+      "format": "meet attendance window, not an individual race",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": []
+    },
+    "mens-track-and-field": {
+      "planningMinutes": 360,
+      "format": "meet attendance window, not an individual event",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": []
+    },
+    "womens-track-and-field": {
+      "planningMinutes": 360,
+      "format": "meet attendance window, not an individual event",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": []
+    },
+    "mens-golf": {
+      "planningMinutes": 300,
+      "format": "single round, not a multi-day tournament",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": []
+    },
+    "womens-golf": {
+      "planningMinutes": 300,
+      "format": "single round, not a multi-day tournament",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": []
+    },
+    "esports": {
+      "planningMinutes": 120,
+      "format": "match/series; strongly dependent on game and format",
+      "basis": "provisional planning allowance; not a verified sport-wide average",
+      "sampleMeanMinutes": null,
+      "elapsedSampleSize": 0,
+      "checkedBoxScores": []
+    }
+  }
+}

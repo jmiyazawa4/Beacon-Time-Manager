@@ -48,7 +48,7 @@
     function newPage(label) {doc.addPage(); header(label);}
     function color(event) {return options.grayscale ? [243, 243, 243] : rgb(event.color);}
     function timeLabel(event) {
-      return event.allDay ? (event.timeUnknown ? event.timeLabel || 'Time TBA' : 'All day') : event.endKnown ? clock(event.start) + ' - ' + clock(event.end) : clock(event.start);
+      return event.allDay ? (event.timeUnknown ? event.timeLabel || 'Time TBA' : 'All day') : event.endKnown ? clock(event.start) + ' - ' + clock(event.end) + (event.estimated ? ' (est.)' : '') : clock(event.start);
     }
     if (layout === 'grid') {
       header('Weekly grid');
@@ -152,7 +152,7 @@
         doc.setFontSize(6.5);
         doc.text(creditLines, M, verseY + verseLines.length * 8 + 7, {lineHeightFactor: 7/6.5});
       }
-      doc.setFontSize(6.5); doc.text('Competition durations not listed by athletics use a one-hour display block. Confirm changes with athletics.', M, H - 22);
+      doc.setFontSize(6.5); doc.text('Game finishes marked (est.) use sport-specific planning estimates. Allow extra time for warm-ups/travel; confirm with athletics.', M, H - 22);
       doc.text(`${page} / ${pages}`, W - M, H - 11, {align: 'right'});
       doc.text('Beacon Time Manager | ' + text(schedule.weekLabel), M, H - 11);
     }

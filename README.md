@@ -10,7 +10,7 @@ The GitHub Pages review uses **mandatory private sessions**: example entries are
 
 - **Sports:** saved official season schedules for all 15 sports offered in the selector. Each snapshot includes its official source URL and capture timestamp. The UI shows the last update. These are not live: postponements, cancellations, new seasons, and other changes require a manual snapshot update and republish. Confirm changes with athletics.
 - **Academic calendar:** 54 deduplicated entries transcribed from the 2026–2027 calendar supplied by the project owner. Full-term and subterm deadlines are labeled. Holidays are gold, breaks blue. Details are collapsed below the calendar and separately within the daily agenda. Shared dates persist across sports and appear in PDFs. Shading does not cancel personal recurring classes.
-- **Bible:** 365 distinct KJV verses selected from the included M’Cheyne reading plan. KJV is public domain in the United States. The verse and four reading references are selected by the device's local date. February 29 is a catch-up day; March dates do not shift in leap years. Reading links open KJV on Bible Gateway only when clicked; the app makes no automatic Bible-service requests.
+- **Bible:** 80 curated KJV passages about encouragement, peace, faith, and perseverance, rotated across the year independently of the M’Cheyne reading plan. KJV is public domain in the United States. The verse and four reading references are selected by the device's local date. Review the [curated passage list](beacon-planner/VERSE_SELECTIONS.md) to request keeps, removals, or replacements. February 29 is a catch-up day; March dates do not shift in leap years. Reading links open KJV on Bible Gateway only when clicked; the app makes no automatic Bible-service requests.
 - **Reading-plan attribution:** passage-reference data is adapted from [willswire/mcheyne](https://github.com/willswire/mcheyne), exact commit and transformation notes in `reading-plan.json`, Apache-2.0 license included. KJV selections use [thiagobodruk/bible](https://github.com/thiagobodruk/bible), pinned source and MIT license included in `daily-verses.json`. No NIV text is included. Review territorial KJV publication rights if targeting jurisdictions outside the United States.
 
 University dates retain inclusive range ends using an exclusive stored `end`. Thanksgiving includes November 26–27, 2026; spring break includes March 22–28, 2027, with Good Friday shaded as a holiday. The Summer 2027 commencement date of December 10, 2027 is preserved exactly as supplied. Session 2 add/drop asterisks retain a note because their footnote was not supplied. These dates were checked against the owner-provided text, not independently fetched from the blocked university page.
@@ -21,7 +21,7 @@ Click an empty time or **Add activity** to create a class; click a block to edit
 
 Personal entries stay in this browser profile. Normal mode uses unencrypted localStorage; private-session mode avoids saving and clears on reload/page exit. Other open tabs are told to stop saving after private mode is enabled. Shared computers and downloaded PDFs still require care. See [SECURITY.md](SECURITY.md) for the actual protections and limitations.
 
-`.ics` files are parsed locally, never uploaded. Limits: 2 MB, 2,000 events, 40,000 lines. UTC and IANA timezones are supported; floating times use Pacific time and DST. All-day dates stay fixed. Recurring ICS rules/exceptions and custom timezone definitions are skipped. Cross-midnight timed events currently show only their start day through midnight. Unpublished game durations use a one-hour display block; TBA games remain above the grid. Overlapping scheduled hours are counted separately.
+`.ics` files are parsed locally, never uploaded. Limits: 2 MB, 2,000 events, 40,000 lines. UTC and IANA timezones are supported; floating times use Pacific time and DST. All-day dates stay fixed. Recurring ICS rules/exceptions and custom timezone definitions are skipped. Cross-midnight timed events currently show only their start day through midnight. Unpublished game durations use sport-specific planning estimates, visibly marked “est.” in the calendar, agenda, and PDFs; TBA games remain above the grid. Estimates exclude warm-ups and travel. See [duration research](beacon-planner/sports-duration-research.json) for samples, limits, and provisional values. Overlapping scheduled hours are counted separately.
 
 Reminders work while the page is open. Browser notifications are optional and use generic text instead of reminder contents. No cloud sync, student-account database, analytics, or automatic sharing is included.
 
@@ -41,7 +41,7 @@ python tools/update_schedules.py --sport baseball
 python tools/build_browser_preview.py --hosted-preview --output /path/to/publish/index.html
 ```
 
-The update script only reads official allowlisted sports pages, checks robots rules, and waits at least 30 seconds between source requests. Failed/unverified refreshes retain older files. The snapshot adapter joins the visible competition date/time with its year from structured metadata; this avoids a verified AM/PM error in the source's JSON-LD. Format changes need maintenance. Source IDs deduplicate refreshes and preserve personal classes.
+The update script only reads official allowlisted sports pages, checks robots rules, and waits at least 30 seconds between source requests. Failed/unverified refreshes retain older files. The snapshot adapter joins the visible competition date/time with its year from structured metadata; this avoids a verified AM/PM error in the source's JSON-LD. Format changes need maintenance. Source IDs deduplicate refreshes and preserve personal classes. Matching calendar imports are suppressed when an official competition is already present; distinct official IDs remain separate to preserve doubleheaders. Each timed event renders as one continuous block, with stable columns for overlaps. Goals and reminders sit above the calendar, and the sport question is compact.
 
 The `gh-pages` branch publishes only a self-contained `index.html` and `.nojekyll`, with private-session mode locked for review and a meta CSP. Push updates to that branch to refresh the same public URL. The builder embeds assets, content, and license texts; it does not deploy Python or expose source/config files. A school-approved student release needs a separate privacy/security decision about saving, origin, contact/operations, and provider settings.
 
@@ -52,12 +52,14 @@ python -m unittest discover -s beacon-planner/tests -v
 node beacon-planner/tests/calendar_import.test.js
 node beacon-planner/tests/privacy_storage.test.js
 node beacon-planner/tests/reading_plan.test.js
+node beacon-planner/tests/sports_events.test.js
 ```
 
 Optional browser checks need Python Playwright and `/usr/bin/chromium`. Run with a local server and set `BEACON_TEST_URL` if necessary:
 
 ```sh
 python beacon-planner/tests/browser_features.py
+python beacon-planner/tests/browser_sports_blocks.py
 python beacon-planner/tests/browser_academic_dates.py
 python beacon-planner/tests/live_schedule_smoke.py
 python beacon-planner/tests/browser_privacy_security.py

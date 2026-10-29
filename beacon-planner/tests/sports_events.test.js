@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const context={window:{}};vm.runInNewContext(fs.readFileSync(__dirname+'/../sports-events.js','utf8'),context);const api=context.window.BeaconSports;
+const game={id:'one',sport:'baseball',title:'vs. Test College',start:'2027-02-01T12:30:00-08:00',source:'Official Bushnell schedule'};
+assert.equal(api.unique([game,{...game}]).length,1);
+assert.equal(api.unique([game,{...game,id:'two'}]).length,2,'distinct official doubleheaders survive');
+assert.equal(api.unique([{...game,id:'calendar',title:'Test College',source:'Imported calendar'},game]).length,1,'calendar import does not double an official competition');
+assert.equal(api.unique([game,{...game,id:'two',start:'2027-02-01T16:00:00-08:00'}]).length,2);
+assert.equal(api.timing(game).estimated,true);assert.equal(+api.timing(game).finish-Date.parse(game.start),api.minutes.baseball*60000);
+assert.equal(api.timing({...game,end:'2027-02-01T14:00:00-08:00'}).estimated,false);
+assert.equal(api.timing({...game,allDay:true,start:'2027-02-01'}).estimated,false);
+const blocks=api.layout([{id:'a',start:750,end:930},{id:'b',start:810,end:900},{id:'c',start:1000,end:1100}]);
+assert.equal(blocks[0].lanes,2);assert.notEqual(blocks[0].lane,blocks[1].lane);assert.equal(blocks[2].lanes,1);
+console.log('PASS: duplicates removed across imports; real doubleheaders retained; published ends win; estimates and stable overlap columns');

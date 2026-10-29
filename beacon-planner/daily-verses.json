@@ -1,6 +1,6 @@
 {
   "translation": "KJV",
-  "description": "One verse selected from each day of the included M’Cheyne reading plan, preferring a New Testament/Psalms reading and avoiding repeats when possible.",
+  "description": "80 hand-selected KJV passages on encouragement, peace, faith, and perseverance, repeated through the year independently of the M’Cheyne reading plan.",
   "source": "https://github.com/thiagobodruk/bible",
   "sourceCommit": "98a52a5439c1cfe566676e8508795834424a5f3a",
   "sourceFile": "https://raw.githubusercontent.com/thiagobodruk/bible/98a52a5439c1cfe566676e8508795834424a5f3a/json/en_kjv.json",
@@ -9,1468 +9,1841 @@
   "licenseText": "MIT License\n\nCopyright (c) 2024 Thiago Bodruk\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
   "days": [
     {
-      "reference": "Matthew 1:1",
-      "text": "The book of the generation of Jesus Christ, the son of David, the son of Abraham."
+      "reference": "Psalm 23:1-3",
+      "text": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Matthew 2:1",
-      "text": "Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem,"
+      "reference": "Psalm 4:8",
+      "text": "I will both lay me down in peace, and sleep: for thou, LORD , only makest me dwell in safety.",
+      "theme": "peace"
     },
     {
-      "reference": "Matthew 3:1",
-      "text": "In those days came John the Baptist, preaching in the wilderness of Judaea,"
+      "reference": "Psalm 9:9-10",
+      "text": "The LORD also will be a refuge for the oppressed, a refuge in times of trouble. And they that know thy name will put their trust in thee: for thou, LORD , hast not forsaken them that seek thee.",
+      "theme": "faith"
     },
     {
-      "reference": "Matthew 4:1",
-      "text": "Then was Jesus led up of the Spirit into the wilderness to be tempted of the devil."
+      "reference": "Psalm 27:13-14",
+      "text": "I had fainted , unless I had believed to see the goodness of the LORD in the land of the living. Wait on the LORD : be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD .",
+      "theme": "perseverance"
     },
     {
-      "reference": "Matthew 5:1",
-      "text": "And seeing the multitudes, he went up into a mountain: and when he was set, his disciples came unto him:"
+      "reference": "Psalm 27:1",
+      "text": "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+      "theme": "encouragement"
     },
     {
-      "reference": "Matthew 6:1",
-      "text": "Take heed that ye do not your alms before men, to be seen of them: otherwise ye have no reward of your Father which is in heaven."
+      "reference": "Psalm 23:4-6",
+      "text": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over. Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.",
+      "theme": "peace"
     },
     {
-      "reference": "Matthew 7:1",
-      "text": "Judge not, that ye be not judged."
+      "reference": "Psalm 37:3-5",
+      "text": "Trust in the LORD , and do good; so shalt thou dwell in the land, and verily thou shalt be fed. Delight thyself also in the LORD ; and he shall give thee the desires of thine heart. Commit thy way unto the LORD ; trust also in him; and he shall bring it to pass.",
+      "theme": "faith"
     },
     {
-      "reference": "Matthew 8:1",
-      "text": "When he was come down from the mountain, great multitudes followed him."
+      "reference": "Psalm 31:24",
+      "text": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD .",
+      "theme": "perseverance"
     },
     {
-      "reference": "Matthew 9:1",
-      "text": "And he entered into a ship, and passed over, and came into his own city."
+      "reference": "Psalm 34:8",
+      "text": "O taste and see that the LORD is good: blessed is the man that trusteth in him.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Matthew 10:1",
-      "text": "And when he had called unto him his twelve disciples, he gave them power against unclean spirits, to cast them out, and to heal all manner of sickness and all manner of disease."
+      "reference": "Psalm 29:11",
+      "text": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
+      "theme": "peace"
     },
     {
-      "reference": "Matthew 11:1",
-      "text": "And it came to pass, when Jesus had made an end of commanding his twelve disciples, he departed thence to teach and to preach in their cities."
+      "reference": "Psalm 56:3-4",
+      "text": "What time I am afraid, I will trust in thee. In God I will praise his word, in God I have put my trust; I will not fear what flesh can do unto me.",
+      "theme": "faith"
     },
     {
-      "reference": "Matthew 12:1",
-      "text": "At that time Jesus went on the sabbath day through the corn; and his disciples were an hungred, and began to pluck the ears of corn, and to eat."
+      "reference": "Psalm 37:23-24",
+      "text": "The steps of a good man are ordered by the LORD : and he delighteth in his way. Though he fall, he shall not be utterly cast down: for the LORD upholdeth him with his hand.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Matthew 13:1",
-      "text": "The same day went Jesus out of the house, and sat by the sea side."
+      "reference": "Psalm 46:1",
+      "text": "God is our refuge and strength, a very present help in trouble.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Matthew 14:1",
-      "text": "At that time Herod the tetrarch heard of the fame of Jesus,"
+      "reference": "Psalm 46:10",
+      "text": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+      "theme": "peace"
     },
     {
-      "reference": "Matthew 15:1",
-      "text": "Then came to Jesus scribes and Pharisees, which were of Jerusalem, saying,"
+      "reference": "Psalm 91:1-2",
+      "text": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD , He is my refuge and my fortress: my God; in him will I trust.",
+      "theme": "faith"
     },
     {
-      "reference": "Matthew 16:1",
-      "text": "The Pharisees also with the Sadducees came, and tempting desired him that he would shew them a sign from heaven."
+      "reference": "Psalm 40:1-3",
+      "text": "I waited patiently for the LORD ; and he inclined unto me, and heard my cry. He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings. And he hath put a new song in my mouth, even praise unto our God: many shall see it , and fear, and shall trust in the LORD .",
+      "theme": "perseverance"
     },
     {
-      "reference": "Matthew 17:1",
-      "text": "And after six days Jesus taketh Peter, James, and John his brother, and bringeth them up into an high mountain apart,"
+      "reference": "Psalm 103:1-5",
+      "text": "Bless the LORD , O my soul: and all that is within me, bless his holy name. Bless the LORD , O my soul, and forget not all his benefits: Who forgiveth all thine iniquities; who healeth all thy diseases; Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies; Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle’s.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Matthew 18:1",
-      "text": "At the same time came the disciples unto Jesus, saying, Who is the greatest in the kingdom of heaven?"
+      "reference": "Psalm 55:22",
+      "text": "Cast thy burden upon the LORD , and he shall sustain thee: he shall never suffer the righteous to be moved.",
+      "theme": "peace"
     },
     {
-      "reference": "Matthew 19:1",
-      "text": "And it came to pass, that when Jesus had finished these sayings, he departed from Galilee, and came into the coasts of Judaea beyond Jordan;"
+      "reference": "Proverbs 3:5-6",
+      "text": "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+      "theme": "faith"
     },
     {
-      "reference": "Matthew 20:1",
-      "text": "For the kingdom of heaven is like unto a man that is an householder, which went out early in the morning to hire labourers into his vineyard."
+      "reference": "Psalm 73:26",
+      "text": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Matthew 21:1",
-      "text": "And when they drew nigh unto Jerusalem, and were come to Bethphage, unto the mount of Olives, then sent Jesus two disciples,"
+      "reference": "Psalm 121:1-2",
+      "text": "I will lift up mine eyes unto the hills, from whence cometh my help. My help cometh from the LORD , which made heaven and earth.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Matthew 22:1",
-      "text": "And Jesus answered and spake unto them again by parables, and said,"
+      "reference": "Psalm 62:5-8",
+      "text": "My soul, wait thou only upon God; for my expectation is from him. He only is my rock and my salvation: he is my defence; I shall not be moved. In God is my salvation and my glory: the rock of my strength, and my refuge, is in God. Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us. Selah.",
+      "theme": "peace"
     },
     {
-      "reference": "Matthew 23:1",
-      "text": "Then spake Jesus to the multitude, and to his disciples,"
+      "reference": "Isaiah 12:2",
+      "text": "Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation.",
+      "theme": "faith"
     },
     {
-      "reference": "Matthew 24:1",
-      "text": "And Jesus went out, and departed from the temple: and his disciples came to him for to shew him the buildings of the temple."
+      "reference": "Psalm 126:5-6",
+      "text": "They that sow in tears shall reap in joy. He that goeth forth and weepeth, bearing precious seed, shall doubtless come again with rejoicing, bringing his sheaves with him .",
+      "theme": "perseverance"
     },
     {
-      "reference": "Matthew 25:1",
-      "text": "Then shall the kingdom of heaven be likened unto ten virgins, which took their lamps, and went forth to meet the bridegroom."
+      "reference": "Isaiah 40:28-31",
+      "text": "Hast thou not known? hast thou not heard, that the everlasting God, the LORD , the Creator of the ends of the earth, fainteth not, neither is weary? there is no searching of his understanding. He giveth power to the faint; and to them that have no might he increaseth strength. Even the youths shall faint and be weary, and the young men shall utterly fall: But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Matthew 26:1",
-      "text": "And it came to pass, when Jesus had finished all these sayings, he said unto his disciples,"
+      "reference": "Psalm 94:18-19",
+      "text": "When I said, My foot slippeth; thy mercy, O LORD , held me up. In the multitude of my thoughts within me thy comforts delight my soul.",
+      "theme": "peace"
     },
     {
-      "reference": "Matthew 27:1",
-      "text": "When the morning was come, all the chief priests and elders of the people took counsel against Jesus to put him to death:"
+      "reference": "Jeremiah 17:7-8",
+      "text": "Blessed is the man that trusteth in the LORD , and whose hope the LORD is. For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river, and shall not see when heat cometh, but her leaf shall be green; and shall not be careful in the year of drought, neither shall cease from yielding fruit.",
+      "theme": "faith"
     },
     {
-      "reference": "Matthew 28:1",
-      "text": "In the end of the sabbath, as it began to dawn toward the first day of the week, came Mary Magdalene and the other Mary to see the sepulchre."
+      "reference": "Proverbs 16:3",
+      "text": "Commit thy works unto the LORD , and thy thoughts shall be established.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Mark 1:1",
-      "text": "The beginning of the gospel of Jesus Christ, the Son of God;"
+      "reference": "Isaiah 41:10",
+      "text": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Mark 2:1",
-      "text": "And again he entered into Capernaum after some days; and it was noised that he was in the house."
+      "reference": "Psalm 119:165",
+      "text": "Great peace have they which love thy law: and nothing shall offend them.",
+      "theme": "peace"
     },
     {
-      "reference": "Mark 3:1",
-      "text": "And he entered again into the synagogue; and there was a man there which had a withered hand."
+      "reference": "Habakkuk 3:17-19",
+      "text": "Although the fig tree shall not blossom, neither shall fruit be in the vines; the labour of the olive shall fail, and the fields shall yield no meat; the flock shall be cut off from the fold, and there shall be no herd in the stalls: Yet I will rejoice in the LORD , I will joy in the God of my salvation. The LORD God is my strength, and he will make my feet like hinds’ feet , and he will make me to walk upon mine high places. To the chief singer on my stringed instruments.",
+      "theme": "faith"
     },
     {
-      "reference": "Mark 4:1",
-      "text": "And he began again to teach by the sea side: and there was gathered unto him a great multitude, so that he entered into a ship, and sat in the sea; and the whole multitude was by the sea on the land."
+      "reference": "Isaiah 43:1-2",
+      "text": "But now thus saith the LORD that created thee, O Jacob, and he that formed thee, O Israel, Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine. When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee: when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Mark 5:1",
-      "text": "And they came over unto the other side of the sea, into the country of the Gadarenes."
+      "reference": "Lamentations 3:22-24",
+      "text": "It is of the LORD’s mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness. The LORD is my portion, saith my soul; therefore will I hope in him.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Mark 6:1",
-      "text": "And he went out from thence, and came into his own country; and his disciples follow him."
+      "reference": "Isaiah 26:3-4",
+      "text": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength:",
+      "theme": "peace"
     },
     {
-      "reference": "Mark 7:1",
-      "text": "Then came together unto him the Pharisees, and certain of the scribes, which came from Jerusalem."
+      "reference": "Mark 9:23-24",
+      "text": "Jesus said unto him, If thou canst believe, all things are possible to him that believeth. And straightway the father of the child cried out, and said with tears, Lord, I believe; help thou mine unbelief.",
+      "theme": "faith"
     },
     {
-      "reference": "Mark 8:1",
-      "text": "In those days the multitude being very great, and having nothing to eat, Jesus called his disciples unto him , and saith unto them,"
+      "reference": "Micah 6:8",
+      "text": "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+      "theme": "perseverance"
     },
     {
-      "reference": "Mark 9:1",
-      "text": "And he said unto them, Verily I say unto you, That there be some of them that stand here, which shall not taste of death, till they have seen the kingdom of God come with power."
+      "reference": "Matthew 11:28-30",
+      "text": "Come unto me, all ye that labour and are heavy laden, and I will give you rest. Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. For my yoke is easy, and my burden is light.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Mark 10:1",
-      "text": "And he arose from thence, and cometh into the coasts of Judæa by the farther side of Jordan: and the people resort unto him again; and, as he was wont, he taught them again."
+      "reference": "Isaiah 32:17",
+      "text": "And the work of righteousness shall be peace; and the effect of righteousness quietness and assurance for ever.",
+      "theme": "peace"
     },
     {
-      "reference": "Mark 11:1",
-      "text": "And when they came nigh to Jerusalem, unto Bethphage and Bethany, at the mount of Olives, he sendeth forth two of his disciples,"
+      "reference": "John 6:35",
+      "text": "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.",
+      "theme": "faith"
     },
     {
-      "reference": "Mark 12:1",
-      "text": "And he began to speak unto them by parables. A certain man planted a vineyard, and set an hedge about it , and digged a place for the winefat, and built a tower, and let it out to husbandmen, and went into a far country."
+      "reference": "Romans 5:3-5",
+      "text": "And not only so , but we glory in tribulations also: knowing that tribulation worketh patience; And patience, experience; and experience, hope: And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Mark 13:1",
-      "text": "And as he went out of the temple, one of his disciples saith unto him, Master, see what manner of stones and what buildings are here !"
+      "reference": "John 16:33",
+      "text": "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Mark 14:1",
-      "text": "After two days was the feast of the passover, and of unleavened bread: and the chief priests and the scribes sought how they might take him by craft, and put him to death."
+      "reference": "Matthew 6:25-26",
+      "text": "Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment? Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them. Are ye not much better than they?",
+      "theme": "peace"
     },
     {
-      "reference": "Mark 15:1",
-      "text": "And straightway in the morning the chief priests held a consultation with the elders and scribes and the whole council, and bound Jesus, and carried him away, and delivered him to Pilate."
+      "reference": "John 11:25-26",
+      "text": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?",
+      "theme": "faith"
     },
     {
-      "reference": "Mark 16:1",
-      "text": "And when the sabbath was past, Mary Magdalene, and Mary the mother of James, and Salome, had bought sweet spices, that they might come and anoint him."
+      "reference": "Romans 12:11-12",
+      "text": "Not slothful in business; fervent in spirit; serving the Lord; Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+      "theme": "perseverance"
     },
     {
-      "reference": "Luke 1:1",
-      "text": "Forasmuch as many have taken in hand to set forth in order a declaration of those things which are most surely believed among us,"
+      "reference": "Romans 8:38-39",
+      "text": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Luke 1:39",
-      "text": "And Mary arose in those days, and went into the hill country with haste, into a city of Juda;"
+      "reference": "Matthew 6:33-34",
+      "text": "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you. Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself. Sufficient unto the day is the evil thereof.",
+      "theme": "peace"
     },
     {
-      "reference": "Luke 2:1",
-      "text": "And it came to pass in those days, that there went out a decree from Cæsar Augustus, that all the world should be taxed."
+      "reference": "John 15:4-5",
+      "text": "Abide in me, and I in you. As the branch cannot bear fruit of itself, except it abide in the vine; no more can ye, except ye abide in me. I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+      "theme": "faith"
     },
     {
-      "reference": "Luke 3:1",
-      "text": "Now in the fifteenth year of the reign of Tiberius Cæsar, Pontius Pilate being governor of Judæa, and Herod being tetrarch of Galilee, and his brother Philip tetrarch of Ituraea and of the region of Trachonitis, and Lysanias the tetrarch of Abilene,"
+      "reference": "1 Corinthians 9:24-25",
+      "text": "Know ye not that they which run in a race run all, but one receiveth the prize? So run, that ye may obtain. And every man that striveth for the mastery is temperate in all things. Now they do it to obtain a corruptible crown; but we an incorruptible.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Luke 4:1",
-      "text": "And Jesus being full of the Holy Ghost returned from Jordan, and was led by the Spirit into the wilderness,"
+      "reference": "Romans 15:13",
+      "text": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Luke 5:1",
-      "text": "And it came to pass, that, as the people pressed upon him to hear the word of God, he stood by the lake of Gennesaret,"
+      "reference": "John 14:27",
+      "text": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",
+      "theme": "peace"
     },
     {
-      "reference": "Luke 6:1",
-      "text": "And it came to pass on the second sabbath after the first, that he went through the corn fields; and his disciples plucked the ears of corn, and did eat, rubbing them in their hands."
+      "reference": "Romans 8:28",
+      "text": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+      "theme": "faith"
     },
     {
-      "reference": "Luke 7:1",
-      "text": "Now when he had ended all his sayings in the audience of the people, he entered into Capernaum."
+      "reference": "1 Corinthians 15:58",
+      "text": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Luke 8:1",
-      "text": "And it came to pass afterward, that he went throughout every city and village, preaching and shewing the glad tidings of the kingdom of God: and the twelve were with him,"
+      "reference": "2 Corinthians 1:3-4",
+      "text": "Blessed be God, even the Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort; Who comforteth us in all our tribulation, that we may be able to comfort them which are in any trouble, by the comfort wherewith we ourselves are comforted of God.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Luke 9:1",
-      "text": "Then he called his twelve disciples together, and gave them power and authority over all devils, and to cure diseases."
+      "reference": "Romans 5:1-2",
+      "text": "Therefore being justified by faith, we have peace with God through our Lord Jesus Christ: By whom also we have access by faith into this grace wherein we stand, and rejoice in hope of the glory of God.",
+      "theme": "peace"
     },
     {
-      "reference": "Luke 10:1",
-      "text": "After these things the Lord appointed other seventy also, and sent them two and two before his face into every city and place, whither he himself would come."
+      "reference": "Romans 10:9-10",
+      "text": "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved. For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation.",
+      "theme": "faith"
     },
     {
-      "reference": "Luke 11:1",
-      "text": "And it came to pass, that, as he was praying in a certain place, when he ceased, one of his disciples said unto him, Lord, teach us to pray, as John also taught his disciples."
+      "reference": "1 Corinthians 16:13-14",
+      "text": "Watch ye, stand fast in the faith, quit you like men, be strong. Let all your things be done with charity.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Luke 12:1",
-      "text": "In the mean time, when there were gathered together an innumerable multitude of people, insomuch that they trode one upon another, he began to say unto his disciples first of all, Beware ye of the leaven of the Pharisees, which is hypocrisy."
+      "reference": "Ephesians 3:20-21",
+      "text": "Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us, Unto him be glory in the church by Christ Jesus throughout all ages, world without end. Amen.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Luke 13:1",
-      "text": "There were present at that season some that told him of the Galilæans, whose blood Pilate had mingled with their sacrifices."
+      "reference": "Romans 12:18",
+      "text": "If it be possible, as much as lieth in you, live peaceably with all men.",
+      "theme": "peace"
     },
     {
-      "reference": "Luke 14:1",
-      "text": "And it came to pass, as he went into the house of one of the chief Pharisees to eat bread on the sabbath day, that they watched him."
+      "reference": "2 Corinthians 5:7",
+      "text": "(For we walk by faith, not by sight:)",
+      "theme": "faith"
     },
     {
-      "reference": "Luke 15:1",
-      "text": "Then drew near unto him all the publicans and sinners for to hear him."
+      "reference": "2 Corinthians 4:16-18",
+      "text": "For which cause we faint not; but though our outward man perish, yet the inward man is renewed day by day. For our light affliction, which is but for a moment, worketh for us a far more exceeding and eternal weight of glory; While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Luke 16:1",
-      "text": "And he said also unto his disciples, There was a certain rich man, which had a steward; and the same was accused unto him that he had wasted his goods."
+      "reference": "Philippians 1:6",
+      "text": "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
+      "theme": "encouragement"
     },
     {
-      "reference": "Luke 17:1",
-      "text": "Then said he unto the disciples, It is impossible but that offences will come: but woe unto him , through whom they come!"
+      "reference": "Philippians 4:6-7",
+      "text": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+      "theme": "peace"
     },
     {
-      "reference": "Luke 18:1",
-      "text": "And he spake a parable unto them to this end , that men ought always to pray, and not to faint;"
+      "reference": "Galatians 2:20",
+      "text": "I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me.",
+      "theme": "faith"
     },
     {
-      "reference": "Luke 19:1",
-      "text": "And Jesus entered and passed through Jericho."
+      "reference": "Galatians 6:9-10",
+      "text": "And let us not be weary in well doing: for in due season we shall reap, if we faint not. As we have therefore opportunity, let us do good unto all men , especially unto them who are of the household of faith.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Luke 20:1",
-      "text": "And it came to pass, that on one of those days, as he taught the people in the temple, and preached the gospel, the chief priests and the scribes came upon him with the elders,"
+      "reference": "1 Thessalonians 5:11",
+      "text": "Wherefore comfort yourselves together, and edify one another, even as also ye do.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Luke 21:1",
-      "text": "And he looked up, and saw the rich men casting their gifts into the treasury."
+      "reference": "Philippians 4:8-9",
+      "text": "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things. Those things, which ye have both learned, and received, and heard, and seen in me, do: and the God of peace shall be with you.",
+      "theme": "peace"
     },
     {
-      "reference": "Luke 22:1",
-      "text": "Now the feast of unleavened bread drew nigh, which is called the Passover."
+      "reference": "Ephesians 2:8-10",
+      "text": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast. For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+      "theme": "faith"
     },
     {
-      "reference": "Luke 23:1",
-      "text": "And the whole multitude of them arose, and led him unto Pilate."
+      "reference": "Philippians 3:13-14",
+      "text": "Brethren, I count not myself to have apprehended: but this one thing I do , forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Luke 24:1",
-      "text": "Now upon the first day of the week, very early in the morning, they came unto the sepulchre, bringing the spices which they had prepared, and certain others with them."
+      "reference": "Hebrews 13:5-6",
+      "text": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee. So that we may boldly say, The Lord is my helper, and I will not fear what man shall do unto me.",
+      "theme": "encouragement"
     },
     {
-      "reference": "John 1:1",
-      "text": "In the beginning was the Word, and the Word was with God, and the Word was God."
-    },
-    {
-      "reference": "John 2:1",
-      "text": "And the third day there was a marriage in Cana of Galilee; and the mother of Jesus was there:"
-    },
-    {
-      "reference": "John 3:1",
-      "text": "There was a man of the Pharisees, named Nicodemus, a ruler of the Jews:"
-    },
-    {
-      "reference": "John 4:1",
-      "text": "When therefore the Lord knew how the Pharisees had heard that Jesus made and baptized more disciples than John,"
-    },
-    {
-      "reference": "John 5:1",
-      "text": "After this there was a feast of the Jews; and Jesus went up to Jerusalem."
-    },
-    {
-      "reference": "John 6:1",
-      "text": "After these things Jesus went over the sea of Galilee, which is the sea of Tiberias."
-    },
-    {
-      "reference": "John 7:1",
-      "text": "After these things Jesus walked in Galilee: for he would not walk in Jewry, because the Jews sought to kill him."
-    },
-    {
-      "reference": "John 8:1",
-      "text": "Jesus went unto the mount of Olives."
-    },
-    {
-      "reference": "John 9:1",
-      "text": "And as Jesus passed by, he saw a man which was blind from his birth."
-    },
-    {
-      "reference": "John 10:1",
-      "text": "Verily, verily, I say unto you, He that entereth not by the door into the sheepfold, but climbeth up some other way, the same is a thief and a robber."
-    },
-    {
-      "reference": "John 11:1",
-      "text": "Now a certain man was sick, named Lazarus, of Bethany, the town of Mary and her sister Martha."
-    },
-    {
-      "reference": "John 12:1",
-      "text": "Then Jesus six days before the passover came to Bethany, where Lazarus was which had been dead, whom he raised from the dead."
-    },
-    {
-      "reference": "John 13:1",
-      "text": "Now before the feast of the passover, when Jesus knew that his hour was come that he should depart out of this world unto the Father, having loved his own which were in the world, he loved them unto the end."
-    },
-    {
-      "reference": "John 14:1",
-      "text": "Let not your heart be troubled: ye believe in God, believe also in me."
-    },
-    {
-      "reference": "John 15:1",
-      "text": "I am the true vine, and my Father is the husbandman."
-    },
-    {
-      "reference": "John 16:1",
-      "text": "These things have I spoken unto you, that ye should not be offended."
-    },
-    {
-      "reference": "John 17:1",
-      "text": "These words spake Jesus, and lifted up his eyes to heaven, and said, Father, the hour is come; glorify thy Son, that thy Son also may glorify thee:"
-    },
-    {
-      "reference": "John 18:1",
-      "text": "When Jesus had spoken these words, he went forth with his disciples over the brook Cedron, where was a garden, into the which he entered, and his disciples."
-    },
-    {
-      "reference": "John 19:1",
-      "text": "Then Pilate therefore took Jesus, and scourged him ."
-    },
-    {
-      "reference": "John 20:1",
-      "text": "The first day of the week cometh Mary Magdalene early, when it was yet dark, unto the sepulchre, and seeth the stone taken away from the sepulchre."
-    },
-    {
-      "reference": "John 21:1",
-      "text": "After these things Jesus shewed himself again to the disciples at the sea of Tiberias; and on this wise shewed he himself ."
-    },
-    {
-      "reference": "Psalms 1:1",
-      "text": "Blessed is the man that walketh not in the counsel of the ungodly, nor standeth in the way of sinners, nor sitteth in the seat of the scornful."
-    },
-    {
-      "reference": "Psalms 3:1",
-      "text": "LORD , how are they increased that trouble me! many are they that rise up against me."
-    },
-    {
-      "reference": "Psalms 5:1",
-      "text": "Give ear to my words, O LORD , consider my meditation."
-    },
-    {
-      "reference": "Psalms 7:1",
-      "text": "O LORD my God, in thee do I put my trust: save me from all them that persecute me, and deliver me:"
-    },
-    {
-      "reference": "Psalms 9:1",
-      "text": "I will praise thee , O LORD , with my whole heart; I will shew forth all thy marvellous works."
-    },
-    {
-      "reference": "Psalms 10:1",
-      "text": "Why standest thou afar off, O LORD ? why hidest thou thyself in times of trouble?"
-    },
-    {
-      "reference": "Psalms 11:1",
-      "text": "In the LORD put I my trust: how say ye to my soul, Flee as a bird to your mountain?"
-    },
-    {
-      "reference": "Psalms 13:1",
-      "text": "How long wilt thou forget me, O LORD ? for ever? how long wilt thou hide thy face from me?"
-    },
-    {
-      "reference": "Psalms 15:1",
-      "text": "LORD , who shall abide in thy tabernacle? who shall dwell in thy holy hill?"
-    },
-    {
-      "reference": "Psalms 17:1",
-      "text": "Hear the right, O LORD , attend unto my cry, give ear unto my prayer, that goeth not out of feigned lips."
-    },
-    {
-      "reference": "Psalms 18:1",
-      "text": "I will love thee, O LORD , my strength."
-    },
-    {
-      "reference": "Psalms 19:1",
-      "text": "The heavens declare the glory of God; and the firmament sheweth his handywork."
-    },
-    {
-      "reference": "Psalms 20:1",
-      "text": "The LORD hear thee in the day of trouble; the name of the God of Jacob defend thee;"
-    },
-    {
-      "reference": "Psalms 22:1",
-      "text": "My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?"
-    },
-    {
-      "reference": "Psalms 23:1",
-      "text": "The LORD is my shepherd; I shall not want."
-    },
-    {
-      "reference": "Psalms 25:1",
-      "text": "Unto thee, O LORD , do I lift up my soul."
-    },
-    {
-      "reference": "Psalms 26:1",
-      "text": "Judge me, O LORD ; for I have walked in mine integrity: I have trusted also in the LORD ; therefore I shall not slide."
-    },
-    {
-      "reference": "Psalms 28:1",
-      "text": "Unto thee will I cry, O LORD my rock; be not silent to me: lest, if thou be silent to me, I become like them that go down into the pit."
-    },
-    {
-      "reference": "Psalms 30:1",
-      "text": "I will extol thee, O LORD ; for thou hast lifted me up, and hast not made my foes to rejoice over me."
-    },
-    {
-      "reference": "Psalms 31:1",
-      "text": "In thee, O LORD , do I put my trust; let me never be ashamed: deliver me in thy righteousness."
-    },
-    {
-      "reference": "Psalms 32:1",
-      "text": "Blessed is he whose transgression is forgiven, whose sin is covered."
-    },
-    {
-      "reference": "Psalms 33:1",
-      "text": "Rejoice in the LORD , O ye righteous: for praise is comely for the upright."
-    },
-    {
-      "reference": "Psalms 34:1",
-      "text": "I will bless the LORD at all times: his praise shall continually be in my mouth."
-    },
-    {
-      "reference": "Psalms 35:1",
-      "text": "Plead my cause , O LORD , with them that strive with me: fight against them that fight against me."
-    },
-    {
-      "reference": "Psalms 36:1",
-      "text": "The transgression of the wicked saith within my heart, that there is no fear of God before his eyes."
-    },
-    {
-      "reference": "Psalms 37:1",
-      "text": "Fret not thyself because of evildoers, neither be thou envious against the workers of iniquity."
-    },
-    {
-      "reference": "Psalms 38:1",
-      "text": "O LORD , rebuke me not in thy wrath: neither chasten me in thy hot displeasure."
-    },
-    {
-      "reference": "Psalms 39:1",
-      "text": "I said, I will take heed to my ways, that I sin not with my tongue: I will keep my mouth with a bridle, while the wicked is before me."
-    },
-    {
-      "reference": "Psalms 40:1",
-      "text": "I waited patiently for the LORD ; and he inclined unto me, and heard my cry."
-    },
-    {
-      "reference": "Psalms 42:1",
-      "text": "As the hart panteth after the water brooks, so panteth my soul after thee, O God."
-    },
-    {
-      "reference": "Psalms 44:1",
-      "text": "We have heard with our ears, O God, our fathers have told us, what work thou didst in their days, in the times of old."
-    },
-    {
-      "reference": "Psalms 45:1",
-      "text": "My heart is inditing a good matter: I speak of the things which I have made touching the king: my tongue is the pen of a ready writer."
-    },
-    {
-      "reference": "Psalms 46:1",
-      "text": "God is our refuge and strength, a very present help in trouble."
-    },
-    {
-      "reference": "Psalms 48:1",
-      "text": "Great is the LORD , and greatly to be praised in the city of our God, in the mountain of his holiness."
-    },
-    {
-      "reference": "Psalms 49:1",
-      "text": "Hear this, all ye people; give ear, all ye inhabitants of the world:"
-    },
-    {
-      "reference": "Psalms 50:1",
-      "text": "The mighty God, even the LORD , hath spoken, and called the earth from the rising of the sun unto the going down thereof."
-    },
-    {
-      "reference": "Psalms 51:1",
-      "text": "Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions."
-    },
-    {
-      "reference": "Psalms 52:1",
-      "text": "Why boastest thou thyself in mischief, O mighty man? the goodness of God endureth continually."
-    },
-    {
-      "reference": "Psalms 55:1",
-      "text": "Give ear to my prayer, O God; and hide not thyself from my supplication."
-    },
-    {
-      "reference": "Psalms 56:1",
-      "text": "Be merciful unto me, O God: for man would swallow me up; he fighting daily oppresseth me."
-    },
-    {
-      "reference": "Psalms 58:1",
-      "text": "Do ye indeed speak righteousness, O congregation? do ye judge uprightly, O ye sons of men?"
-    },
-    {
-      "reference": "Psalms 60:1",
-      "text": "O God, thou hast cast us off, thou hast scattered us, thou hast been displeased; O turn thyself to us again."
-    },
-    {
-      "reference": "Psalms 62:1",
-      "text": "Truly my soul waiteth upon God: from him cometh my salvation."
-    },
-    {
-      "reference": "Psalms 64:1",
-      "text": "Hear my voice, O God, in my prayer: preserve my life from fear of the enemy."
-    },
-    {
-      "reference": "Psalms 66:1",
-      "text": "Make a joyful noise unto God, all ye lands:"
-    },
-    {
-      "reference": "Psalms 68:1",
-      "text": "Let God arise, let his enemies be scattered: let them also that hate him flee before him."
-    },
-    {
-      "reference": "Psalms 69:1",
-      "text": "Save me, O God; for the waters are come in unto my soul."
-    },
-    {
-      "reference": "Psalms 70:1",
-      "text": "Make haste , O God, to deliver me; make haste to help me, O LORD ."
-    },
-    {
-      "reference": "Psalms 72:1",
-      "text": "Give the king thy judgments, O God, and thy righteousness unto the king’s son."
-    },
-    {
-      "reference": "Psalms 73:1",
-      "text": "Truly God is good to Israel, even to such as are of a clean heart."
-    },
-    {
-      "reference": "Psalms 74:1",
-      "text": "O God, why hast thou cast us off for ever? why doth thine anger smoke against the sheep of thy pasture?"
-    },
-    {
-      "reference": "Psalms 75:1",
-      "text": "Unto thee, O God, do we give thanks, unto thee do we give thanks: for that thy name is near thy wondrous works declare."
-    },
-    {
-      "reference": "Psalms 77:1",
-      "text": "I cried unto God with my voice, even unto God with my voice; and he gave ear unto me."
-    },
-    {
-      "reference": "Psalms 78:1",
-      "text": "Give ear, O my people, to my law: incline your ears to the words of my mouth."
-    },
-    {
-      "reference": "Psalms 78:38",
-      "text": "But he, being full of compassion, forgave their iniquity, and destroyed them not: yea, many a time turned he his anger away, and did not stir up all his wrath."
-    },
-    {
-      "reference": "Psalms 79:1",
-      "text": "O God, the heathen are come into thine inheritance; thy holy temple have they defiled; they have laid Jerusalem on heaps."
-    },
-    {
-      "reference": "Psalms 80:1",
-      "text": "Give ear, O Shepherd of Israel, thou that leadest Joseph like a flock; thou that dwellest between the cherubims, shine forth."
-    },
-    {
-      "reference": "Psalms 81:1",
-      "text": "Sing aloud unto God our strength: make a joyful noise unto the God of Jacob."
-    },
-    {
-      "reference": "Psalms 83:1",
-      "text": "Keep not thou silence, O God: hold not thy peace, and be not still, O God."
-    },
-    {
-      "reference": "Psalms 85:1",
-      "text": "LORD , thou hast been favourable unto thy land: thou hast brought back the captivity of Jacob."
-    },
-    {
-      "reference": "Psalms 86:1",
-      "text": "Bow down thine ear, O LORD , hear me: for I am poor and needy."
-    },
-    {
-      "reference": "Psalms 88:1",
-      "text": "O LORD God of my salvation, I have cried day and night before thee:"
-    },
-    {
-      "reference": "Psalms 89:1",
-      "text": "I will sing of the mercies of the LORD for ever: with my mouth will I make known thy faithfulness to all generations."
-    },
-    {
-      "reference": "Psalms 90:1",
-      "text": "Lord, thou hast been our dwelling place in all generations."
-    },
-    {
-      "reference": "Psalms 91:1",
-      "text": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty."
-    },
-    {
-      "reference": "Psalms 92:1",
-      "text": "It is a good thing to give thanks unto the LORD , and to sing praises unto thy name, O most High:"
-    },
-    {
-      "reference": "Psalms 94:1",
-      "text": "O LORD God, to whom vengeance belongeth; O God, to whom vengeance belongeth, shew thyself."
-    },
-    {
-      "reference": "Psalms 95:1",
-      "text": "O come, let us sing unto the LORD : let us make a joyful noise to the rock of our salvation."
-    },
-    {
-      "reference": "Psalms 97:1",
-      "text": "The LORD reigneth; let the earth rejoice; let the multitude of isles be glad thereof ."
-    },
-    {
-      "reference": "Psalms 99:1",
-      "text": "The LORD reigneth; let the people tremble: he sitteth between the cherubims; let the earth be moved."
-    },
-    {
-      "reference": "Psalms 102:1",
-      "text": "Hear my prayer, O LORD , and let my cry come unto thee."
-    },
-    {
-      "reference": "Psalms 103:1",
-      "text": "Bless the LORD , O my soul: and all that is within me, bless his holy name."
-    },
-    {
-      "reference": "Psalms 104:1",
-      "text": "Bless the LORD , O my soul. O LORD my God, thou art very great; thou art clothed with honour and majesty."
-    },
-    {
-      "reference": "Psalms 105:1",
-      "text": "O give thanks unto the LORD ; call upon his name: make known his deeds among the people."
-    },
-    {
-      "reference": "Psalms 106:1",
-      "text": "Praise ye the LORD . O give thanks unto the LORD ; for he is good: for his mercy endureth for ever."
-    },
-    {
-      "reference": "Psalms 107:1",
-      "text": "O give thanks unto the LORD , for he is good: for his mercy endureth for ever."
-    },
-    {
-      "reference": "Psalms 108:1",
-      "text": "O God, my heart is fixed; I will sing and give praise, even with my glory."
-    },
-    {
-      "reference": "Psalms 110:1",
-      "text": "The LORD said unto my Lord, Sit thou at my right hand, until I make thine enemies thy footstool."
-    },
-    {
-      "reference": "Psalms 112:1",
-      "text": "Praise ye the LORD . Blessed is the man that feareth the LORD , that delighteth greatly in his commandments."
-    },
-    {
-      "reference": "Psalms 114:1",
-      "text": "When Israel went out of Egypt, the house of Jacob from a people of strange language;"
-    },
-    {
-      "reference": "Psalms 116:1",
-      "text": "I love the LORD , because he hath heard my voice and my supplications."
-    },
-    {
-      "reference": "Psalms 117:1",
-      "text": "O praise the LORD , all ye nations: praise him, all ye people."
-    },
-    {
-      "reference": "Psalms 119:1",
-      "text": "Blessed are the undefiled in the way, who walk in the law of the LORD ."
-    },
-    {
-      "reference": "Psalms 119:25",
-      "text": "My soul cleaveth unto the dust: quicken thou me according to thy word."
-    },
-    {
-      "reference": "Psalms 119:49",
-      "text": "Remember the word unto thy servant, upon which thou hast caused me to hope."
-    },
-    {
-      "reference": "Psalms 119:73",
-      "text": "Thy hands have made me and fashioned me: give me understanding, that I may learn thy commandments."
-    },
-    {
-      "reference": "Psalms 119:97",
-      "text": "O how love I thy law! it is my meditation all the day."
-    },
-    {
-      "reference": "Psalms 119:121",
-      "text": "I have done judgment and justice: leave me not to mine oppressors."
-    },
-    {
-      "reference": "Psalms 119:145",
-      "text": "I cried with my whole heart; hear me, O LORD : I will keep thy statutes."
-    },
-    {
-      "reference": "Psalms 120:1",
-      "text": "In my distress I cried unto the LORD , and he heard me."
-    },
-    {
-      "reference": "Psalms 123:1",
-      "text": "Unto thee lift I up mine eyes, O thou that dwellest in the heavens."
-    },
-    {
-      "reference": "Psalms 126:1",
-      "text": "When the LORD turned again the captivity of Zion, we were like them that dream."
-    },
-    {
-      "reference": "Psalms 129:1",
-      "text": "Many a time have they afflicted me from my youth, may Israel now say:"
-    },
-    {
-      "reference": "Psalms 132:1",
-      "text": "LORD , remember David, and all his afflictions:"
-    },
-    {
-      "reference": "Psalms 135:1",
-      "text": "Praise ye the LORD . Praise ye the name of the LORD ; praise him , O ye servants of the LORD ."
-    },
-    {
-      "reference": "Psalms 137:1",
-      "text": "By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion."
-    },
-    {
-      "reference": "Psalms 139:1",
-      "text": "O LORD , thou hast searched me, and known me ."
-    },
-    {
-      "reference": "Psalms 140:1",
-      "text": "Deliver me, O LORD , from the evil man: preserve me from the violent man;"
-    },
-    {
-      "reference": "Psalms 142:1",
-      "text": "I cried unto the LORD with my voice; with my voice unto the LORD did I make my supplication."
-    },
-    {
-      "reference": "Psalms 144:1",
-      "text": "Blessed be the LORD my strength, which teacheth my hands to war, and my fingers to fight:"
-    },
-    {
-      "reference": "Psalms 145:1",
-      "text": "I will extol thee, my God, O king; and I will bless thy name for ever and ever."
-    },
-    {
-      "reference": "Psalms 146:1",
-      "text": "Praise ye the LORD . Praise the LORD , O my soul."
-    },
-    {
-      "reference": "Psalms 148:1",
-      "text": "Praise ye the LORD . Praise ye the LORD from the heavens: praise him in the heights. . Praise: Heb. Hallelujah, etc"
-    },
-    {
-      "reference": "Psalms 149:1",
-      "text": "Praise ye the LORD . Sing unto the LORD a new song, and his praise in the congregation of saints."
-    },
-    {
-      "reference": "Acts 1:1",
-      "text": "The former treatise have I made, O Theophilus, of all that Jesus began both to do and teach,"
-    },
-    {
-      "reference": "Acts 2:1",
-      "text": "And when the day of Pentecost was fully come, they were all with one accord in one place."
-    },
-    {
-      "reference": "Acts 3:1",
-      "text": "Now Peter and John went up together into the temple at the hour of prayer, being the ninth hour ."
-    },
-    {
-      "reference": "Acts 4:1",
-      "text": "And as they spake unto the people, the priests, and the captain of the temple, and the Sadducees, came upon them,"
-    },
-    {
-      "reference": "Acts 5:1",
-      "text": "But a certain man named Ananias, with Sapphira his wife, sold a possession,"
-    },
-    {
-      "reference": "Acts 6:1",
-      "text": "And in those days, when the number of the disciples was multiplied, there arose a murmuring of the Grecians against the Hebrews, because their widows were neglected in the daily ministration."
-    },
-    {
-      "reference": "Acts 7:1",
-      "text": "Then said the high priest, Are these things so?"
-    },
-    {
-      "reference": "Acts 8:1",
-      "text": "And Saul was consenting unto his death. And at that time there was a great persecution against the church which was at Jerusalem; and they were all scattered abroad throughout the regions of Judæa and Samaria, except the apostles."
-    },
-    {
-      "reference": "Acts 9:1",
-      "text": "And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord, went unto the high priest,"
-    },
-    {
-      "reference": "Acts 10:1",
-      "text": "There was a certain man in Cæsarea called Cornelius, a centurion of the band called the Italian band ,"
-    },
-    {
-      "reference": "Acts 11:1",
-      "text": "And the apostles and brethren that were in Judæa heard that the Gentiles had also received the word of God."
-    },
-    {
-      "reference": "Acts 12:1",
-      "text": "Now about that time Herod the king stretched forth his hands to vex certain of the church."
-    },
-    {
-      "reference": "Acts 13:1",
-      "text": "Now there were in the church that was at Antioch certain prophets and teachers; as Barnabas, and Simeon that was called Niger, and Lucius of Cyrene, and Manaen, which had been brought up with Herod the tetrarch, and Saul."
-    },
-    {
-      "reference": "Acts 14:1",
-      "text": "And it came to pass in Iconium, that they went both together into the synagogue of the Jews, and so spake, that a great multitude both of the Jews and also of the Greeks believed."
-    },
-    {
-      "reference": "Acts 15:1",
-      "text": "And certain men which came down from Judæa taught the brethren, and said , Except ye be circumcised after the manner of Moses, ye cannot be saved."
-    },
-    {
-      "reference": "Acts 16:1",
-      "text": "Then came he to Derbe and Lystra: and, behold, a certain disciple was there, named Timotheus, the son of a certain woman, which was a Jewess, and believed; but his father was a Greek:"
-    },
-    {
-      "reference": "Acts 17:1",
-      "text": "Now when they had passed through Amphipolis and Apollonia, they came to Thessalonica, where was a synagogue of the Jews:"
-    },
-    {
-      "reference": "Acts 18:1",
-      "text": "After these things Paul departed from Athens, and came to Corinth;"
-    },
-    {
-      "reference": "Acts 19:1",
-      "text": "And it came to pass, that, while Apollos was at Corinth, Paul having passed through the upper coasts came to Ephesus: and finding certain disciples,"
-    },
-    {
-      "reference": "Acts 20:1",
-      "text": "And after the uproar was ceased, Paul called unto him the disciples, and embraced them , and departed for to go into Macedonia."
-    },
-    {
-      "reference": "Acts 21:1",
-      "text": "And it came to pass, that after we were gotten from them, and had launched, we came with a straight course unto Coos, and the day following unto Rhodes, and from thence unto Patara:"
-    },
-    {
-      "reference": "Acts 22:1",
-      "text": "Men, brethren, and fathers, hear ye my defence which I make now unto you."
-    },
-    {
-      "reference": "Acts 23:1",
-      "text": "And Paul, earnestly beholding the council, said, Men and brethren, I have lived in all good conscience before God until this day."
-    },
-    {
-      "reference": "Acts 24:1",
-      "text": "And after five days Ananias the high priest descended with the elders, and with a certain orator named Tertullus, who informed the governor against Paul."
-    },
-    {
-      "reference": "Acts 25:1",
-      "text": "Now when Festus was come into the province, after three days he ascended from Cæsarea to Jerusalem."
-    },
-    {
-      "reference": "Acts 26:1",
-      "text": "Then Agrippa said unto Paul, Thou art permitted to speak for thyself. Then Paul stretched forth the hand, and answered for himself:"
-    },
-    {
-      "reference": "Acts 27:1",
-      "text": "And when it was determined that we should sail into Italy, they delivered Paul and certain other prisoners unto one named Julius, a centurion of Augustus’ band."
-    },
-    {
-      "reference": "Acts 28:1",
-      "text": "And when they were escaped, then they knew that the island was called Melita."
-    },
-    {
-      "reference": "Romans 1:1",
-      "text": "Paul, a servant of Jesus Christ, called to be an apostle, separated unto the gospel of God,"
-    },
-    {
-      "reference": "Romans 2:1",
-      "text": "Therefore thou art inexcusable, O man, whosoever thou art that judgest: for wherein thou judgest another, thou condemnest thyself; for thou that judgest doest the same things."
-    },
-    {
-      "reference": "Romans 3:1",
-      "text": "What advantage then hath the Jew? or what profit is there of circumcision?"
-    },
-    {
-      "reference": "Romans 4:1",
-      "text": "What shall we say then that Abraham our father, as pertaining to the flesh, hath found?"
-    },
-    {
-      "reference": "Romans 5:1",
-      "text": "Therefore being justified by faith, we have peace with God through our Lord Jesus Christ:"
-    },
-    {
-      "reference": "Romans 6:1",
-      "text": "What shall we say then? Shall we continue in sin, that grace may abound?"
-    },
-    {
-      "reference": "Romans 7:1",
-      "text": "Know ye not, brethren, (for I speak to them that know the law,) how that the law hath dominion over a man as long as he liveth?"
-    },
-    {
-      "reference": "Romans 8:1",
-      "text": "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit."
-    },
-    {
-      "reference": "Romans 9:1",
-      "text": "I say the truth in Christ, I lie not, my conscience also bearing me witness in the Holy Ghost,"
-    },
-    {
-      "reference": "Romans 10:1",
-      "text": "Brethren, my heart’s desire and prayer to God for Israel is, that they might be saved."
-    },
-    {
-      "reference": "Romans 11:1",
-      "text": "I say then, Hath God cast away his people? God forbid. For I also am an Israelite, of the seed of Abraham, of the tribe of Benjamin."
-    },
-    {
-      "reference": "Romans 12:1",
-      "text": "I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service."
-    },
-    {
-      "reference": "Romans 13:1",
-      "text": "Let every soul be subject unto the higher powers. For there is no power but of God: the powers that be are ordained of God."
-    },
-    {
-      "reference": "Romans 14:1",
-      "text": "Him that is weak in the faith receive ye, but not to doubtful disputations."
-    },
-    {
-      "reference": "Romans 15:1",
-      "text": "We then that are strong ought to bear the infirmities of the weak, and not to please ourselves."
-    },
-    {
-      "reference": "Romans 16:1",
-      "text": "I commend unto you Phebe our sister, which is a servant of the church which is at Cenchrea:"
-    },
-    {
-      "reference": "1 Corinthians 1:1",
-      "text": "Paul, called to be an apostle of Jesus Christ through the will of God, and Sosthenes our brother,"
-    },
-    {
-      "reference": "1 Corinthians 2:1",
-      "text": "And I, brethren, when I came to you, came not with excellency of speech or of wisdom, declaring unto you the testimony of God."
-    },
-    {
-      "reference": "1 Corinthians 3:1",
-      "text": "And I, brethren, could not speak unto you as unto spiritual, but as unto carnal, even as unto babes in Christ."
-    },
-    {
-      "reference": "1 Corinthians 4:1",
-      "text": "Let a man so account of us, as of the ministers of Christ, and stewards of the mysteries of God."
-    },
-    {
-      "reference": "1 Corinthians 5:1",
-      "text": "It is reported commonly that there is fornication among you, and such fornication as is not so much as named among the Gentiles, that one should have his father’s wife."
-    },
-    {
-      "reference": "1 Corinthians 6:1",
-      "text": "Dare any of you, having a matter against another, go to law before the unjust, and not before the saints?"
-    },
-    {
-      "reference": "1 Corinthians 7:1",
-      "text": "Now concerning the things whereof ye wrote unto me: It is good for a man not to touch a woman."
-    },
-    {
-      "reference": "1 Corinthians 8:1",
-      "text": "Now as touching things offered unto idols, we know that we all have knowledge. Knowledge puffeth up, but charity edifieth."
-    },
-    {
-      "reference": "1 Corinthians 9:1",
-      "text": "Am I not an apostle? am I not free? have I not seen Jesus Christ our Lord? are not ye my work in the Lord?"
-    },
-    {
-      "reference": "1 Corinthians 10:1",
-      "text": "Moreover, brethren, I would not that ye should be ignorant, how that all our fathers were under the cloud, and all passed through the sea;"
-    },
-    {
-      "reference": "1 Corinthians 11:1",
-      "text": "Be ye followers of me, even as I also am of Christ."
-    },
-    {
-      "reference": "1 Corinthians 12:1",
-      "text": "Now concerning spiritual gifts , brethren, I would not have you ignorant."
-    },
-    {
-      "reference": "1 Corinthians 13:1",
-      "text": "Though I speak with the tongues of men and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal."
-    },
-    {
-      "reference": "1 Corinthians 14:1",
-      "text": "Follow after charity, and desire spiritual gifts , but rather that ye may prophesy."
-    },
-    {
-      "reference": "1 Corinthians 15:1",
-      "text": "Moreover, brethren, I declare unto you the gospel which I preached unto you, which also ye have received, and wherein ye stand;"
-    },
-    {
-      "reference": "1 Corinthians 16:1",
-      "text": "Now concerning the collection for the saints, as I have given order to the churches of Galatia, even so do ye."
-    },
-    {
-      "reference": "2 Corinthians 1:1",
-      "text": "Paul, an apostle of Jesus Christ by the will of God, and Timothy our brother, unto the church of God which is at Corinth, with all the saints which are in all Achaia:"
-    },
-    {
-      "reference": "2 Corinthians 2:1",
-      "text": "But I determined this with myself, that I would not come again to you in heaviness."
-    },
-    {
-      "reference": "2 Corinthians 3:1",
-      "text": "Do we begin again to commend ourselves? or need we, as some others , epistles of commendation to you, or letters of commendation from you?"
-    },
-    {
-      "reference": "2 Corinthians 4:1",
-      "text": "Therefore seeing we have this ministry, as we have received mercy, we faint not;"
-    },
-    {
-      "reference": "2 Corinthians 5:1",
-      "text": "For we know that if our earthly house of this tabernacle were dissolved, we have a building of God, an house not made with hands, eternal in the heavens."
-    },
-    {
-      "reference": "2 Corinthians 6:1",
-      "text": "We then, as workers together with him , beseech you also that ye receive not the grace of God in vain."
-    },
-    {
-      "reference": "2 Corinthians 7:1",
-      "text": "Having therefore these promises, dearly beloved, let us cleanse ourselves from all filthiness of the flesh and spirit, perfecting holiness in the fear of God."
-    },
-    {
-      "reference": "2 Corinthians 8:1",
-      "text": "Moreover, brethren, we do you to wit of the grace of God bestowed on the churches of Macedonia;"
-    },
-    {
-      "reference": "2 Corinthians 9:1",
-      "text": "For as touching the ministering to the saints, it is superfluous for me to write to you:"
-    },
-    {
-      "reference": "2 Corinthians 10:1",
-      "text": "Now I Paul myself beseech you by the meekness and gentleness of Christ, who in presence am base among you, but being absent am bold toward you:"
-    },
-    {
-      "reference": "2 Corinthians 11:1",
-      "text": "Would to God ye could bear with me a little in my folly: and indeed bear with me."
-    },
-    {
-      "reference": "2 Corinthians 12:1",
-      "text": "It is not expedient for me doubtless to glory. I will come to visions and revelations of the Lord."
-    },
-    {
-      "reference": "2 Corinthians 13:1",
-      "text": "This is the third time I am coming to you. In the mouth of two or three witnesses shall every word be established."
-    },
-    {
-      "reference": "Galatians 1:1",
-      "text": "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father, who raised him from the dead;)"
-    },
-    {
-      "reference": "Galatians 2:1",
-      "text": "Then fourteen years after I went up again to Jerusalem with Barnabas, and took Titus with me also."
-    },
-    {
-      "reference": "Galatians 3:1",
-      "text": "O foolish Galatians, who hath bewitched you, that ye should not obey the truth, before whose eyes Jesus Christ hath been evidently set forth, crucified among you?"
-    },
-    {
-      "reference": "Galatians 4:1",
-      "text": "Now I say, That the heir, as long as he is a child, differeth nothing from a servant, though he be lord of all;"
-    },
-    {
-      "reference": "Galatians 5:1",
-      "text": "Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage."
-    },
-    {
-      "reference": "Galatians 6:1",
-      "text": "Brethren, if a man be overtaken in a fault, ye which are spiritual, restore such an one in the spirit of meekness; considering thyself, lest thou also be tempted."
-    },
-    {
-      "reference": "Ephesians 1:1",
-      "text": "Paul, an apostle of Jesus Christ by the will of God, to the saints which are at Ephesus, and to the faithful in Christ Jesus:"
-    },
-    {
-      "reference": "Ephesians 2:1",
-      "text": "And you hath he quickened , who were dead in trespasses and sins;"
-    },
-    {
-      "reference": "Ephesians 3:1",
-      "text": "For this cause I Paul, the prisoner of Jesus Christ for you Gentiles,"
-    },
-    {
-      "reference": "Ephesians 4:1",
-      "text": "I therefore, the prisoner of the Lord, beseech you that ye walk worthy of the vocation wherewith ye are called,"
-    },
-    {
-      "reference": "Ephesians 5:1",
-      "text": "Be ye therefore followers of God, as dear children;"
-    },
-    {
-      "reference": "Ephesians 6:1",
-      "text": "Children, obey your parents in the Lord: for this is right."
-    },
-    {
-      "reference": "Philippians 1:1",
-      "text": "Paul and Timotheus, the servants of Jesus Christ, to all the saints in Christ Jesus which are at Philippi, with the bishops and deacons:"
-    },
-    {
-      "reference": "Philippians 2:1",
-      "text": "If there be therefore any consolation in Christ, if any comfort of love, if any fellowship of the Spirit, if any bowels and mercies,"
-    },
-    {
-      "reference": "Philippians 3:1",
-      "text": "Finally, my brethren, rejoice in the Lord. To write the same things to you, to me indeed is not grievous, but for you it is safe."
-    },
-    {
-      "reference": "Philippians 4:1",
-      "text": "Therefore, my brethren dearly beloved and longed for, my joy and crown, so stand fast in the Lord, my dearly beloved."
-    },
-    {
-      "reference": "Colossians 1:1",
-      "text": "Paul, an apostle of Jesus Christ by the will of God, and Timotheus our brother,"
-    },
-    {
-      "reference": "Colossians 2:1",
-      "text": "For I would that ye knew what great conflict I have for you, and for them at Laodicea, and for as many as have not seen my face in the flesh;"
-    },
-    {
-      "reference": "Colossians 3:1",
-      "text": "If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God."
-    },
-    {
-      "reference": "Colossians 4:1",
-      "text": "Masters, give unto your servants that which is just and equal; knowing that ye also have a Master in heaven."
-    },
-    {
-      "reference": "1 Thessalonians 1:1",
-      "text": "Paul, and Silvanus, and Timotheus, unto the church of the Thessalonians which is in God the Father and in the Lord Jesus Christ: Grace be unto you, and peace, from God our Father, and the Lord Jesus Christ."
-    },
-    {
-      "reference": "1 Thessalonians 2:1",
-      "text": "For yourselves, brethren, know our entrance in unto you, that it was not in vain:"
-    },
-    {
-      "reference": "1 Thessalonians 3:1",
-      "text": "Wherefore when we could no longer forbear, we thought it good to be left at Athens alone;"
-    },
-    {
-      "reference": "1 Thessalonians 4:1",
-      "text": "Furthermore then we beseech you, brethren, and exhort you by the Lord Jesus, that as ye have received of us how ye ought to walk and to please God, so ye would abound more and more."
-    },
-    {
-      "reference": "1 Thessalonians 5:1",
-      "text": "But of the times and the seasons, brethren, ye have no need that I write unto you."
-    },
-    {
-      "reference": "2 Thessalonians 1:1",
-      "text": "Paul, and Silvanus, and Timotheus, unto the church of the Thessalonians in God our Father and the Lord Jesus Christ:"
-    },
-    {
-      "reference": "2 Thessalonians 2:1",
-      "text": "Now we beseech you, brethren, by the coming of our Lord Jesus Christ, and by our gathering together unto him,"
-    },
-    {
-      "reference": "2 Thessalonians 3:1",
-      "text": "Finally, brethren, pray for us, that the word of the Lord may have free course, and be glorified, even as it is with you:"
-    },
-    {
-      "reference": "1 Timothy 1:1",
-      "text": "Paul, an apostle of Jesus Christ by the commandment of God our Saviour, and Lord Jesus Christ, which is our hope;"
-    },
-    {
-      "reference": "1 Timothy 2:1",
-      "text": "I exhort therefore, that, first of all, supplications, prayers, intercessions, and giving of thanks, be made for all men;"
-    },
-    {
-      "reference": "1 Timothy 3:1",
-      "text": "This is a true saying, If a man desire the office of a bishop, he desireth a good work."
-    },
-    {
-      "reference": "1 Timothy 4:1",
-      "text": "Now the Spirit speaketh expressly, that in the latter times some shall depart from the faith, giving heed to seducing spirits, and doctrines of devils;"
-    },
-    {
-      "reference": "1 Timothy 5:1",
-      "text": "Rebuke not an elder, but intreat him as a father; and the younger men as brethren;"
-    },
-    {
-      "reference": "1 Timothy 6:1",
-      "text": "Let as many servants as are under the yoke count their own masters worthy of all honour, that the name of God and his doctrine be not blasphemed."
-    },
-    {
-      "reference": "2 Timothy 1:1",
-      "text": "Paul, an apostle of Jesus Christ by the will of God, according to the promise of life which is in Christ Jesus,"
-    },
-    {
-      "reference": "2 Timothy 2:1",
-      "text": "Thou therefore, my son, be strong in the grace that is in Christ Jesus."
-    },
-    {
-      "reference": "2 Timothy 3:1",
-      "text": "This know also, that in the last days perilous times shall come."
-    },
-    {
-      "reference": "2 Timothy 4:1",
-      "text": "I charge thee therefore before God, and the Lord Jesus Christ, who shall judge the quick and the dead at his appearing and his kingdom;"
-    },
-    {
-      "reference": "Titus 1:1",
-      "text": "Paul, a servant of God, and an apostle of Jesus Christ, according to the faith of God’s elect, and the acknowledging of the truth which is after godliness;"
-    },
-    {
-      "reference": "Titus 2:1",
-      "text": "But speak thou the things which become sound doctrine:"
-    },
-    {
-      "reference": "Titus 3:1",
-      "text": "Put them in mind to be subject to principalities and powers, to obey magistrates, to be ready to every good work,"
-    },
-    {
-      "reference": "Philemon 1:1",
-      "text": "Paul, a prisoner of Jesus Christ, and Timothy our brother, unto Philemon our dearly beloved, and fellowlabourer,"
-    },
-    {
-      "reference": "Hebrews 1:1",
-      "text": "God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets,"
-    },
-    {
-      "reference": "Hebrews 2:1",
-      "text": "Therefore we ought to give the more earnest heed to the things which we have heard, lest at any time we should let them slip."
-    },
-    {
-      "reference": "Hebrews 3:1",
-      "text": "Wherefore, holy brethren, partakers of the heavenly calling, consider the Apostle and High Priest of our profession, Christ Jesus;"
-    },
-    {
-      "reference": "Hebrews 4:1",
-      "text": "Let us therefore fear, lest, a promise being left us of entering into his rest, any of you should seem to come short of it."
-    },
-    {
-      "reference": "Hebrews 5:1",
-      "text": "For every high priest taken from among men is ordained for men in things pertaining to God, that he may offer both gifts and sacrifices for sins:"
-    },
-    {
-      "reference": "Hebrews 6:1",
-      "text": "Therefore leaving the principles of the doctrine of Christ, let us go on unto perfection; not laying again the foundation of repentance from dead works, and of faith toward God,"
-    },
-    {
-      "reference": "Hebrews 7:1",
-      "text": "For this Melchisedec, king of Salem, priest of the most high God, who met Abraham returning from the slaughter of the kings, and blessed him;"
-    },
-    {
-      "reference": "Hebrews 8:1",
-      "text": "Now of the things which we have spoken this is the sum: We have such an high priest, who is set on the right hand of the throne of the Majesty in the heavens;"
-    },
-    {
-      "reference": "Hebrews 9:1",
-      "text": "Then verily the first covenant had also ordinances of divine service, and a worldly sanctuary."
-    },
-    {
-      "reference": "Hebrews 10:1",
-      "text": "For the law having a shadow of good things to come, and not the very image of the things, can never with those sacrifices which they offered year by year continually make the comers thereunto perfect."
+      "reference": "Colossians 3:15",
+      "text": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+      "theme": "peace"
     },
     {
       "reference": "Hebrews 11:1",
-      "text": "Now faith is the substance of things hoped for, the evidence of things not seen."
+      "text": "Now faith is the substance of things hoped for, the evidence of things not seen.",
+      "theme": "faith"
     },
     {
-      "reference": "Hebrews 12:1",
-      "text": "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us , and let us run with patience the race that is set before us,"
+      "reference": "Hebrews 12:1-3",
+      "text": "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us , and let us run with patience the race that is set before us, Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God. For consider him that endured such contradiction of sinners against himself, lest ye be wearied and faint in your minds.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Hebrews 13:1",
-      "text": "Let brotherly love continue."
+      "reference": "1 Peter 5:7",
+      "text": "Casting all your care upon him; for he careth for you.",
+      "theme": "encouragement"
     },
     {
-      "reference": "James 1:1",
-      "text": "James, a servant of God and of the Lord Jesus Christ, to the twelve tribes which are scattered abroad, greeting."
+      "reference": "2 Thessalonians 3:16",
+      "text": "Now the Lord of peace himself give you peace always by all means. The Lord be with you all.",
+      "theme": "peace"
     },
     {
-      "reference": "James 2:1",
-      "text": "My brethren, have not the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons."
+      "reference": "Hebrews 11:6",
+      "text": "But without faith it is impossible to please him : for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.",
+      "theme": "faith"
     },
     {
-      "reference": "James 3:1",
-      "text": "My brethren, be not many masters, knowing that we shall receive the greater condemnation."
+      "reference": "James 1:2-5",
+      "text": "My brethren, count it all joy when ye fall into divers temptations; Knowing this , that the trying of your faith worketh patience. But let patience have her perfect work, that ye may be perfect and entire, wanting nothing. If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+      "theme": "perseverance"
     },
     {
-      "reference": "James 4:1",
-      "text": "From whence come wars and fightings among you? come they not hence, even of your lusts that war in your members?"
+      "reference": "Psalm 139:13-14",
+      "text": "For thou hast possessed my reins: thou hast covered me in my mother’s womb. I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.",
+      "theme": "encouragement"
     },
     {
-      "reference": "James 5:1",
-      "text": "Go to now, ye rich men, weep and howl for your miseries that shall come upon you ."
+      "reference": "Numbers 6:24-26",
+      "text": "The LORD bless thee, and keep thee: The LORD make his face shine upon thee, and be gracious unto thee: The LORD lift up his countenance upon thee, and give thee peace.",
+      "theme": "peace"
     },
     {
-      "reference": "1 Peter 1:1",
-      "text": "Peter, an apostle of Jesus Christ, to the strangers scattered throughout Pontus, Galatia, Cappadocia, Asia, and Bithynia,"
+      "reference": "1 John 5:14-15",
+      "text": "And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us: And if we know that he hear us, whatsoever we ask, we know that we have the petitions that we desired of him.",
+      "theme": "faith"
     },
     {
-      "reference": "1 Peter 2:1",
-      "text": "Wherefore laying aside all malice, and all guile, and hypocrisies, and envies, and all evil speakings,"
+      "reference": "James 1:12",
+      "text": "Blessed is the man that endureth temptation: for when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him.",
+      "theme": "perseverance"
     },
     {
-      "reference": "1 Peter 3:1",
-      "text": "Likewise, ye wives, be in subjection to your own husbands; that, if any obey not the word, they also may without the word be won by the conversation of the wives;"
+      "reference": "Psalm 23:1-3",
+      "text": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+      "theme": "encouragement"
     },
     {
-      "reference": "1 Peter 4:1",
-      "text": "Forasmuch then as Christ hath suffered for us in the flesh, arm yourselves likewise with the same mind: for he that hath suffered in the flesh hath ceased from sin;"
+      "reference": "Psalm 4:8",
+      "text": "I will both lay me down in peace, and sleep: for thou, LORD , only makest me dwell in safety.",
+      "theme": "peace"
     },
     {
-      "reference": "1 Peter 5:1",
-      "text": "The elders which are among you I exhort, who am also an elder, and a witness of the sufferings of Christ, and also a partaker of the glory that shall be revealed:"
+      "reference": "Psalm 9:9-10",
+      "text": "The LORD also will be a refuge for the oppressed, a refuge in times of trouble. And they that know thy name will put their trust in thee: for thou, LORD , hast not forsaken them that seek thee.",
+      "theme": "faith"
     },
     {
-      "reference": "2 Peter 1:1",
-      "text": "Simon Peter, a servant and an apostle of Jesus Christ, to them that have obtained like precious faith with us through the righteousness of God and our Saviour Jesus Christ:"
+      "reference": "Psalm 27:13-14",
+      "text": "I had fainted , unless I had believed to see the goodness of the LORD in the land of the living. Wait on the LORD : be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD .",
+      "theme": "perseverance"
     },
     {
-      "reference": "2 Peter 2:1",
-      "text": "But there were false prophets also among the people, even as there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them, and bring upon themselves swift destruction."
+      "reference": "Psalm 27:1",
+      "text": "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+      "theme": "encouragement"
     },
     {
-      "reference": "2 Peter 3:1",
-      "text": "This second epistle, beloved, I now write unto you; in both which I stir up your pure minds by way of remembrance:"
+      "reference": "Psalm 23:4-6",
+      "text": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over. Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.",
+      "theme": "peace"
     },
     {
-      "reference": "1 John 1:1",
-      "text": "That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, of the Word of life;"
+      "reference": "Psalm 37:3-5",
+      "text": "Trust in the LORD , and do good; so shalt thou dwell in the land, and verily thou shalt be fed. Delight thyself also in the LORD ; and he shall give thee the desires of thine heart. Commit thy way unto the LORD ; trust also in him; and he shall bring it to pass.",
+      "theme": "faith"
     },
     {
-      "reference": "1 John 2:1",
-      "text": "My little children, these things write I unto you, that ye sin not. And if any man sin, we have an advocate with the Father, Jesus Christ the righteous:"
+      "reference": "Psalm 31:24",
+      "text": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD .",
+      "theme": "perseverance"
     },
     {
-      "reference": "1 John 3:1",
-      "text": "Behold, what manner of love the Father hath bestowed upon us, that we should be called the sons of God: therefore the world knoweth us not, because it knew him not."
+      "reference": "Psalm 34:8",
+      "text": "O taste and see that the LORD is good: blessed is the man that trusteth in him.",
+      "theme": "encouragement"
     },
     {
-      "reference": "1 John 4:1",
-      "text": "Beloved, believe not every spirit, but try the spirits whether they are of God: because many false prophets are gone out into the world."
+      "reference": "Psalm 29:11",
+      "text": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
+      "theme": "peace"
     },
     {
-      "reference": "1 John 5:1",
-      "text": "Whosoever believeth that Jesus is the Christ is born of God: and every one that loveth him that begat loveth him also that is begotten of him."
+      "reference": "Psalm 56:3-4",
+      "text": "What time I am afraid, I will trust in thee. In God I will praise his word, in God I have put my trust; I will not fear what flesh can do unto me.",
+      "theme": "faith"
     },
     {
-      "reference": "2 John 1:1",
-      "text": "The elder unto the elect lady and her children, whom I love in the truth; and not I only, but also all they that have known the truth;"
+      "reference": "Psalm 37:23-24",
+      "text": "The steps of a good man are ordered by the LORD : and he delighteth in his way. Though he fall, he shall not be utterly cast down: for the LORD upholdeth him with his hand.",
+      "theme": "perseverance"
     },
     {
-      "reference": "3 John 1:1",
-      "text": "The elder unto the wellbeloved Gaius, whom I love in the truth."
+      "reference": "Psalm 46:1",
+      "text": "God is our refuge and strength, a very present help in trouble.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Jude 1:1",
-      "text": "Jude, the servant of Jesus Christ, and brother of James, to them that are sanctified by God the Father, and preserved in Jesus Christ, and called:"
+      "reference": "Psalm 46:10",
+      "text": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+      "theme": "peace"
     },
     {
-      "reference": "Revelation 1:1",
-      "text": "The Revelation of Jesus Christ, which God gave unto him, to shew unto his servants things which must shortly come to pass; and he sent and signified it by his angel unto his servant John:"
+      "reference": "Psalm 91:1-2",
+      "text": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD , He is my refuge and my fortress: my God; in him will I trust.",
+      "theme": "faith"
     },
     {
-      "reference": "Revelation 2:1",
-      "text": "Unto the angel of the church of Ephesus write; These things saith he that holdeth the seven stars in his right hand, who walketh in the midst of the seven golden candlesticks;"
+      "reference": "Psalm 40:1-3",
+      "text": "I waited patiently for the LORD ; and he inclined unto me, and heard my cry. He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings. And he hath put a new song in my mouth, even praise unto our God: many shall see it , and fear, and shall trust in the LORD .",
+      "theme": "perseverance"
     },
     {
-      "reference": "Revelation 3:1",
-      "text": "And unto the angel of the church in Sardis write; These things saith he that hath the seven Spirits of God, and the seven stars; I know thy works, that thou hast a name that thou livest, and art dead."
+      "reference": "Psalm 103:1-5",
+      "text": "Bless the LORD , O my soul: and all that is within me, bless his holy name. Bless the LORD , O my soul, and forget not all his benefits: Who forgiveth all thine iniquities; who healeth all thy diseases; Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies; Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle’s.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Revelation 4:1",
-      "text": "After this I looked, and, behold, a door was opened in heaven: and the first voice which I heard was as it were of a trumpet talking with me; which said, Come up hither, and I will shew thee things which must be hereafter."
+      "reference": "Psalm 55:22",
+      "text": "Cast thy burden upon the LORD , and he shall sustain thee: he shall never suffer the righteous to be moved.",
+      "theme": "peace"
     },
     {
-      "reference": "Revelation 5:1",
-      "text": "And I saw in the right hand of him that sat on the throne a book written within and on the backside, sealed with seven seals."
+      "reference": "Proverbs 3:5-6",
+      "text": "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+      "theme": "faith"
     },
     {
-      "reference": "Revelation 6:1",
-      "text": "And I saw when the Lamb opened one of the seals, and I heard, as it were the noise of thunder, one of the four beasts saying, Come and see."
+      "reference": "Psalm 73:26",
+      "text": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Revelation 7:1",
-      "text": "And after these things I saw four angels standing on the four corners of the earth, holding the four winds of the earth, that the wind should not blow on the earth, nor on the sea, nor on any tree."
+      "reference": "Psalm 121:1-2",
+      "text": "I will lift up mine eyes unto the hills, from whence cometh my help. My help cometh from the LORD , which made heaven and earth.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Revelation 8:1",
-      "text": "And when he had opened the seventh seal, there was silence in heaven about the space of half an hour."
+      "reference": "Psalm 62:5-8",
+      "text": "My soul, wait thou only upon God; for my expectation is from him. He only is my rock and my salvation: he is my defence; I shall not be moved. In God is my salvation and my glory: the rock of my strength, and my refuge, is in God. Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us. Selah.",
+      "theme": "peace"
     },
     {
-      "reference": "Revelation 9:1",
-      "text": "And the fifth angel sounded, and I saw a star fall from heaven unto the earth: and to him was given the key of the bottomless pit."
+      "reference": "Isaiah 12:2",
+      "text": "Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation.",
+      "theme": "faith"
     },
     {
-      "reference": "Revelation 10:1",
-      "text": "And I saw another mighty angel come down from heaven, clothed with a cloud: and a rainbow was upon his head, and his face was as it were the sun, and his feet as pillars of fire:"
+      "reference": "Psalm 126:5-6",
+      "text": "They that sow in tears shall reap in joy. He that goeth forth and weepeth, bearing precious seed, shall doubtless come again with rejoicing, bringing his sheaves with him .",
+      "theme": "perseverance"
     },
     {
-      "reference": "Revelation 11:1",
-      "text": "And there was given me a reed like unto a rod: and the angel stood, saying, Rise, and measure the temple of God, and the altar, and them that worship therein."
+      "reference": "Isaiah 40:28-31",
+      "text": "Hast thou not known? hast thou not heard, that the everlasting God, the LORD , the Creator of the ends of the earth, fainteth not, neither is weary? there is no searching of his understanding. He giveth power to the faint; and to them that have no might he increaseth strength. Even the youths shall faint and be weary, and the young men shall utterly fall: But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Revelation 12:1",
-      "text": "And there appeared a great wonder in heaven; a woman clothed with the sun, and the moon under her feet, and upon her head a crown of twelve stars:"
+      "reference": "Psalm 94:18-19",
+      "text": "When I said, My foot slippeth; thy mercy, O LORD , held me up. In the multitude of my thoughts within me thy comforts delight my soul.",
+      "theme": "peace"
     },
     {
-      "reference": "Revelation 13:1",
-      "text": "And I stood upon the sand of the sea, and saw a beast rise up out of the sea, having seven heads and ten horns, and upon his horns ten crowns, and upon his heads the name of blasphemy."
+      "reference": "Jeremiah 17:7-8",
+      "text": "Blessed is the man that trusteth in the LORD , and whose hope the LORD is. For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river, and shall not see when heat cometh, but her leaf shall be green; and shall not be careful in the year of drought, neither shall cease from yielding fruit.",
+      "theme": "faith"
     },
     {
-      "reference": "Revelation 14:1",
-      "text": "And I looked, and, lo, a Lamb stood on the mount Sion, and with him an hundred forty and four thousand, having his Father’s name written in their foreheads."
+      "reference": "Proverbs 16:3",
+      "text": "Commit thy works unto the LORD , and thy thoughts shall be established.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Revelation 15:1",
-      "text": "And I saw another sign in heaven, great and marvellous, seven angels having the seven last plagues; for in them is filled up the wrath of God."
+      "reference": "Isaiah 41:10",
+      "text": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Revelation 16:1",
-      "text": "And I heard a great voice out of the temple saying to the seven angels, Go your ways, and pour out the vials of the wrath of God upon the earth."
+      "reference": "Psalm 119:165",
+      "text": "Great peace have they which love thy law: and nothing shall offend them.",
+      "theme": "peace"
     },
     {
-      "reference": "Revelation 17:1",
-      "text": "And there came one of the seven angels which had the seven vials, and talked with me, saying unto me, Come hither; I will shew unto thee the judgment of the great whore that sitteth upon many waters:"
+      "reference": "Habakkuk 3:17-19",
+      "text": "Although the fig tree shall not blossom, neither shall fruit be in the vines; the labour of the olive shall fail, and the fields shall yield no meat; the flock shall be cut off from the fold, and there shall be no herd in the stalls: Yet I will rejoice in the LORD , I will joy in the God of my salvation. The LORD God is my strength, and he will make my feet like hinds’ feet , and he will make me to walk upon mine high places. To the chief singer on my stringed instruments.",
+      "theme": "faith"
     },
     {
-      "reference": "Revelation 18:1",
-      "text": "And after these things I saw another angel come down from heaven, having great power; and the earth was lightened with his glory."
+      "reference": "Isaiah 43:1-2",
+      "text": "But now thus saith the LORD that created thee, O Jacob, and he that formed thee, O Israel, Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine. When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee: when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.",
+      "theme": "perseverance"
     },
     {
-      "reference": "Revelation 19:1",
-      "text": "And after these things I heard a great voice of much people in heaven, saying, Alleluia; Salvation, and glory, and honour, and power, unto the Lord our God:"
+      "reference": "Lamentations 3:22-24",
+      "text": "It is of the LORD’s mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness. The LORD is my portion, saith my soul; therefore will I hope in him.",
+      "theme": "encouragement"
     },
     {
-      "reference": "Revelation 20:1",
-      "text": "And I saw an angel come down from heaven, having the key of the bottomless pit and a great chain in his hand."
+      "reference": "Isaiah 26:3-4",
+      "text": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength:",
+      "theme": "peace"
     },
     {
-      "reference": "Revelation 21:1",
-      "text": "And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea."
+      "reference": "Mark 9:23-24",
+      "text": "Jesus said unto him, If thou canst believe, all things are possible to him that believeth. And straightway the father of the child cried out, and said with tears, Lord, I believe; help thou mine unbelief.",
+      "theme": "faith"
     },
     {
-      "reference": "Revelation 22:1",
-      "text": "And he shewed me a pure river of water of life, clear as crystal, proceeding out of the throne of God and of the Lamb."
+      "reference": "Micah 6:8",
+      "text": "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Matthew 11:28-30",
+      "text": "Come unto me, all ye that labour and are heavy laden, and I will give you rest. Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. For my yoke is easy, and my burden is light.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Isaiah 32:17",
+      "text": "And the work of righteousness shall be peace; and the effect of righteousness quietness and assurance for ever.",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 6:35",
+      "text": "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Romans 5:3-5",
+      "text": "And not only so , but we glory in tribulations also: knowing that tribulation worketh patience; And patience, experience; and experience, hope: And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "John 16:33",
+      "text": "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Matthew 6:25-26",
+      "text": "Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment? Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them. Are ye not much better than they?",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 11:25-26",
+      "text": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?",
+      "theme": "faith"
+    },
+    {
+      "reference": "Romans 12:11-12",
+      "text": "Not slothful in business; fervent in spirit; serving the Lord; Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Romans 8:38-39",
+      "text": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Matthew 6:33-34",
+      "text": "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you. Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself. Sufficient unto the day is the evil thereof.",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 15:4-5",
+      "text": "Abide in me, and I in you. As the branch cannot bear fruit of itself, except it abide in the vine; no more can ye, except ye abide in me. I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+      "theme": "faith"
+    },
+    {
+      "reference": "1 Corinthians 9:24-25",
+      "text": "Know ye not that they which run in a race run all, but one receiveth the prize? So run, that ye may obtain. And every man that striveth for the mastery is temperate in all things. Now they do it to obtain a corruptible crown; but we an incorruptible.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Romans 15:13",
+      "text": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "John 14:27",
+      "text": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Romans 8:28",
+      "text": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+      "theme": "faith"
+    },
+    {
+      "reference": "1 Corinthians 15:58",
+      "text": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "2 Corinthians 1:3-4",
+      "text": "Blessed be God, even the Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort; Who comforteth us in all our tribulation, that we may be able to comfort them which are in any trouble, by the comfort wherewith we ourselves are comforted of God.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Romans 5:1-2",
+      "text": "Therefore being justified by faith, we have peace with God through our Lord Jesus Christ: By whom also we have access by faith into this grace wherein we stand, and rejoice in hope of the glory of God.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Romans 10:9-10",
+      "text": "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved. For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation.",
+      "theme": "faith"
+    },
+    {
+      "reference": "1 Corinthians 16:13-14",
+      "text": "Watch ye, stand fast in the faith, quit you like men, be strong. Let all your things be done with charity.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Ephesians 3:20-21",
+      "text": "Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us, Unto him be glory in the church by Christ Jesus throughout all ages, world without end. Amen.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Romans 12:18",
+      "text": "If it be possible, as much as lieth in you, live peaceably with all men.",
+      "theme": "peace"
+    },
+    {
+      "reference": "2 Corinthians 5:7",
+      "text": "(For we walk by faith, not by sight:)",
+      "theme": "faith"
+    },
+    {
+      "reference": "2 Corinthians 4:16-18",
+      "text": "For which cause we faint not; but though our outward man perish, yet the inward man is renewed day by day. For our light affliction, which is but for a moment, worketh for us a far more exceeding and eternal weight of glory; While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Philippians 1:6",
+      "text": "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Philippians 4:6-7",
+      "text": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Galatians 2:20",
+      "text": "I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Galatians 6:9-10",
+      "text": "And let us not be weary in well doing: for in due season we shall reap, if we faint not. As we have therefore opportunity, let us do good unto all men , especially unto them who are of the household of faith.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "1 Thessalonians 5:11",
+      "text": "Wherefore comfort yourselves together, and edify one another, even as also ye do.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Philippians 4:8-9",
+      "text": "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things. Those things, which ye have both learned, and received, and heard, and seen in me, do: and the God of peace shall be with you.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Ephesians 2:8-10",
+      "text": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast. For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Philippians 3:13-14",
+      "text": "Brethren, I count not myself to have apprehended: but this one thing I do , forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Hebrews 13:5-6",
+      "text": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee. So that we may boldly say, The Lord is my helper, and I will not fear what man shall do unto me.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Colossians 3:15",
+      "text": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Hebrews 11:1",
+      "text": "Now faith is the substance of things hoped for, the evidence of things not seen.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Hebrews 12:1-3",
+      "text": "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us , and let us run with patience the race that is set before us, Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God. For consider him that endured such contradiction of sinners against himself, lest ye be wearied and faint in your minds.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "1 Peter 5:7",
+      "text": "Casting all your care upon him; for he careth for you.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "2 Thessalonians 3:16",
+      "text": "Now the Lord of peace himself give you peace always by all means. The Lord be with you all.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Hebrews 11:6",
+      "text": "But without faith it is impossible to please him : for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.",
+      "theme": "faith"
+    },
+    {
+      "reference": "James 1:2-5",
+      "text": "My brethren, count it all joy when ye fall into divers temptations; Knowing this , that the trying of your faith worketh patience. But let patience have her perfect work, that ye may be perfect and entire, wanting nothing. If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 139:13-14",
+      "text": "For thou hast possessed my reins: thou hast covered me in my mother’s womb. I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Numbers 6:24-26",
+      "text": "The LORD bless thee, and keep thee: The LORD make his face shine upon thee, and be gracious unto thee: The LORD lift up his countenance upon thee, and give thee peace.",
+      "theme": "peace"
+    },
+    {
+      "reference": "1 John 5:14-15",
+      "text": "And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us: And if we know that he hear us, whatsoever we ask, we know that we have the petitions that we desired of him.",
+      "theme": "faith"
+    },
+    {
+      "reference": "James 1:12",
+      "text": "Blessed is the man that endureth temptation: for when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 23:1-3",
+      "text": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 4:8",
+      "text": "I will both lay me down in peace, and sleep: for thou, LORD , only makest me dwell in safety.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 9:9-10",
+      "text": "The LORD also will be a refuge for the oppressed, a refuge in times of trouble. And they that know thy name will put their trust in thee: for thou, LORD , hast not forsaken them that seek thee.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 27:13-14",
+      "text": "I had fainted , unless I had believed to see the goodness of the LORD in the land of the living. Wait on the LORD : be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 27:1",
+      "text": "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 23:4-6",
+      "text": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over. Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 37:3-5",
+      "text": "Trust in the LORD , and do good; so shalt thou dwell in the land, and verily thou shalt be fed. Delight thyself also in the LORD ; and he shall give thee the desires of thine heart. Commit thy way unto the LORD ; trust also in him; and he shall bring it to pass.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 31:24",
+      "text": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 34:8",
+      "text": "O taste and see that the LORD is good: blessed is the man that trusteth in him.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 29:11",
+      "text": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 56:3-4",
+      "text": "What time I am afraid, I will trust in thee. In God I will praise his word, in God I have put my trust; I will not fear what flesh can do unto me.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 37:23-24",
+      "text": "The steps of a good man are ordered by the LORD : and he delighteth in his way. Though he fall, he shall not be utterly cast down: for the LORD upholdeth him with his hand.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 46:1",
+      "text": "God is our refuge and strength, a very present help in trouble.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 46:10",
+      "text": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 91:1-2",
+      "text": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD , He is my refuge and my fortress: my God; in him will I trust.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 40:1-3",
+      "text": "I waited patiently for the LORD ; and he inclined unto me, and heard my cry. He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings. And he hath put a new song in my mouth, even praise unto our God: many shall see it , and fear, and shall trust in the LORD .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 103:1-5",
+      "text": "Bless the LORD , O my soul: and all that is within me, bless his holy name. Bless the LORD , O my soul, and forget not all his benefits: Who forgiveth all thine iniquities; who healeth all thy diseases; Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies; Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle’s.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 55:22",
+      "text": "Cast thy burden upon the LORD , and he shall sustain thee: he shall never suffer the righteous to be moved.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Proverbs 3:5-6",
+      "text": "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 73:26",
+      "text": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 121:1-2",
+      "text": "I will lift up mine eyes unto the hills, from whence cometh my help. My help cometh from the LORD , which made heaven and earth.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 62:5-8",
+      "text": "My soul, wait thou only upon God; for my expectation is from him. He only is my rock and my salvation: he is my defence; I shall not be moved. In God is my salvation and my glory: the rock of my strength, and my refuge, is in God. Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us. Selah.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Isaiah 12:2",
+      "text": "Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 126:5-6",
+      "text": "They that sow in tears shall reap in joy. He that goeth forth and weepeth, bearing precious seed, shall doubtless come again with rejoicing, bringing his sheaves with him .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Isaiah 40:28-31",
+      "text": "Hast thou not known? hast thou not heard, that the everlasting God, the LORD , the Creator of the ends of the earth, fainteth not, neither is weary? there is no searching of his understanding. He giveth power to the faint; and to them that have no might he increaseth strength. Even the youths shall faint and be weary, and the young men shall utterly fall: But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 94:18-19",
+      "text": "When I said, My foot slippeth; thy mercy, O LORD , held me up. In the multitude of my thoughts within me thy comforts delight my soul.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Jeremiah 17:7-8",
+      "text": "Blessed is the man that trusteth in the LORD , and whose hope the LORD is. For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river, and shall not see when heat cometh, but her leaf shall be green; and shall not be careful in the year of drought, neither shall cease from yielding fruit.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Proverbs 16:3",
+      "text": "Commit thy works unto the LORD , and thy thoughts shall be established.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Isaiah 41:10",
+      "text": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 119:165",
+      "text": "Great peace have they which love thy law: and nothing shall offend them.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Habakkuk 3:17-19",
+      "text": "Although the fig tree shall not blossom, neither shall fruit be in the vines; the labour of the olive shall fail, and the fields shall yield no meat; the flock shall be cut off from the fold, and there shall be no herd in the stalls: Yet I will rejoice in the LORD , I will joy in the God of my salvation. The LORD God is my strength, and he will make my feet like hinds’ feet , and he will make me to walk upon mine high places. To the chief singer on my stringed instruments.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Isaiah 43:1-2",
+      "text": "But now thus saith the LORD that created thee, O Jacob, and he that formed thee, O Israel, Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine. When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee: when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Lamentations 3:22-24",
+      "text": "It is of the LORD’s mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness. The LORD is my portion, saith my soul; therefore will I hope in him.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Isaiah 26:3-4",
+      "text": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength:",
+      "theme": "peace"
+    },
+    {
+      "reference": "Mark 9:23-24",
+      "text": "Jesus said unto him, If thou canst believe, all things are possible to him that believeth. And straightway the father of the child cried out, and said with tears, Lord, I believe; help thou mine unbelief.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Micah 6:8",
+      "text": "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Matthew 11:28-30",
+      "text": "Come unto me, all ye that labour and are heavy laden, and I will give you rest. Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. For my yoke is easy, and my burden is light.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Isaiah 32:17",
+      "text": "And the work of righteousness shall be peace; and the effect of righteousness quietness and assurance for ever.",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 6:35",
+      "text": "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Romans 5:3-5",
+      "text": "And not only so , but we glory in tribulations also: knowing that tribulation worketh patience; And patience, experience; and experience, hope: And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "John 16:33",
+      "text": "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Matthew 6:25-26",
+      "text": "Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment? Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them. Are ye not much better than they?",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 11:25-26",
+      "text": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?",
+      "theme": "faith"
+    },
+    {
+      "reference": "Romans 12:11-12",
+      "text": "Not slothful in business; fervent in spirit; serving the Lord; Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Romans 8:38-39",
+      "text": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Matthew 6:33-34",
+      "text": "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you. Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself. Sufficient unto the day is the evil thereof.",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 15:4-5",
+      "text": "Abide in me, and I in you. As the branch cannot bear fruit of itself, except it abide in the vine; no more can ye, except ye abide in me. I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+      "theme": "faith"
+    },
+    {
+      "reference": "1 Corinthians 9:24-25",
+      "text": "Know ye not that they which run in a race run all, but one receiveth the prize? So run, that ye may obtain. And every man that striveth for the mastery is temperate in all things. Now they do it to obtain a corruptible crown; but we an incorruptible.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Romans 15:13",
+      "text": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "John 14:27",
+      "text": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Romans 8:28",
+      "text": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+      "theme": "faith"
+    },
+    {
+      "reference": "1 Corinthians 15:58",
+      "text": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "2 Corinthians 1:3-4",
+      "text": "Blessed be God, even the Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort; Who comforteth us in all our tribulation, that we may be able to comfort them which are in any trouble, by the comfort wherewith we ourselves are comforted of God.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Romans 5:1-2",
+      "text": "Therefore being justified by faith, we have peace with God through our Lord Jesus Christ: By whom also we have access by faith into this grace wherein we stand, and rejoice in hope of the glory of God.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Romans 10:9-10",
+      "text": "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved. For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation.",
+      "theme": "faith"
+    },
+    {
+      "reference": "1 Corinthians 16:13-14",
+      "text": "Watch ye, stand fast in the faith, quit you like men, be strong. Let all your things be done with charity.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Ephesians 3:20-21",
+      "text": "Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us, Unto him be glory in the church by Christ Jesus throughout all ages, world without end. Amen.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Romans 12:18",
+      "text": "If it be possible, as much as lieth in you, live peaceably with all men.",
+      "theme": "peace"
+    },
+    {
+      "reference": "2 Corinthians 5:7",
+      "text": "(For we walk by faith, not by sight:)",
+      "theme": "faith"
+    },
+    {
+      "reference": "2 Corinthians 4:16-18",
+      "text": "For which cause we faint not; but though our outward man perish, yet the inward man is renewed day by day. For our light affliction, which is but for a moment, worketh for us a far more exceeding and eternal weight of glory; While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Philippians 1:6",
+      "text": "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Philippians 4:6-7",
+      "text": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Galatians 2:20",
+      "text": "I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Galatians 6:9-10",
+      "text": "And let us not be weary in well doing: for in due season we shall reap, if we faint not. As we have therefore opportunity, let us do good unto all men , especially unto them who are of the household of faith.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "1 Thessalonians 5:11",
+      "text": "Wherefore comfort yourselves together, and edify one another, even as also ye do.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Philippians 4:8-9",
+      "text": "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things. Those things, which ye have both learned, and received, and heard, and seen in me, do: and the God of peace shall be with you.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Ephesians 2:8-10",
+      "text": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast. For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Philippians 3:13-14",
+      "text": "Brethren, I count not myself to have apprehended: but this one thing I do , forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Hebrews 13:5-6",
+      "text": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee. So that we may boldly say, The Lord is my helper, and I will not fear what man shall do unto me.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Colossians 3:15",
+      "text": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Hebrews 11:1",
+      "text": "Now faith is the substance of things hoped for, the evidence of things not seen.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Hebrews 12:1-3",
+      "text": "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us , and let us run with patience the race that is set before us, Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God. For consider him that endured such contradiction of sinners against himself, lest ye be wearied and faint in your minds.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "1 Peter 5:7",
+      "text": "Casting all your care upon him; for he careth for you.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "2 Thessalonians 3:16",
+      "text": "Now the Lord of peace himself give you peace always by all means. The Lord be with you all.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Hebrews 11:6",
+      "text": "But without faith it is impossible to please him : for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.",
+      "theme": "faith"
+    },
+    {
+      "reference": "James 1:2-5",
+      "text": "My brethren, count it all joy when ye fall into divers temptations; Knowing this , that the trying of your faith worketh patience. But let patience have her perfect work, that ye may be perfect and entire, wanting nothing. If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 139:13-14",
+      "text": "For thou hast possessed my reins: thou hast covered me in my mother’s womb. I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Numbers 6:24-26",
+      "text": "The LORD bless thee, and keep thee: The LORD make his face shine upon thee, and be gracious unto thee: The LORD lift up his countenance upon thee, and give thee peace.",
+      "theme": "peace"
+    },
+    {
+      "reference": "1 John 5:14-15",
+      "text": "And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us: And if we know that he hear us, whatsoever we ask, we know that we have the petitions that we desired of him.",
+      "theme": "faith"
+    },
+    {
+      "reference": "James 1:12",
+      "text": "Blessed is the man that endureth temptation: for when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 23:1-3",
+      "text": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 4:8",
+      "text": "I will both lay me down in peace, and sleep: for thou, LORD , only makest me dwell in safety.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 9:9-10",
+      "text": "The LORD also will be a refuge for the oppressed, a refuge in times of trouble. And they that know thy name will put their trust in thee: for thou, LORD , hast not forsaken them that seek thee.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 27:13-14",
+      "text": "I had fainted , unless I had believed to see the goodness of the LORD in the land of the living. Wait on the LORD : be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 27:1",
+      "text": "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 23:4-6",
+      "text": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over. Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 37:3-5",
+      "text": "Trust in the LORD , and do good; so shalt thou dwell in the land, and verily thou shalt be fed. Delight thyself also in the LORD ; and he shall give thee the desires of thine heart. Commit thy way unto the LORD ; trust also in him; and he shall bring it to pass.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 31:24",
+      "text": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 34:8",
+      "text": "O taste and see that the LORD is good: blessed is the man that trusteth in him.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 29:11",
+      "text": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 56:3-4",
+      "text": "What time I am afraid, I will trust in thee. In God I will praise his word, in God I have put my trust; I will not fear what flesh can do unto me.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 37:23-24",
+      "text": "The steps of a good man are ordered by the LORD : and he delighteth in his way. Though he fall, he shall not be utterly cast down: for the LORD upholdeth him with his hand.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 46:1",
+      "text": "God is our refuge and strength, a very present help in trouble.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 46:10",
+      "text": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 91:1-2",
+      "text": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD , He is my refuge and my fortress: my God; in him will I trust.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 40:1-3",
+      "text": "I waited patiently for the LORD ; and he inclined unto me, and heard my cry. He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings. And he hath put a new song in my mouth, even praise unto our God: many shall see it , and fear, and shall trust in the LORD .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 103:1-5",
+      "text": "Bless the LORD , O my soul: and all that is within me, bless his holy name. Bless the LORD , O my soul, and forget not all his benefits: Who forgiveth all thine iniquities; who healeth all thy diseases; Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies; Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle’s.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 55:22",
+      "text": "Cast thy burden upon the LORD , and he shall sustain thee: he shall never suffer the righteous to be moved.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Proverbs 3:5-6",
+      "text": "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 73:26",
+      "text": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 121:1-2",
+      "text": "I will lift up mine eyes unto the hills, from whence cometh my help. My help cometh from the LORD , which made heaven and earth.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 62:5-8",
+      "text": "My soul, wait thou only upon God; for my expectation is from him. He only is my rock and my salvation: he is my defence; I shall not be moved. In God is my salvation and my glory: the rock of my strength, and my refuge, is in God. Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us. Selah.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Isaiah 12:2",
+      "text": "Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 126:5-6",
+      "text": "They that sow in tears shall reap in joy. He that goeth forth and weepeth, bearing precious seed, shall doubtless come again with rejoicing, bringing his sheaves with him .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Isaiah 40:28-31",
+      "text": "Hast thou not known? hast thou not heard, that the everlasting God, the LORD , the Creator of the ends of the earth, fainteth not, neither is weary? there is no searching of his understanding. He giveth power to the faint; and to them that have no might he increaseth strength. Even the youths shall faint and be weary, and the young men shall utterly fall: But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 94:18-19",
+      "text": "When I said, My foot slippeth; thy mercy, O LORD , held me up. In the multitude of my thoughts within me thy comforts delight my soul.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Jeremiah 17:7-8",
+      "text": "Blessed is the man that trusteth in the LORD , and whose hope the LORD is. For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river, and shall not see when heat cometh, but her leaf shall be green; and shall not be careful in the year of drought, neither shall cease from yielding fruit.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Proverbs 16:3",
+      "text": "Commit thy works unto the LORD , and thy thoughts shall be established.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Isaiah 41:10",
+      "text": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 119:165",
+      "text": "Great peace have they which love thy law: and nothing shall offend them.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Habakkuk 3:17-19",
+      "text": "Although the fig tree shall not blossom, neither shall fruit be in the vines; the labour of the olive shall fail, and the fields shall yield no meat; the flock shall be cut off from the fold, and there shall be no herd in the stalls: Yet I will rejoice in the LORD , I will joy in the God of my salvation. The LORD God is my strength, and he will make my feet like hinds’ feet , and he will make me to walk upon mine high places. To the chief singer on my stringed instruments.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Isaiah 43:1-2",
+      "text": "But now thus saith the LORD that created thee, O Jacob, and he that formed thee, O Israel, Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine. When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee: when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Lamentations 3:22-24",
+      "text": "It is of the LORD’s mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness. The LORD is my portion, saith my soul; therefore will I hope in him.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Isaiah 26:3-4",
+      "text": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength:",
+      "theme": "peace"
+    },
+    {
+      "reference": "Mark 9:23-24",
+      "text": "Jesus said unto him, If thou canst believe, all things are possible to him that believeth. And straightway the father of the child cried out, and said with tears, Lord, I believe; help thou mine unbelief.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Micah 6:8",
+      "text": "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Matthew 11:28-30",
+      "text": "Come unto me, all ye that labour and are heavy laden, and I will give you rest. Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. For my yoke is easy, and my burden is light.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Isaiah 32:17",
+      "text": "And the work of righteousness shall be peace; and the effect of righteousness quietness and assurance for ever.",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 6:35",
+      "text": "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Romans 5:3-5",
+      "text": "And not only so , but we glory in tribulations also: knowing that tribulation worketh patience; And patience, experience; and experience, hope: And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "John 16:33",
+      "text": "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Matthew 6:25-26",
+      "text": "Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment? Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them. Are ye not much better than they?",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 11:25-26",
+      "text": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?",
+      "theme": "faith"
+    },
+    {
+      "reference": "Romans 12:11-12",
+      "text": "Not slothful in business; fervent in spirit; serving the Lord; Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Romans 8:38-39",
+      "text": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Matthew 6:33-34",
+      "text": "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you. Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself. Sufficient unto the day is the evil thereof.",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 15:4-5",
+      "text": "Abide in me, and I in you. As the branch cannot bear fruit of itself, except it abide in the vine; no more can ye, except ye abide in me. I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+      "theme": "faith"
+    },
+    {
+      "reference": "1 Corinthians 9:24-25",
+      "text": "Know ye not that they which run in a race run all, but one receiveth the prize? So run, that ye may obtain. And every man that striveth for the mastery is temperate in all things. Now they do it to obtain a corruptible crown; but we an incorruptible.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Romans 15:13",
+      "text": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "John 14:27",
+      "text": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Romans 8:28",
+      "text": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+      "theme": "faith"
+    },
+    {
+      "reference": "1 Corinthians 15:58",
+      "text": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "2 Corinthians 1:3-4",
+      "text": "Blessed be God, even the Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort; Who comforteth us in all our tribulation, that we may be able to comfort them which are in any trouble, by the comfort wherewith we ourselves are comforted of God.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Romans 5:1-2",
+      "text": "Therefore being justified by faith, we have peace with God through our Lord Jesus Christ: By whom also we have access by faith into this grace wherein we stand, and rejoice in hope of the glory of God.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Romans 10:9-10",
+      "text": "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved. For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation.",
+      "theme": "faith"
+    },
+    {
+      "reference": "1 Corinthians 16:13-14",
+      "text": "Watch ye, stand fast in the faith, quit you like men, be strong. Let all your things be done with charity.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Ephesians 3:20-21",
+      "text": "Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us, Unto him be glory in the church by Christ Jesus throughout all ages, world without end. Amen.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Romans 12:18",
+      "text": "If it be possible, as much as lieth in you, live peaceably with all men.",
+      "theme": "peace"
+    },
+    {
+      "reference": "2 Corinthians 5:7",
+      "text": "(For we walk by faith, not by sight:)",
+      "theme": "faith"
+    },
+    {
+      "reference": "2 Corinthians 4:16-18",
+      "text": "For which cause we faint not; but though our outward man perish, yet the inward man is renewed day by day. For our light affliction, which is but for a moment, worketh for us a far more exceeding and eternal weight of glory; While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Philippians 1:6",
+      "text": "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Philippians 4:6-7",
+      "text": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Galatians 2:20",
+      "text": "I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Galatians 6:9-10",
+      "text": "And let us not be weary in well doing: for in due season we shall reap, if we faint not. As we have therefore opportunity, let us do good unto all men , especially unto them who are of the household of faith.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "1 Thessalonians 5:11",
+      "text": "Wherefore comfort yourselves together, and edify one another, even as also ye do.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Philippians 4:8-9",
+      "text": "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things. Those things, which ye have both learned, and received, and heard, and seen in me, do: and the God of peace shall be with you.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Ephesians 2:8-10",
+      "text": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast. For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Philippians 3:13-14",
+      "text": "Brethren, I count not myself to have apprehended: but this one thing I do , forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Hebrews 13:5-6",
+      "text": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee. So that we may boldly say, The Lord is my helper, and I will not fear what man shall do unto me.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Colossians 3:15",
+      "text": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Hebrews 11:1",
+      "text": "Now faith is the substance of things hoped for, the evidence of things not seen.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Hebrews 12:1-3",
+      "text": "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us , and let us run with patience the race that is set before us, Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God. For consider him that endured such contradiction of sinners against himself, lest ye be wearied and faint in your minds.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "1 Peter 5:7",
+      "text": "Casting all your care upon him; for he careth for you.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "2 Thessalonians 3:16",
+      "text": "Now the Lord of peace himself give you peace always by all means. The Lord be with you all.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Hebrews 11:6",
+      "text": "But without faith it is impossible to please him : for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.",
+      "theme": "faith"
+    },
+    {
+      "reference": "James 1:2-5",
+      "text": "My brethren, count it all joy when ye fall into divers temptations; Knowing this , that the trying of your faith worketh patience. But let patience have her perfect work, that ye may be perfect and entire, wanting nothing. If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 139:13-14",
+      "text": "For thou hast possessed my reins: thou hast covered me in my mother’s womb. I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Numbers 6:24-26",
+      "text": "The LORD bless thee, and keep thee: The LORD make his face shine upon thee, and be gracious unto thee: The LORD lift up his countenance upon thee, and give thee peace.",
+      "theme": "peace"
+    },
+    {
+      "reference": "1 John 5:14-15",
+      "text": "And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us: And if we know that he hear us, whatsoever we ask, we know that we have the petitions that we desired of him.",
+      "theme": "faith"
+    },
+    {
+      "reference": "James 1:12",
+      "text": "Blessed is the man that endureth temptation: for when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 23:1-3",
+      "text": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 4:8",
+      "text": "I will both lay me down in peace, and sleep: for thou, LORD , only makest me dwell in safety.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 9:9-10",
+      "text": "The LORD also will be a refuge for the oppressed, a refuge in times of trouble. And they that know thy name will put their trust in thee: for thou, LORD , hast not forsaken them that seek thee.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 27:13-14",
+      "text": "I had fainted , unless I had believed to see the goodness of the LORD in the land of the living. Wait on the LORD : be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 27:1",
+      "text": "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 23:4-6",
+      "text": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over. Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 37:3-5",
+      "text": "Trust in the LORD , and do good; so shalt thou dwell in the land, and verily thou shalt be fed. Delight thyself also in the LORD ; and he shall give thee the desires of thine heart. Commit thy way unto the LORD ; trust also in him; and he shall bring it to pass.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 31:24",
+      "text": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 34:8",
+      "text": "O taste and see that the LORD is good: blessed is the man that trusteth in him.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 29:11",
+      "text": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 56:3-4",
+      "text": "What time I am afraid, I will trust in thee. In God I will praise his word, in God I have put my trust; I will not fear what flesh can do unto me.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 37:23-24",
+      "text": "The steps of a good man are ordered by the LORD : and he delighteth in his way. Though he fall, he shall not be utterly cast down: for the LORD upholdeth him with his hand.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 46:1",
+      "text": "God is our refuge and strength, a very present help in trouble.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 46:10",
+      "text": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Psalm 91:1-2",
+      "text": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD , He is my refuge and my fortress: my God; in him will I trust.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 40:1-3",
+      "text": "I waited patiently for the LORD ; and he inclined unto me, and heard my cry. He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings. And he hath put a new song in my mouth, even praise unto our God: many shall see it , and fear, and shall trust in the LORD .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 103:1-5",
+      "text": "Bless the LORD , O my soul: and all that is within me, bless his holy name. Bless the LORD , O my soul, and forget not all his benefits: Who forgiveth all thine iniquities; who healeth all thy diseases; Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies; Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle’s.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 55:22",
+      "text": "Cast thy burden upon the LORD , and he shall sustain thee: he shall never suffer the righteous to be moved.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Proverbs 3:5-6",
+      "text": "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 73:26",
+      "text": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Psalm 121:1-2",
+      "text": "I will lift up mine eyes unto the hills, from whence cometh my help. My help cometh from the LORD , which made heaven and earth.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 62:5-8",
+      "text": "My soul, wait thou only upon God; for my expectation is from him. He only is my rock and my salvation: he is my defence; I shall not be moved. In God is my salvation and my glory: the rock of my strength, and my refuge, is in God. Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us. Selah.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Isaiah 12:2",
+      "text": "Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Psalm 126:5-6",
+      "text": "They that sow in tears shall reap in joy. He that goeth forth and weepeth, bearing precious seed, shall doubtless come again with rejoicing, bringing his sheaves with him .",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Isaiah 40:28-31",
+      "text": "Hast thou not known? hast thou not heard, that the everlasting God, the LORD , the Creator of the ends of the earth, fainteth not, neither is weary? there is no searching of his understanding. He giveth power to the faint; and to them that have no might he increaseth strength. Even the youths shall faint and be weary, and the young men shall utterly fall: But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 94:18-19",
+      "text": "When I said, My foot slippeth; thy mercy, O LORD , held me up. In the multitude of my thoughts within me thy comforts delight my soul.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Jeremiah 17:7-8",
+      "text": "Blessed is the man that trusteth in the LORD , and whose hope the LORD is. For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river, and shall not see when heat cometh, but her leaf shall be green; and shall not be careful in the year of drought, neither shall cease from yielding fruit.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Proverbs 16:3",
+      "text": "Commit thy works unto the LORD , and thy thoughts shall be established.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Isaiah 41:10",
+      "text": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Psalm 119:165",
+      "text": "Great peace have they which love thy law: and nothing shall offend them.",
+      "theme": "peace"
+    },
+    {
+      "reference": "Habakkuk 3:17-19",
+      "text": "Although the fig tree shall not blossom, neither shall fruit be in the vines; the labour of the olive shall fail, and the fields shall yield no meat; the flock shall be cut off from the fold, and there shall be no herd in the stalls: Yet I will rejoice in the LORD , I will joy in the God of my salvation. The LORD God is my strength, and he will make my feet like hinds’ feet , and he will make me to walk upon mine high places. To the chief singer on my stringed instruments.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Isaiah 43:1-2",
+      "text": "But now thus saith the LORD that created thee, O Jacob, and he that formed thee, O Israel, Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine. When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee: when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Lamentations 3:22-24",
+      "text": "It is of the LORD’s mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness. The LORD is my portion, saith my soul; therefore will I hope in him.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Isaiah 26:3-4",
+      "text": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength:",
+      "theme": "peace"
+    },
+    {
+      "reference": "Mark 9:23-24",
+      "text": "Jesus said unto him, If thou canst believe, all things are possible to him that believeth. And straightway the father of the child cried out, and said with tears, Lord, I believe; help thou mine unbelief.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Micah 6:8",
+      "text": "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Matthew 11:28-30",
+      "text": "Come unto me, all ye that labour and are heavy laden, and I will give you rest. Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. For my yoke is easy, and my burden is light.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Isaiah 32:17",
+      "text": "And the work of righteousness shall be peace; and the effect of righteousness quietness and assurance for ever.",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 6:35",
+      "text": "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.",
+      "theme": "faith"
+    },
+    {
+      "reference": "Romans 5:3-5",
+      "text": "And not only so , but we glory in tribulations also: knowing that tribulation worketh patience; And patience, experience; and experience, hope: And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "John 16:33",
+      "text": "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world.",
+      "theme": "encouragement"
+    },
+    {
+      "reference": "Matthew 6:25-26",
+      "text": "Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment? Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them. Are ye not much better than they?",
+      "theme": "peace"
+    },
+    {
+      "reference": "John 11:25-26",
+      "text": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?",
+      "theme": "faith"
+    },
+    {
+      "reference": "Romans 12:11-12",
+      "text": "Not slothful in business; fervent in spirit; serving the Lord; Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+      "theme": "perseverance"
+    },
+    {
+      "reference": "Romans 8:38-39",
+      "text": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      "theme": "encouragement"
     }
   ],
   "leapDay": {
     "reference": "Psalm 118:24",
     "text": "This is the day which the LORD hath made; we will rejoice and be glad in it."
-  }
+  },
+  "themes": [
+    "encouragement",
+    "peace",
+    "faith",
+    "perseverance"
+  ],
+  "rotationLength": 80,
+  "selection": "Curated for the site owner’s requested themes; whole selected passages quoted from the pinned KJV dataset. This rotation may repeat; it is separate from the yearly reading plan."
 }

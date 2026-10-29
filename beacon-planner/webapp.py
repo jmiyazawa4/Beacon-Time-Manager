@@ -15,7 +15,7 @@ SPORTS = {'baseball','mens-basketball','womens-basketball','mens-soccer','womens
           'volleyball','womens-volleyball','beach-volleyball','softball','mens-cross-country',
           'womens-cross-country','mens-track-and-field','womens-track-and-field','mens-golf','womens-golf','esports'}
 PUBLIC_FILES = {'index.html','academic-calendar.js','academic-calendar.json','bible-verses.js',
-                'calendar-import.js','privacy-storage.js','planner-views.css','planner-views.js',
+                'calendar-import.js','sports-events.js','privacy-storage.js','planner-views.css','planner-views.js',
                 'schedule-pdf.js','theme.css','reading-plan.json','daily-verses.json','vendor/jspdf.umd.min.js','assets/beacon-b.png'}
 
 

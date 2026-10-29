@@ -4,6 +4,9 @@
   const planner = window.BeaconPlanner;
   $('goals').closest('section').classList.add('goals-card');
   $('reminders').closest('section').classList.add('reminders-card');
+  const priorities=document.createElement('div');priorities.className='priorities-row';priorities.setAttribute('aria-label','Goals and reminders');
+  document.querySelector('.layout').before(priorities);
+  priorities.append($('goals').closest('section'),$('reminders').closest('section'));
   const agenda = document.createElement('div');
   agenda.id = 'agendaView'; agenda.className = 'agenda-view';
   agenda.innerHTML = '<nav id="agendaDays" class="agenda-days" aria-label="Choose an agenda day"></nav><div class="agenda-heading"><div><span class="section-index">DAILY SCHEDULE</span><h3 id="agendaDate"></h3></div><button id="agendaAdd" type="button">+ Add activity</button></div><div id="agendaEvents" class="agenda-events"></div>';
@@ -36,7 +39,7 @@
     day.events.forEach(event => {
       const button = document.createElement('button'); button.type = 'button'; button.className = 'agenda-event'; button.style.setProperty('--event-color', event.color);
       const time = document.createElement('span'); time.className = 'agenda-event-time'; time.textContent = event.allDay ? (event.timeUnknown ? event.timeLabel || 'Time TBA' : 'All day') : formatTime(event.start);
-      if (!event.allDay && event.endKnown) {const end = document.createElement('small'); end.textContent = 'to ' + formatTime(event.end); time.append(end);}
+      if (!event.allDay && event.endKnown) {const end = document.createElement('small'); end.textContent = 'to ' + formatTime(event.end) + (event.estimated ? ' (est.)' : ''); time.append(end);}
       const body = document.createElement('span'); body.className = 'agenda-event-body';
       const title = document.createElement('strong'); title.textContent = event.title;
       const detail = document.createElement('small'); detail.textContent = [event.category, event.location].filter(Boolean).join(' · ');
@@ -102,7 +105,7 @@
     $('readingPassages').replaceChildren();
     if(verse){for(const passage of verse.passages){const link=document.createElement('a');link.textContent=passage;link.href='https://www.biblegateway.com/passage/?search='+encodeURIComponent(passage)+'&version=KJV';link.target='_blank';link.rel='noopener';$('readingPassages').append(link);}if(verse.catchUp)$('readingPassages').textContent='Leap-day catch-up: revisit any unfinished reading.';$('readingPlanSource').href=verse.planSource;}
 
-    $('verseStatus').textContent = verse ? 'Selected from today’s included reading plan.' : status.state === 'loading' ? 'Loading saved reading content…' : status.error || 'Saved reading content is unavailable.';
+    $('verseStatus').textContent = verse ? (verse.theme ? verse.theme[0].toUpperCase()+verse.theme.slice(1)+' · ' : '')+'Curated KJV passage; separate from the reading plan.' : status.state === 'loading' ? 'Loading saved reading content…' : status.error || 'Saved reading content is unavailable.';
     $('verseRetry').hidden = status.state !== 'error';
   }
   function updateVerse() {renderVerse(); window.BeaconVerses.load().then(renderVerse);}

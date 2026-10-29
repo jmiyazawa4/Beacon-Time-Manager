@@ -47,3 +47,21 @@ body[data-planner-view=dashboard] .dashboard-agenda-card .agenda-view{display:bl
 .layout>.panel>.academic-banner{display:block;padding:12px 15px;background:#faf7ef;border-color:#e0d8cb;font-size:11px}.academic-banner>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;list-style:none}.academic-banner>summary::-webkit-details-marker{display:none}.academic-banner>summary strong{display:inline;margin:0;font-size:11px}.academic-banner>summary strong:before{content:'▸';margin-right:8px;color:#9b7429}.academic-banner[open]>summary strong:before{content:'▾'}.academic-banner #academicCount{padding:3px 8px;border-radius:12px;background:#eee7d7;font-size:9px;color:#715927}.academic-banner #academicStatus{font-size:10px;margin:12px 0 7px}.academic-banner #academicWeekList{margin:0 0 12px;font-size:11px}.academic-date-row{display:flex;align-items:start;gap:13px;width:100%;text-align:left;background:transparent;color:#344b69;border-radius:0;border-bottom:1px solid #e7e0d3;padding:10px 0;box-shadow:none;font-size:11px}.academic-date-row span{flex:0 0 50px;font-size:10px;color:#715927}.academic-date-row strong{font-size:11px;font-weight:500;line-height:1.5}.agenda-academic-dates{margin-top:12px;border-top:1px solid #e0d8cb;padding-top:10px}.agenda-academic-dates>summary{font-size:10px;font-weight:600;color:#715927;cursor:pointer;margin-bottom:9px}.agenda-academic-dates .agenda-event{background:#faf7ef}
 
 .daily-reading-plan{margin-top:15px;padding-top:12px;border-top:1px solid #ffffff26;font-size:11px}.daily-reading-plan summary{cursor:pointer;font-weight:600;color:#e9cb88}.daily-reading-plan #readingPassages{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.daily-reading-plan #readingPassages a{display:inline-block;padding:5px 8px;border:1px solid #ffffff30;border-radius:4px;font-size:10px}.daily-reading-plan #readingPlanSource{font-size:9px;color:#c0d4e9}
+
+/* Compact sport choice and priorities above the weekly calendar. */
+.sport-panel{padding:13px 18px;gap:12px;margin-bottom:16px;align-items:center}
+.sport-panel .sport-question{font-size:14px;font-weight:700;white-space:nowrap}
+.sport-panel select{min-width:190px;max-width:260px;font-size:12px;border-width:1px}
+.sport-options{margin-left:auto;font-size:11px;max-width:100%}
+.sport-options>summary{cursor:pointer;color:var(--text);padding:7px 0}
+.sport-options[open]{flex-basis:100%;margin-left:0}
+.sport-options-content{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 0 0;border-top:1px solid var(--line)}
+.sport-options-content .status,.sport-options-content .detail{flex-basis:100%}
+.priorities-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 22px;align-items:start}
+.priorities-row>section{min-width:0;background:var(--panel,#fff);border:1px solid var(--line);border-radius:12px;padding:20px;margin:0}
+.priorities-row h2{font-size:20px;margin:6px 0 12px}.priorities-row .entry{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.priorities-row input{min-width:0;flex:1}.priorities-row input[type=datetime-local]{max-width:100%}
+.priorities-row .sub,.priorities-row .hint{font-size:11px;line-height:1.5}.priorities-row .hint{margin-top:12px}
+@media(max-width:700px){.priorities-row{grid-template-columns:1fr;gap:12px}.priorities-row>section{padding:16px}.sport-panel{padding:12px}.sport-panel select{min-width:0;flex:1}.sport-options{margin-left:0}}
+@media print{.priorities-row{display:none!important}}
+@media screen{.priorities-row>section{background:#fffdf8;border-color:#ded6c7}}

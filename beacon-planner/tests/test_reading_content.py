@@ -11,11 +11,14 @@ class ReadingContentTests(unittest.TestCase):
   self.assertEqual(plan['days'][-1],['2 Chronicles 36','Revelation 22','Malachi 4','John 21'])
   self.assertEqual(plan['license'],'Apache-2.0')
   self.assertIn('Apache License',plan['licenseText'])
- def test_kjv_verses_are_complete_unique_and_sourced(self):
+ def test_curated_kjv_passages_are_complete_and_sourced(self):
   data=json.loads((ROOT/'daily-verses.json').read_text())
   self.assertEqual(data['translation'],'KJV')
   self.assertEqual(len(data['days']),365)
-  self.assertEqual(len({entry['reference'] for entry in data['days']}),365)
+  self.assertEqual(len({entry['reference'] for entry in data['days']}),80)
+  self.assertEqual(set(entry['theme'] for entry in data['days']),{'encouragement','peace','faith','perseverance'})
+  self.assertEqual(data['days'][0]['reference'],'Psalm 23:1-3')
+  self.assertEqual(data['days'][0]['text'].split('.')[0],'The LORD is my shepherd; I shall not want')
   self.assertTrue(all(entry['reference'] and entry['text'] for entry in data['days']))
   self.assertIn('public domain in the United States',data['copyright'])
   self.assertIn('MIT License',data['licenseText'])
