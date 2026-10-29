@@ -1,6 +1,7 @@
 """Validate a built single-file preview without requesting the development server."""
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+from browser_test_helpers import wait_js
 import os
 
 HTML = Path(os.environ.get('BEACON_PREVIEW_HTML','/workspace/artifacts/beacon-browser-review/Beacon-Time-Manager.html'))
@@ -14,7 +15,7 @@ with sync_playwright() as p:
     url='https://beacon-preview.invalid/Beacon-Time-Manager.html'
     page.route('**/*',lambda route:route.fulfill(content_type='text/html',body=HTML.read_text()) if route.request.url==url else route.abort())
     page.goto(url)
-    page.wait_for_function('BeaconAcademic.status().verified')
+    wait_js(page,'BeaconAcademic.status().verified')
     assert page.locator('.preview-notice').is_visible()
     assert page.evaluate("getComputedStyle(document.body).backgroundColor")=='rgb(246, 242, 233)'
     assert 'Georgia' in page.locator('.hero h2').evaluate('(e)=>getComputedStyle(e).fontFamily')
@@ -25,7 +26,7 @@ with sync_playwright() as p:
     page.reload();assert 'Independent exploration test' in page.locator('#calendar').inner_text()
     for sport,count in [('baseball',57),('mens-basketball',37),('womens-volleyball',35)]:
         page.locator('#sport').select_option(sport)
-        page.wait_for_function("document.getElementById('sportStatus').textContent.includes('official competitions loaded')")
+        wait_js(page,"document.getElementById('sportStatus').textContent.includes('official competitions loaded')")
         state=page.evaluate("JSON.parse(localStorage.getItem('beacon-planner-v1'))")
         assert len([e for e in state['datedEvents'] if e['sport']==sport])==count
         assert len(state['events'])==1

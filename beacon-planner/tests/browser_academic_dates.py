@@ -2,6 +2,7 @@
 from datetime import datetime, timezone
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+from browser_test_helpers import wait_js
 
 OUT = Path('/tmp/beacon-academic-check')
 OUT.mkdir(exist_ok=True)
@@ -12,13 +13,13 @@ with sync_playwright() as p:
     page.route('**/api/verse',lambda r:r.fulfill(status=502,content_type='application/json',body='{"error":"NIV service unavailable in test"}'))
     page.route('**/api/schedule?*',lambda r:r.fulfill(status=502,content_type='application/json',body='{"error":"Sports service fixture"}'))
     page.goto('http://127.0.0.1:8000')
-    page.wait_for_function("BeaconAcademic.status().verified")
+    wait_js(page,"BeaconAcademic.status().verified")
     assert page.locator('.slot[data-day="4"].academic-holiday').count()==16
     assert page.locator('.slot[data-day="5"].academic-holiday').count()==16
     assert page.locator('.slot[data-day="6"].academic-holiday').count()==0
     assert 'Thanksgiving Holiday' in page.locator('#calendarNotes').inner_text()
     page.locator('#sport').select_option('baseball')
-    page.wait_for_function("document.getElementById('sportStatus').textContent.includes('Sports service')")
+    wait_js(page,"document.getElementById('sportStatus').textContent.includes('Sports service')")
     assert 'Thanksgiving Holiday' in page.locator('#calendarNotes').inner_text()
     page.locator('#sport').select_option('softball')
     assert page.locator('.slot[data-day="4"].academic-holiday').count()==16

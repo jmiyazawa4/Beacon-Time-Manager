@@ -41,3 +41,5 @@ body[data-planner-view=dashboard] .dashboard-agenda-card .agenda-view{display:bl
 }
 
 .layout>.panel>.academic-banner{margin:18px 0 0}
+
+.privacy-panel{border:1px solid #ded7c8;border-radius:6px;background:#fffdf8;color:#596b82;padding:11px 14px;margin:0 0 18px;font-size:11px;line-height:1.7}.privacy-panel summary{cursor:pointer;font-weight:650;color:#344b69}.privacy-panel p{max-width:850px;margin:10px 0}.privacy-choice{display:flex;align-items:center;gap:8px;margin-top:12px;color:#344b69;font-weight:600}.privacy-panel[open]{padding-bottom:13px}

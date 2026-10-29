@@ -4,6 +4,7 @@ from pathlib import Path
 import os
 import json
 from playwright.sync_api import sync_playwright
+from browser_test_helpers import wait_js
 
 OUT = Path(os.environ.get('BEACON_TEST_ARTIFACTS', '/tmp/beacon-feature-check'))
 OUT.mkdir(parents=True, exist_ok=True)
@@ -24,20 +25,20 @@ with sync_playwright() as p:
     page.route('**/api/schedule?*', lambda route: route.fulfill(status=502, content_type='application/json', body='{"error":"Fixture: live schedule unavailable"}'))
     page.add_init_script("""if(!localStorage.getItem('beacon-planner-v1')) localStorage.setItem('beacon-planner-v1',JSON.stringify({student:'Sample student',sport:'baseball',datedEvents:[{key:'baseball|fixture',sport:'baseball',title:'Fixture official competition',start:'2026-01-15T12:30:00-08:00',end:null,allDay:false,location:'Fixture gym',source:'Official Bushnell schedule'},{key:'baseball|tba',sport:'baseball',title:'Fixture TBA competition',start:'2026-01-16',end:'2026-01-17',allDay:true,timeUnknown:true,timeLabel:'Time TBA',source:'Official Bushnell schedule'}],goals:[{id:'g',text:'Complete biology lab',done:false}],reminders:[],events:[{id:'class',name:'Biology 101 - laboratory and discussion',cat:'Class',start:540,end:660,days:[1,3,5],color:'#8b5cf6'},{id:'practice',name:'Team practice',cat:'Practice',start:900,end:1020,days:[1,2,3,4,5],color:'#f6c642'},{id:'chapel',name:'Chapel',cat:'Chapel',start:600,end:660,days:[2],color:'#477dbb'},{id:'work',name:'Campus work',cat:'Work',start:780,end:960,days:[0,6],color:'#2d8b76'}]}));""")
     page.goto(os.environ.get('BEACON_TEST_URL', 'http://127.0.0.1:8000'))
-    page.wait_for_function("document.getElementById('verseReference').textContent.includes('NIV service preview')")
+    wait_js(page,"document.getElementById('verseReference').textContent.includes('NIV service preview')")
     assert page.locator('#verseText').inner_text()
     assert 'NIV' in page.locator('#verseReference').inner_text()
     assert 'Test fixture attribution' in page.locator('#verseCopyright').inner_text()
     assert 'January 15, 2026' in page.locator('#verseDate').inner_text()
     assert page.evaluate('BeaconVerses.current().translation') == 'NIV'
-    page.wait_for_function("document.getElementById('academicStatus').textContent.includes('Test fixture calendar')")
+    wait_js(page,"document.getElementById('academicStatus').textContent.includes('Test fixture calendar')")
     assert page.locator('.layout > .panel > .academic-banner').count() == 1
     assert page.locator('.academic-banner').evaluate("e=>!!(document.querySelector('.calendar-wrap').compareDocumentPosition(e)&Node.DOCUMENT_POSITION_FOLLOWING)")
     assert page.locator('.slot[data-day="1"].academic-holiday').count() == 16
     assert page.locator('.slot[data-day="3"].academic-break').count() == 16
     assert 'Fixture university holiday' in page.locator('#calendarNotes').inner_text()
     page.locator('#sport').select_option('softball')
-    page.wait_for_function("document.getElementById('sportStatus').textContent.includes('Fixture:')")
+    wait_js(page,"document.getElementById('sportStatus').textContent.includes('Fixture:')")
     assert page.locator('.slot[data-day="1"].academic-holiday').count() == 16
     assert 'Fixture university holiday' in page.locator('#calendarNotes').inner_text()
     page.locator('#sport').select_option('baseball')
@@ -47,7 +48,7 @@ with sync_playwright() as p:
     # Legacy saved view preferences must not restore a student-facing switcher.
     page.evaluate("localStorage.setItem('beacon-planner-view','agenda')")
     page.reload()
-    page.wait_for_function("BeaconAcademic.status().verified")
+    wait_js(page,"BeaconAcademic.status().verified")
     assert page.locator('.website-views').count() == 0
     assert page.locator('.view-buttons').count() == 0
     assert page.locator('body').get_attribute('data-planner-view') == 'dashboard'
@@ -101,14 +102,14 @@ with sync_playwright() as p:
     assert not page.locator('#exportDialog').is_visible()
     old = page.locator('#verseReference').inner_text()
     page.clock.fast_forward(86400000)
-    page.wait_for_function("document.getElementById('verseReference').textContent !== "+json.dumps(old))
+    wait_js(page,"document.getElementById('verseReference').textContent !== "+json.dumps(old))
     assert page.locator('#verseReference').inner_text() != old
     assert 'January 16, 2026' in page.locator('#verseDate').inner_text()
     assert not errors, errors
     failed = browser.new_page()
     failed.route('**/api/verse', lambda route: route.fulfill(status=502, content_type='application/json', body='{"error":"Unable to load the NIV verse"}'))
     failed.goto(os.environ.get('BEACON_TEST_URL', 'http://127.0.0.1:8000'))
-    failed.wait_for_function("document.getElementById('verseStatus').textContent.includes('Unable to load')")
+    wait_js(failed,"document.getElementById('verseStatus').textContent.includes('Unable to load')")
     assert not failed.locator('#verseText').is_visible()
     assert 'NIV' in failed.locator('#verseReference').inner_text()
     assert 'KJV' not in failed.locator('.daily-verse-card').inner_text()

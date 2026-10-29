@@ -1,20 +1,9 @@
 """Standard-library development server for Beacon Time Manager."""
 from datetime import date, datetime, timedelta, timezone
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
-from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qs, urlparse
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
-import json
 import re
-from schedule_source import load_official_schedule
-from daily_verse import load_verse
 
-SPORTS = {'baseball', 'mens-basketball', 'womens-basketball', 'mens-soccer',
-          'womens-soccer', 'volleyball', 'womens-volleyball', 'beach-volleyball', 'softball',
-          'mens-cross-country', 'womens-cross-country', 'mens-track-and-field',
-          'womens-track-and-field', 'mens-golf', 'womens-golf', 'esports'}
-MAX_FEED_BYTES = 2_000_000
-PACIFIC = ZoneInfo('America/Los_Angeles')
 
 
 def unescape(value):
@@ -85,54 +74,41 @@ def parse_ics(raw):
 
 
 class Handler(SimpleHTTPRequestHandler):
-    def do_GET(self):
-        url = urlparse(self.path)
-        if url.path == '/api/verse':
-            try:
-                return self.send_json(200, load_verse())
-            except (OSError, ValueError, TypeError, AttributeError, UnicodeError):
-                return self.send_json(502, {'error': 'Unable to load the NIV verse. Retry or read it on Bible Gateway.'})
-        if url.path != '/api/schedule':
-            return super().do_GET()
-        sport = parse_qs(url.query).get('sport', [''])[0]
-        if sport not in SPORTS:
-            return self.send_json(400, {'error': 'Unknown sport'})
-        try:
-            result = load_official_schedule(sport)
-            self.send_json(200, result)
-        except HTTPError as error:
-            self.send_json(502, {'error': 'Official schedule unavailable',
-                                'detail': f'The athletics site returned HTTP {error.code}. View the official schedule or import an .ics file.'})
-        except (URLError, TimeoutError, OSError):
-            self.send_json(502, {'error': 'Cannot reach the official schedule',
-                                'detail': 'Check the connection or import an official .ics file.'})
-        except (ValueError, UnicodeError) as error:
-            self.send_json(502, {'error': 'Official schedule could not be verified',
-                                'detail': str(error)[:200]})
+    """Local development adapter; production uses webapp:application."""
+    server_version = "Beacon"
+    sys_version = ""
 
-    def do_POST(self):
-        if urlparse(self.path).path != '/api/import':
-            return self.send_json(404, {'error': 'Unknown endpoint'})
-        try:
-            length = int(self.headers.get('Content-Length', '0'))
-        except ValueError:
-            return self.send_json(400, {'error': 'Invalid content length'})
-        if not 0 < length <= MAX_FEED_BYTES:
-            return self.send_json(413, {'error': 'Calendar must be between 1 byte and 2 MB'})
-        try:
-            result = parse_ics_result(self.rfile.read(length).decode('utf-8-sig'))
-        except (ValueError, UnicodeError):
-            return self.send_json(400, {'error': 'Select a valid .ics calendar file'})
-        self.send_json(200, result)
+    def setup(self):
+        super().setup()
+        self.connection.settimeout(10)
 
-    def send_json(self, status, data):
-        body = json.dumps(data).encode()
+    def log_message(self, format, *args):
+        # Do not retain client IPs, request URLs, or query strings in app logs.
+        pass
+
+    def handle_request(self):
+        from webapp import dispatch, response
+        if len(self.headers.get_all('Host', [])) != 1:
+            result = response(400, {'error':'Invalid host'})
+        else:
+            result = dispatch(self.command, self.path, self.headers)
+        status, headers, body = result
         self.send_response(status)
-        self.send_header('Content-Type', 'application/json')
-        self.send_header('Cache-Control', 'no-store')
-        self.send_header('Content-Length', str(len(body)))
+        for name, value in headers.items():
+            self.send_header(name, value)
         self.end_headers()
-        self.wfile.write(body)
+        if self.command != 'HEAD':
+            self.wfile.write(body)
+        if self.command not in {'GET','HEAD'}:
+            self.close_connection = True
+
+    do_GET = handle_request
+    do_HEAD = handle_request
+    do_POST = handle_request
+    do_PUT = handle_request
+    do_DELETE = handle_request
+    do_PATCH = handle_request
+    do_OPTIONS = handle_request
 
 
 if __name__ == '__main__':

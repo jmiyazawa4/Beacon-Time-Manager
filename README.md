@@ -4,14 +4,14 @@ A lightweight weekly planner for Bushnell student-athletes: recurring personal a
 
 ## Run locally
 
-Requires Python 3.9+ with the IANA timezone database (Python 3.12 tested). On Windows, if `America/Los_Angeles` is unavailable, install the official `tzdata` package with `py -m pip install tzdata`.
+Requires Python 3.10+ with the IANA timezone database (Python 3.12 tested). On Windows, if `America/Los_Angeles` is unavailable, install the official `tzdata` package with `py -m pip install tzdata`.
 
 ```sh
 cd beacon-planner
 python server.py
 ```
 
-On Windows, `py server.py` also works. Open `http://localhost:8000` in your browser. Keep the terminal running. Both automatic schedule requests and `.ics` import require this server; opening the HTML file directly is insufficient. No JavaScript package installation is needed. A pinned local copy of jsPDF 4.2.1 is included for browser PDF creation; its MIT license is in vendor/jspdf.LICENSE. There are no third-party analytics.
+On Windows, `py server.py` also works. Open `http://localhost:8000` in your browser. Keep the terminal running. Live schedule and NIV requests require this server. Calendar files are parsed locally in the browser and are never uploaded. No JavaScript package installation is needed. A pinned local copy of jsPDF 4.2.1 is included for browser PDF creation; its MIT license is in vendor/jspdf.LICENSE. There are no third-party analytics.
 
 ## Explore without installing Python
 
@@ -21,7 +21,7 @@ A developer can create a self-contained review file with:
 python tools/build_browser_preview.py --output /path/to/Beacon-Time-Manager.html --snapshots /path/to/verified-sport-json
 ```
 
-The output HTML and ZIP include scripts, styles, logo, university dates, and any supplied verified official schedule snapshots. The recipient only extracts the ZIP and opens `Beacon-Time-Manager.html` in a browser; no Python, installation, or account is needed. Personal planning, colors, the daily agenda, and PDF exports work locally. The review version explicitly identifies saved schedules and disables live sports refresh, NIV loading, and server-side `.ics` import. A hosted Python service is still needed for those live features and for a normal shareable website link. Some managed computers block downloaded HTML; local file storage behavior also depends on the browser. The file was tested without API/asset network requests under an isolated browser origin; this cloud browser blocks `file://` navigation, so launching the download as a local file could not be independently exercised here.
+The output HTML and ZIP include scripts, styles, logo, university dates, and any supplied verified official schedule snapshots. The recipient only extracts the ZIP and opens `Beacon-Time-Manager.html` in a browser; no Python, installation, or account is needed. Personal planning, colors, the daily agenda, and PDF exports work locally. The review version explicitly identifies saved schedules and disables live sports refresh and NIV loading. Calendar-file import is local-only. A hosted Python service is still needed for live sports and NIV and for a normal shareable website link. Some managed computers block downloaded HTML; local file storage behavior also depends on the browser. The file was tested without API/asset network requests under an isolated browser origin; this cloud browser blocks `file://` navigation, so launching the download as a local file could not be independently exercised here.
 
 ## Website layouts, daily scripture, and schedule downloads
 
@@ -74,7 +74,7 @@ The planner uses Bushnell's mission themes (Wisdom, Faith, Service), the univers
 
 Click **Add activity** or an empty calendar time to create a class. Click any personal activity block to edit its class/name, category, start/end time, recurring days, or custom block color. Changes apply to its selected repeating weekdays and are saved in the same browser. Text color adjusts to the block color for contrast. Official competition blocks show source details and are not personal class entries.
 
-Calendar import accepts up to 2 MB. UTC and IANA `TZID` values are supported. Floating timestamps default to `America/Los_Angeles`, with winter/summer offsets. Timed events display in the device's timezone; all-day events keep their calendar dates and use exclusive end dates. All-day and pre-8 AM competitions appear above the hourly grid. Events without an end display with a one-hour fallback. Cancellation status hides an event; reimporting the same UID updates it rather than adding a duplicate. For ambiguous fall-back wall times, the first occurrence is used unless the feed supplies UTC. Invalid spring-forward times are skipped.
+Calendar import is local-only, with limits of 2 MB, 2,000 events, and 40,000 lines. UTC and IANA `TZID` values are supported. Floating timestamps default to `America/Los_Angeles`, with winter/summer offsets. Timed events display in the device's timezone; all-day events keep their calendar dates and use exclusive end dates. All-day and pre-8 AM competitions appear above the hourly grid. Events without an end display with a one-hour fallback. Cancellation status hides an event; reimporting the same UID updates it rather than adding a duplicate. For ambiguous fall-back wall times, the first occurrence is used unless the feed supplies UTC. Invalid spring-forward times are skipped.
 
 Recurring ICS rules, recurrence exceptions, custom `VTIMEZONE` definitions and non-IANA timezone names are unsupported; affected entries are counted as skipped. Personal weekday repetition is supported independently. Cross-midnight timed events currently display on their start day through midnight; continuation on the next day is not implemented. Previously imported calendars from the original prototype retain their stored timestamps; reimport to apply corrected timezone parsing.
 
@@ -86,7 +86,7 @@ From the repository root:
 python -m unittest discover -s beacon-planner/tests -v
 ```
 
-Twenty tests cover Pacific DST and winter/summer offsets, explicit timezones and UTC, all-day dates, duplicate updates/cancellations, invalid entries, official-page parsing, visible-versus-metadata time discrepancies, TBA dates, ranked opponents, source caching, robots rules, and safe NIV payload/attribution parsing. Minimal source excerpts in tests/fixtures are captured official examples, not fabricated games.
+Twenty-seven tests cover Pacific DST and winter/summer offsets, explicit timezones and UTC, all-day dates, duplicate updates/cancellations, invalid entries, official-page parsing, visible-versus-metadata time discrepancies, TBA dates, ranked opponents, source caching, robots rules, and safe NIV payload/attribution parsing. Minimal source excerpts in tests/fixtures are captured official examples, not fabricated games.
 
 Optional browser checks require Python Playwright and `/usr/bin/chromium` (both available in the prepared cloud environment). Start the server, then run:
 
@@ -108,6 +108,8 @@ Printing uses US Letter landscape. The checked filled week fits one page with al
 
 ## Privacy and deployment
 
-Data lives in browser `localStorage`, does not sync across devices, and can be lost when browser storage is cleared. Reminders require the page to remain open. Calendar files are parsed by the Python server and are not intentionally saved there. No JSON backup/restore controls are exposed.
+See [SECURITY.md](SECURITY.md) for the actual data flows, protections, limitations, and pre-launch requirements. Personal planners stay in the browser; the server accepts no planner writes or uploads. Private-session mode avoids durable saving on shared devices. Normal localStorage is not encrypted and is accessible to someone using the same browser profile. Notifications omit reminder contents. PDFs contain schedule information and must be shared carefully.
 
-This is a local development server bound to loopback, not a public deployment. A public site will need an appropriate production host/server, HTTPS, reviewed security and privacy behavior, and maintenance of the official schedule adapter. Publishing a Codex development environment does not deploy this website.
+A hash-pinned Gunicorn production configuration is provided in `requirements-production.txt` and `beacon-planner/gunicorn.conf.py`; `webapp:application` is the WSGI entry point. The local `python server.py` command remains for development. A host must configure a dedicated approved origin, HTTPS/redirects, allowed hostname, edge traffic protections, logs/retention, and operational ownership before student rollout. These changes are not a guarantee against leaks or a compliance certification. Publishing a Codex development environment does not deploy the website.
+
+The `gh-pages` branch contains a separate interactive review preview. It is not the production student site: private sessions are mandatory, only public saved schedule snapshots are present, and live services are disabled. The repository owner must enable GitHub Pages for that branch before a working preview link is established. The preview branch has no backend/source/configuration files.

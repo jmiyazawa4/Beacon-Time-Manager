@@ -3,6 +3,7 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+from browser_test_helpers import wait_js
 
 BASE = os.environ.get('BEACON_TEST_URL', 'http://127.0.0.1:8000')
 OUT = Path(os.environ.get('BEACON_TEST_ARTIFACTS', '/tmp/beacon-browser-check'))
@@ -62,7 +63,7 @@ with sync_playwright() as p:
     page.locator('#evName').fill('Long biology class and collaborative study session')
     page.locator('#saveEvent').click()
     page.locator('#sport').select_option('baseball')
-    page.wait_for_function("document.getElementById('sportStatus').textContent.includes('Fixture feed unavailable')")
+    wait_js(page,"document.getElementById('sportStatus').textContent.includes('Fixture feed unavailable')")
     assert 'Long biology class' in page.locator('#calendar').inner_text()
     assert 'Jan 11' in page.locator('#weekLabel').inner_text()
     page.locator('#nextWeek').click()
@@ -71,7 +72,7 @@ with sync_playwright() as p:
     page.locator('#prevWeek').click()
     for _ in range(2):
         page.locator('#sportCalendarFile').set_input_files({'name': 'fixture.ics', 'mimeType': 'text/calendar', 'buffer': ICS})
-        page.wait_for_function("document.getElementById('sportStatus').textContent.includes('Imported or updated 2')")
+        wait_js(page,"document.getElementById('sportStatus').textContent.includes('Imported or updated 2')")
     state = page.evaluate("JSON.parse(localStorage.getItem('beacon-planner-v1'))")
     assert len(state['datedEvents']) == 2, state
     game = page.locator('.slot[data-day="4"][data-hour="12"] .official-event')
