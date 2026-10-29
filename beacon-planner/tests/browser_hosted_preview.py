@@ -61,9 +61,11 @@ with sync_playwright() as p:
  page.locator('#sport').select_option('baseball')
  wait_js(page,"document.getElementById('sportStatus').textContent.includes('official competitions')")
  page.locator('details.sport-options').evaluate('(e)=>e.open=true')
+ assert page.locator('#csvScheduleFile').get_attribute('accept') is None
  csv=b'Date,Event,Duration,Location,Required Attendance,Description\n2027-01-20,Synthetic CSV Practice,3:30-5:40pm,Field,Tuesday Group,CSV example\n2027-01-20,Synthetic CSV Meeting,TBD,Campus,All,Confirm time'
  for repeat in range(2):
-  page.locator('#sportCalendarFile').set_input_files({'name':'example.csv','mimeType':'text/csv','buffer':csv})
+  with page.expect_file_chooser() as picker:page.locator('#importCSV').click()
+  picker.value.set_files({'name':'example.csv','mimeType':'text/csv','buffer':csv})
   wait_js(page,"document.getElementById('sportStatus').textContent.includes('Imported or updated 2')")
  stored=page.evaluate("JSON.parse(localStorage.getItem('beacon-planner-v1'))")
  imported=[e for e in stored['datedEvents'] if e['title'].startswith('Synthetic CSV')]
