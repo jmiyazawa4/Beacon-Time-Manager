@@ -11,8 +11,7 @@ with sync_playwright() as p:
     page=context.new_page();page.clock.install(time=datetime(2026,1,15,20,tzinfo=timezone.utc))
     requests=[]
     context.on('request',lambda r:requests.append((r.method,r.url,r.post_data or '')))
-    context.route('**/api/verse',lambda r:r.fulfill(status=502,content_type='application/json',body='{"error":"NIV fixture unavailable"}'))
-    context.route('**/api/schedule?*',lambda r:r.fulfill(content_type='application/json',body='{"events":[],"note":"Security fixture"}'))
+    context.route('**/schedules/*.json',lambda r:r.fulfill(content_type='application/json',body='{"events":[],"note":"Security fixture"}'))
     response=page.goto(BASE)
     assert "frame-ancestors 'none'" in response.headers['content-security-policy']
     assert response.headers['referrer-policy']=='no-referrer'

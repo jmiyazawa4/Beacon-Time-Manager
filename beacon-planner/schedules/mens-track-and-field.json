@@ -1,0 +1,100 @@
+{
+  "events": [
+    {
+      "id": "7624",
+      "title": "Lauren McCluskey Invitational",
+      "start": "2026-01-22",
+      "end": "2026-01-24",
+      "allDay": true,
+      "timeUnknown": true,
+      "timeLabel": "All Day",
+      "status": "",
+      "location": "Moscow, Idaho Lauren McCluskey Track",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-track-and-field/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7625",
+      "title": "University of Portland Indoor I",
+      "start": "2027-01-24",
+      "end": null,
+      "allDay": true,
+      "timeUnknown": true,
+      "timeLabel": "All Day",
+      "status": "",
+      "location": "Portland, Ore. Chiles Center",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-track-and-field/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7627",
+      "title": "UW Invitational",
+      "start": "2027-01-29",
+      "end": "2027-01-31",
+      "allDay": true,
+      "timeUnknown": true,
+      "timeLabel": "All Day",
+      "status": "",
+      "location": "Seattle, Wash. Dempsey Indoor",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-track-and-field/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7626",
+      "title": "University of Portland Indoor II",
+      "start": "2027-02-07",
+      "end": null,
+      "allDay": true,
+      "timeUnknown": true,
+      "timeLabel": "All Day",
+      "status": "",
+      "location": "Portland, Ore. Chiles Center",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-track-and-field/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7628",
+      "title": "Whitworth Invitational",
+      "start": "2027-02-12",
+      "end": "2027-02-14",
+      "allDay": true,
+      "timeUnknown": true,
+      "timeLabel": "All Day",
+      "status": "",
+      "location": "Spokane, Wash. The Podium",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-track-and-field/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7629",
+      "title": "George Fox Indoor #2",
+      "start": "2027-02-20",
+      "end": null,
+      "allDay": true,
+      "timeUnknown": true,
+      "timeLabel": "All Day",
+      "status": "",
+      "location": "Newberg, Ore. GFU Multi-Use Facility",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-track-and-field/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7630",
+      "title": "NAIA Indoor National Championship",
+      "start": "2027-03-04",
+      "end": "2027-03-07",
+      "allDay": true,
+      "timeUnknown": true,
+      "timeLabel": "All Day",
+      "status": "",
+      "location": "Gainseville, Fla. Alachua County Sports & Events Center",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-track-and-field/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    }
+  ],
+  "skipped": 0,
+  "note": "Saved official season schedule. Dates may change; confirm with the official athletics site.",
+  "source": "https://bushnellbeacons.com/sports/mens-track-and-field/schedule",
+  "fetchedAt": "2026-10-29T19:07:08.464935+00:00",
+  "available": true
+}

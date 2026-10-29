@@ -1,0 +1,100 @@
+{
+  "events": [
+    {
+      "id": "7333",
+      "title": "Linfield Harrier Classic",
+      "start": "2026-09-04T10:30:00-07:00",
+      "end": null,
+      "allDay": false,
+      "timeUnknown": false,
+      "timeLabel": "10:30 a.m.",
+      "status": "",
+      "location": "McMinnville, Ore. Joe Dancer Park",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-cross-country/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7334",
+      "title": "Ash Creek Collegiate",
+      "start": "2026-09-11T17:00:00-07:00",
+      "end": null,
+      "allDay": false,
+      "timeUnknown": false,
+      "timeLabel": "5 p.m.",
+      "status": "",
+      "location": "Monmouth, Ore. Ash Creek Preserve",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-cross-country/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7335",
+      "title": "Mike Johnson Classic",
+      "start": "2026-09-26T11:00:00-07:00",
+      "end": null,
+      "allDay": false,
+      "timeUnknown": false,
+      "timeLabel": "11 a.m.",
+      "status": "",
+      "location": "Monmouth, Ore. Ash Creek Preserve",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-cross-country/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7336",
+      "title": "Charles Bowles Invitational",
+      "start": "2026-10-03T09:30:00-07:00",
+      "end": null,
+      "allDay": false,
+      "timeUnknown": false,
+      "timeLabel": "9:30 a.m.",
+      "status": "",
+      "location": "Salem, Ore. Bush Park",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-cross-country/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7337",
+      "title": "George Oja Invitational",
+      "start": "2026-10-17T10:00:00-07:00",
+      "end": null,
+      "allDay": false,
+      "timeUnknown": false,
+      "timeLabel": "10 a.m.",
+      "status": "",
+      "location": "McMinnville, Ore. Oak Knoll GC",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-cross-country/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7338",
+      "title": "Cascade Collegiate Conference Championship",
+      "start": "2026-11-06T10:00:00-08:00",
+      "end": null,
+      "allDay": false,
+      "timeUnknown": false,
+      "timeLabel": "10 a.m.",
+      "status": "",
+      "location": "Lewiston, Idaho LC State Cross Country Trail",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-cross-country/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    },
+    {
+      "id": "7339",
+      "title": "NAIA Championship",
+      "start": "2026-11-20",
+      "end": null,
+      "allDay": true,
+      "timeUnknown": true,
+      "timeLabel": "TBD",
+      "status": "",
+      "location": "Vancouver, Wash. Fort Vancouver",
+      "sourceUrl": "https://bushnellbeacons.com/sports/mens-cross-country/schedule",
+      "timeZoneNote": "Times without a zone are interpreted in Pacific time. Confirm with the official schedule."
+    }
+  ],
+  "skipped": 0,
+  "note": "Saved official season schedule. Dates may change; confirm with the official athletics site.",
+  "source": "https://bushnellbeacons.com/sports/mens-cross-country/schedule",
+  "fetchedAt": "2026-10-29T19:06:05.472042+00:00",
+  "available": true
+}

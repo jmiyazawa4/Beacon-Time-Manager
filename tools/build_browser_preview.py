@@ -17,6 +17,7 @@ def build(output, snapshots=None, hosted_preview=False):
     html = (ROOT / 'index.html').read_text()
     academic = json.loads((ROOT / 'academic-calendar.json').read_text())
     sports = {}
+    snapshots=snapshots or (ROOT/'schedules')
     if snapshots:
         for path in Path(snapshots).glob('*.json'):
             response = json.loads(path.read_text())
@@ -32,8 +33,8 @@ def build(output, snapshots=None, hosted_preview=False):
     html = re.sub(r'<script src="([^\"]+)"></script>', inline_script, html)
     logo = 'data:image/png;base64,' + b64encode((ROOT / 'assets/beacon-b.png').read_bytes()).decode()
     html = html.replace('assets/beacon-b.png', logo)
-    payload = json.dumps({'academic': academic, 'sports': sports}, ensure_ascii=True).replace('<', '\\u003c')
-    bootstrap = '''<script>
+    payload = json.dumps({'academic': academic, 'sports': sports,'plan':json.loads((ROOT/'reading-plan.json').read_text()),'verses':json.loads((ROOT/'daily-verses.json').read_text())}, ensure_ascii=True).replace('<', '\\u003c')
+    bootstrap = r'''<script>
 (() => {
   const saved=PAYLOAD;
   window.BEACON_REVIEW_PRIVATE=HOSTED_PREVIEW;
@@ -43,17 +44,18 @@ def build(output, snapshots=None, hosted_preview=False):
     const raw=typeof input==='string'?input:input.url;
     const url=new URL(raw,'https://beacon-preview.invalid/');
     if(url.pathname.endsWith('/academic-calendar.json'))return respond(saved.academic);
-    if(url.pathname==='/api/schedule'){
-      const sport=url.searchParams.get('sport');
-      if(saved.sports[sport])return respond(saved.sports[sport]);
-      return respond({error:'No saved schedule for this sport in the downloaded preview.',detail:'Use the official schedule link. Live updates require the hosted website.'},503);
+    if(url.pathname.endsWith('/reading-plan.json'))return respond(saved.plan);
+    if(url.pathname.endsWith('/daily-verses.json'))return respond(saved.verses);
+    const match=/\/schedules\/([a-z-]+)\.json$/.exec(url.pathname);
+    if(match){
+      if(saved.sports[match[1]])return respond(saved.sports[match[1]]);
+      return respond({available:false,error:'A saved schedule is not available for this sport. Use the official athletics link.',events:[]},404);
     }
-    if(url.pathname==='/api/verse')return respond({error:'Live NIV verses require the hosted website. Use the Bible Gateway link to read today’s verse.'},503);
     return fetchOriginal(input,options);
   };
   document.addEventListener('DOMContentLoaded',()=>{
     const notice=document.createElement('div');notice.className='preview-notice';
-    notice.textContent=(window.BEACON_REVIEW_PRIVATE?'Interactive preview · Use example activities only; changes are not saved. ':'Downloaded review version · ')+' Saved official schedules: baseball, men’s basketball, volleyball. Academic dates are included. Live schedule updates and NIV loading require the hosted website.';
+    notice.textContent=(window.BEACON_REVIEW_PRIVATE?'Interactive preview · Use example activities only; changes are not saved. ':'Downloaded review version · ')+' Saved official season schedules, university dates, KJV verses, and a yearly reading plan are included. Schedule changes require a manual update; confirm changes with athletics.';
     document.querySelector('header').after(notice);
   });
 })();
@@ -68,22 +70,22 @@ def build(output, snapshots=None, hosted_preview=False):
     output.write_text(html)
     readme = '''BEACON TIME MANAGER - BROWSER REVIEW
 
-1. Open Beacon-Time-Manager.html in Chrome, Edge, Firefox, or Safari.
-2. Add or edit activities, choose colors, switch weeks, and try Print / Download.
+Open Beacon-Time-Manager.html in a browser. No Python, installation, paid
+hosting, Bible API, or account is needed by the reader. The self-contained
+site includes saved official season schedules, supplied university dates,
+public-domain KJV daily verses, and a licensed yearly passage-reference plan.
+Schedules are snapshots: check their last-updated date and confirm changes
+with athletics. Changes require a new site-data update.
 
-No Python, installation, or account is needed. Keep using this same file and
-browser for locally saved activities; clearing browser storage can erase them.
-If your computer blocks downloaded HTML files, use an approved browser or ask
-for a hosted link instead.
+Calendar files are parsed locally, never uploaded. PDF downloads are local.
+Normal saving uses this browser profile and is not encrypted. On shared
+computers use Private session. The hosted review locks Private session on;
+use example activities there and expect reload to clear them.
 
-This is an interactive downloaded review, not a live public website.
-Academic dates are included from the supplied 2026-2027 calendar.
-Official baseball, men's basketball, and volleyball schedules were captured
-on October 29, 2026. Check the official athletics site for later changes.
-Other sports, live refresh, and NIV loading need the hosted site.
-Calendar-file imports are parsed locally and never uploaded.
-PDF downloads work directly in your browser. NIV can be read using the card's
-Bible Gateway link; no other translation is substituted.
+The ordinary downloaded file may save personal activities if the browser
+permits local-file storage. This chat may not support file downloads; use the
+GitHub Pages review link instead. The review is not a school-approved student
+release. Read SECURITY.md in the repository before a real rollout.
 '''
     (output.parent / 'READ-ME.txt').write_text(readme)
     with zipfile.ZipFile(output.with_suffix('.zip'), 'w', zipfile.ZIP_DEFLATED) as archive:

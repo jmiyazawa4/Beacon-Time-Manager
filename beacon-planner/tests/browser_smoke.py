@@ -30,7 +30,7 @@ with sync_playwright() as p:
     errors = []
     page.on('pageerror', lambda error: errors.append(str(error)))
     # Keep live athletics checks separate from deterministic browser fixtures.
-    page.route('**/api/schedule?*', lambda route: route.fulfill(status=502, content_type='application/json', body='{"error":"Fixture feed unavailable","detail":"Use calendar import."}'))
+    page.route('**/schedules/*.json', lambda route: route.fulfill(status=502, content_type='application/json', body='{"error":"Fixture feed unavailable","detail":"Use calendar import."}'))
     page.add_init_script("""if (!localStorage.getItem('beacon-planner-v1')) localStorage.setItem('beacon-planner-v1', JSON.stringify({student:'Browser test',sport:'',datedEvents:[],events:[],goals:[],reminders:[]}));""")
     page.goto(BASE)
     page.locator('#add').click()

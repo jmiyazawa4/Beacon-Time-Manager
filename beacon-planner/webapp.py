@@ -3,16 +3,12 @@ from base64 import b64encode
 from hashlib import sha256
 from http import HTTPStatus
 from pathlib import Path
-from threading import BoundedSemaphore
-from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qs, unquote, urlparse
+from urllib.parse import unquote, urlparse
 import json
 import mimetypes
 import os
 import re
 
-from daily_verse import load_verse
-from schedule_source import load_official_schedule
 
 ROOT = Path(__file__).resolve().parent
 SPORTS = {'baseball','mens-basketball','womens-basketball','mens-soccer','womens-soccer',
@@ -20,8 +16,7 @@ SPORTS = {'baseball','mens-basketball','womens-basketball','mens-soccer','womens
           'womens-cross-country','mens-track-and-field','womens-track-and-field','mens-golf','womens-golf','esports'}
 PUBLIC_FILES = {'index.html','academic-calendar.js','academic-calendar.json','bible-verses.js',
                 'calendar-import.js','privacy-storage.js','planner-views.css','planner-views.js',
-                'schedule-pdf.js','theme.css','vendor/jspdf.umd.min.js','assets/beacon-b.png'}
-API_SLOTS = BoundedSemaphore(4)
+                'schedule-pdf.js','theme.css','reading-plan.json','daily-verses.json','vendor/jspdf.umd.min.js','assets/beacon-b.png'}
 
 
 def security_headers():
@@ -70,27 +65,10 @@ def dispatch(method, target, headers):
         origin = headers.get('Origin')
         if headers.get('Sec-Fetch-Site') == 'cross-site' or (origin and urlparse(origin).netloc.lower() != host.lower()):
             return response(403, {'error':'Cross-site API requests are not allowed'})
-        if url.path not in {'/api/schedule','/api/verse'}:
-            return response(404, {'error':'Unknown endpoint'})
-        params=parse_qs(url.query,keep_blank_values=True)
-        if set(params)-({'sport'} if url.path=='/api/schedule' else set()) or any(len(v)!=1 for v in params.values()):
-            return response(400, {'error':'Unsupported request parameters'})
-        sport = params.get('sport',[''])[0]
-        if url.path == '/api/schedule' and sport not in SPORTS:
-            return response(400, {'error':'Unknown sport'})
-        if not API_SLOTS.acquire(blocking=False):
-            return response(429, {'error':'The service is busy. Please retry shortly.'}, extra={'Retry-After':'15'})
-        try:
-            result = load_verse() if url.path == '/api/verse' else load_official_schedule(sport)
-            return response(200, result)
-        except HTTPError as error:
-            return response(502, {'error':'Official service unavailable', 'detail':f'The source returned HTTP {error.code}. Previously saved events are kept.'})
-        except (URLError, TimeoutError, OSError, ValueError, TypeError, AttributeError, UnicodeError):
-            return response(502, {'error':'Unable to load the NIV verse. Retry or read it on Bible Gateway.'} if url.path == '/api/verse' else {'error':'The official schedule could not be retrieved or verified. Previously saved events are kept.'})
-        finally:
-            API_SLOTS.release()
+        return response(404, {'error':'This site uses included data and has no live API'})
     name = 'index.html' if url.path == '/' else unquote(url.path).removeprefix('/')
-    if name not in PUBLIC_FILES:
+    saved_schedule=name in {'schedules/'+sport+'.json' for sport in SPORTS}
+    if name not in PUBLIC_FILES and not saved_schedule:
         return response(404, {'error':'Not found'})
     path = (ROOT / name).resolve()
     if not path.is_relative_to(ROOT) or not path.is_file():

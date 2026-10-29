@@ -11,7 +11,9 @@ with sync_playwright() as p:
  requested=[];page.on('request',lambda r:requested.append(r.url))
  url='https://beacon-preview.invalid/'
  page.route('**/*',lambda r:r.fulfill(content_type='text/html',body=HTML.read_text()) if r.request.url==url else r.abort())
- page.goto(url);wait_js(page,'BeaconAcademic.status().verified')
+ page.goto(url);wait_js(page,'BeaconAcademic.status().verified');wait_js(page,"BeaconVerses.current() !== null")
+ assert page.evaluate('BeaconVerses.current().translation')=='KJV'
+ assert page.locator('#readingPassages a').count()==4
  assert page.locator('#privateSession').is_checked() and page.locator('#privateSession').is_disabled()
  assert page.locator('.view-buttons').count()==0
  page.locator('#add').click();page.locator('#evName').fill('Example review class');page.locator('#saveEvent').click()

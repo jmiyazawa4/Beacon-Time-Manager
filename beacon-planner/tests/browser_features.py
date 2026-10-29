@@ -14,37 +14,31 @@ with sync_playwright() as p:
     page.clock.install(time=datetime(2026, 1, 15, 20, tzinfo=timezone.utc))
     errors = []
     page.on('pageerror', lambda error: errors.append(str(error)))
-    niv_calls = []
-    def niv_fixture(route):
-        niv_calls.append(route.request.url)
-        payload = {'text':'NIV preview placeholder. The live passage is supplied by Bible Gateway.', 'reference':'NIV service preview '+str(len(niv_calls)), 'copyright':'Test fixture attribution. This preview is not Scripture.', 'translation':'NIV', 'link':'https://www.biblegateway.com/'}
-        route.fulfill(content_type='application/json', body=json.dumps(payload))
-    page.route('**/api/verse', niv_fixture)
-    academic_fixture={'verified':True,'program':'Test fixture calendar (not official dates)','academicYear':'2025-26 fixture','source':'https://bushnell.edu/academics/academic-calendars/','events':[{'id':'academic-fixture-holiday','title':'Fixture university holiday','start':'2026-01-12','end':'2026-01-13','kind':'holiday'},{'id':'academic-fixture-break','title':'Fixture university break','start':'2026-01-14','end':'2026-01-17','kind':'break'}]}
+    page.route('**/schedules/*.json', lambda route: route.fulfill(status=502, content_type='application/json', body='{"error":"Fixture: live schedule unavailable"}'))
+    academic_fixture={'verified':True,'program':'Test fixture calendar (not official dates)','academicYear':'2025-26 fixture','events':[{'id':'academic-fixture-holiday','title':'Fixture university holiday','start':'2026-01-12','end':'2026-01-13','kind':'holiday'},{'id':'academic-fixture-break','title':'Fixture university break','start':'2026-01-14','end':'2026-01-17','kind':'break'}]}
     page.route('**/academic-calendar.json',lambda route:route.fulfill(content_type='application/json',body=json.dumps(academic_fixture)))
-    page.route('**/api/schedule?*', lambda route: route.fulfill(status=502, content_type='application/json', body='{"error":"Fixture: live schedule unavailable"}'))
     page.add_init_script("""if(!localStorage.getItem('beacon-planner-v1')) localStorage.setItem('beacon-planner-v1',JSON.stringify({student:'Sample student',sport:'baseball',datedEvents:[{key:'baseball|fixture',sport:'baseball',title:'Fixture official competition',start:'2026-01-15T12:30:00-08:00',end:null,allDay:false,location:'Fixture gym',source:'Official Bushnell schedule'},{key:'baseball|tba',sport:'baseball',title:'Fixture TBA competition',start:'2026-01-16',end:'2026-01-17',allDay:true,timeUnknown:true,timeLabel:'Time TBA',source:'Official Bushnell schedule'}],goals:[{id:'g',text:'Complete biology lab',done:false}],reminders:[],events:[{id:'class',name:'Biology 101 - laboratory and discussion',cat:'Class',start:540,end:660,days:[1,3,5],color:'#8b5cf6'},{id:'practice',name:'Team practice',cat:'Practice',start:900,end:1020,days:[1,2,3,4,5],color:'#f6c642'},{id:'chapel',name:'Chapel',cat:'Chapel',start:600,end:660,days:[2],color:'#477dbb'},{id:'work',name:'Campus work',cat:'Work',start:780,end:960,days:[0,6],color:'#2d8b76'}]}));""")
     page.goto(os.environ.get('BEACON_TEST_URL', 'http://127.0.0.1:8000'))
-    wait_js(page,"document.getElementById('verseReference').textContent.includes('NIV service preview')")
+    wait_js(page,"BeaconVerses.current() !== null")
     assert page.locator('#verseText').inner_text()
-    assert 'NIV' in page.locator('#verseReference').inner_text()
-    assert 'Test fixture attribution' in page.locator('#verseCopyright').inner_text()
+    assert 'KJV' in page.locator('#verseReference').inner_text()
+    assert 'public domain' in page.locator('#verseCopyright').inner_text()
     assert 'January 15, 2026' in page.locator('#verseDate').inner_text()
-    assert page.evaluate('BeaconVerses.current().translation') == 'NIV'
+    assert page.evaluate('BeaconVerses.current().translation') == 'KJV'
     wait_js(page,"document.getElementById('academicStatus').textContent.includes('Test fixture calendar')")
     assert page.locator('.layout > .panel > .academic-banner').count() == 1
     assert page.locator('.academic-banner').evaluate("e=>!!(document.querySelector('.calendar-wrap').compareDocumentPosition(e)&Node.DOCUMENT_POSITION_FOLLOWING)")
     assert page.locator('.slot[data-day="1"].academic-holiday').count() == 16
     assert page.locator('.slot[data-day="3"].academic-break').count() == 16
-    assert 'Fixture university holiday' in page.locator('#calendarNotes').inner_text()
+    assert 'Fixture university holiday' not in page.locator('#calendarNotes').inner_text()
+    page.locator('.academic-banner summary').click()
+    assert 'Fixture university holiday' in page.locator('#academicWeekList').inner_text()
+    page.locator('.academic-banner summary').click()
     page.locator('#sport').select_option('softball')
     wait_js(page,"document.getElementById('sportStatus').textContent.includes('Fixture:')")
     assert page.locator('.slot[data-day="1"].academic-holiday').count() == 16
-    assert 'Fixture university holiday' in page.locator('#calendarNotes').inner_text()
+    assert 'Fixture university holiday' not in page.locator('#calendarNotes').inner_text()
     page.locator('#sport').select_option('baseball')
-    before = len(niv_calls)
-    page.evaluate('BeaconVerses.load()')
-    assert len(niv_calls) == before
     # Legacy saved view preferences must not restore a student-facing switcher.
     page.evaluate("localStorage.setItem('beacon-planner-view','agenda')")
     page.reload()
@@ -58,7 +52,11 @@ with sync_playwright() as p:
     assert page.locator('.calendar-wrap').is_visible()
     page.locator('#agendaDays button').nth(1).click()
     assert 'Biology 101' in page.locator('.dashboard-agenda-card').inner_text()
-    assert 'Fixture university holiday' in page.locator('.dashboard-agenda-card').inner_text()
+    assert page.locator('.agenda-academic-dates').is_visible()
+    assert page.locator('.agenda-academic-dates').get_attribute('open') is None
+    page.locator('.agenda-academic-dates summary').click()
+    assert 'Fixture university holiday' in page.locator('.agenda-academic-dates').inner_text()
+    page.locator('.agenda-academic-dates summary').click()
     page.locator('.dashboard-agenda-card .agenda-event').filter(has_text='Biology 101').click()
     page.locator('#evName').fill('Updated biology class')
     page.locator('#evColor').fill('#d946ef')
@@ -106,18 +104,6 @@ with sync_playwright() as p:
     assert page.locator('#verseReference').inner_text() != old
     assert 'January 16, 2026' in page.locator('#verseDate').inner_text()
     assert not errors, errors
-    failed = browser.new_page()
-    failed.route('**/api/verse', lambda route: route.fulfill(status=502, content_type='application/json', body='{"error":"Unable to load the NIV verse"}'))
-    failed.goto(os.environ.get('BEACON_TEST_URL', 'http://127.0.0.1:8000'))
-    wait_js(failed,"document.getElementById('verseStatus').textContent.includes('Unable to load')")
-    assert not failed.locator('#verseText').is_visible()
-    assert 'NIV' in failed.locator('#verseReference').inner_text()
-    assert 'KJV' not in failed.locator('.daily-verse-card').inner_text()
-    failed.locator('#print').click()
-    failed.locator('#exportVerse').check()
-    failed.locator('#exportDownload').click()
-    assert 'NIV verse has not loaded' in failed.locator('#exportError').inner_text()
-    failed.close()
-    print('PASS: shared academic fixtures across sports and holiday/break shading; one student dashboard without a view switcher; daily-agenda class/color editing; mobile widths; NIV provider payload/attribution, daily refresh, and unavailable-service behavior; three downloadable PDF layouts; A4/grayscale; dialog dismissal; no JS errors')
+    print('PASS: shared academic fixtures across sports and holiday/break shading; one student dashboard without a view switcher; daily-agenda class/color editing; mobile widths; bundled KJV daily reading and local date rollover; three downloadable PDF layouts; A4/grayscale; dialog dismissal; no JS errors')
     print('Artifacts:', OUT)
     browser.close()

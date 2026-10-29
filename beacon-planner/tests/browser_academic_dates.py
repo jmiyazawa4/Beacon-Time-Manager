@@ -1,6 +1,7 @@
 """Check the supplied real dates in the application. Start server.py first."""
 from datetime import datetime, timezone
 from pathlib import Path
+import os
 from playwright.sync_api import sync_playwright
 from browser_test_helpers import wait_js
 
@@ -10,17 +11,20 @@ with sync_playwright() as p:
     browser=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox'])
     page=browser.new_page(timezone_id='America/Los_Angeles',viewport={'width':1440,'height':1000},accept_downloads=True)
     page.clock.install(time=datetime(2026,11,26,20,tzinfo=timezone.utc))
-    page.route('**/api/verse',lambda r:r.fulfill(status=502,content_type='application/json',body='{"error":"NIV service unavailable in test"}'))
-    page.route('**/api/schedule?*',lambda r:r.fulfill(status=502,content_type='application/json',body='{"error":"Sports service fixture"}'))
-    page.goto('http://127.0.0.1:8000')
+    page.route('**/schedules/*.json',lambda r:r.fulfill(status=502,content_type='application/json',body='{"error":"Sports service fixture"}'))
+    page.goto(os.environ.get('BEACON_TEST_URL','http://127.0.0.1:8000'))
     wait_js(page,"BeaconAcademic.status().verified")
     assert page.locator('.slot[data-day="4"].academic-holiday').count()==16
     assert page.locator('.slot[data-day="5"].academic-holiday').count()==16
     assert page.locator('.slot[data-day="6"].academic-holiday').count()==0
-    assert 'Thanksgiving Holiday' in page.locator('#calendarNotes').inner_text()
+    assert 'Thanksgiving Holiday' not in page.locator('#calendarNotes').inner_text()
+    if page.locator('.academic-banner').get_attribute('open') is None:page.locator('.academic-banner summary').click()
+    assert 'Thanksgiving Holiday' in page.locator('#academicWeekList').inner_text()
     page.locator('#sport').select_option('baseball')
     wait_js(page,"document.getElementById('sportStatus').textContent.includes('Sports service')")
-    assert 'Thanksgiving Holiday' in page.locator('#calendarNotes').inner_text()
+    assert 'Thanksgiving Holiday' not in page.locator('#calendarNotes').inner_text()
+    if page.locator('.academic-banner').get_attribute('open') is None:page.locator('.academic-banner summary').click()
+    assert 'Thanksgiving Holiday' in page.locator('#academicWeekList').inner_text()
     page.locator('#sport').select_option('softball')
     assert page.locator('.slot[data-day="4"].academic-holiday').count()==16
     page.locator('#print').click()

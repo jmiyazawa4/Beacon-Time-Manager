@@ -51,23 +51,21 @@ class SecurityTests(unittest.TestCase):
         self.assertTrue(recorded[0].startswith('405'))
         self.assertIn(b'no planner data',result[0])
 
-    def test_only_public_sport_parameter_reaches_source(self):
-        with patch.object(webapp,'load_official_schedule',return_value={'events':[]}) as source:
-            self.assertEqual(self.get('/api/schedule?sport=baseball')[0],200)
-            source.assert_called_once_with('baseball')
-            self.assertEqual(self.get('/api/schedule?sport=baseball&student=private')[0],400)
-            self.assertEqual(source.call_count,1)
-            self.assertEqual(self.get('/api/schedule?sport=https://attacker.example')[0],400)
+    def test_only_static_data_is_served_and_live_apis_are_absent(self):
+        with patch('urllib.request.urlopen') as external:
+            self.assertEqual(self.get('/schedules/baseball.json')[0],200)
+            self.assertEqual(self.get('/reading-plan.json')[0],200)
+            self.assertEqual(self.get('/daily-verses.json')[0],200)
+            for endpoint in ['/api/schedule?sport=baseball','/api/verse','/api/import','/schedules/unknown.json']:
+                self.assertEqual(self.get(endpoint)[0],404)
+            external.assert_not_called()
 
-    def test_busy_source_requests_are_bounded_and_errors_are_redacted(self):
-        with patch.object(webapp.API_SLOTS,'acquire',return_value=False):
-            result=self.get('/api/verse')
-            self.assertEqual(result[0],429)
-            self.assertEqual(result[1]['Retry-After'],'15')
-        with patch.object(webapp,'load_verse',side_effect=ValueError('sensitive-internal-detail')):
-            status,headers,body=self.get('/api/verse')
-            self.assertEqual(status,502)
-            self.assertNotIn(b'sensitive-internal-detail',body)
+    def test_public_errors_are_redacted(self):
+        recorded=[]
+        with patch.object(webapp,'dispatch',side_effect=RuntimeError('sensitive-internal-detail')):
+            result=webapp.application({'REQUEST_METHOD':'GET','PATH_INFO':'/','HTTP_HOST':'localhost'},lambda status,headers:recorded.append(status))
+            self.assertTrue(recorded[0].startswith('500'))
+            self.assertNotIn(b'sensitive-internal-detail',result[0])
 
     def test_head_has_no_body_and_url_size_is_limited(self):
         status,headers,body=self.get('/','HEAD')

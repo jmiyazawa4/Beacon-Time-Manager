@@ -1,8 +1,9 @@
-"""Opt-in live check; start server.py first. Makes real athletics requests."""
+"""Historical filename: verify included official snapshots without live athletics requests."""
 from datetime import datetime, timezone
 from pathlib import Path
 import os
 from playwright.sync_api import sync_playwright
+from browser_test_helpers import wait_js
 
 OUT = Path(os.environ.get('BEACON_TEST_ARTIFACTS', '/tmp/beacon-live-check'))
 OUT.mkdir(parents=True, exist_ok=True)
@@ -20,7 +21,7 @@ with sync_playwright() as p:
     page.locator('#saveEvent').click()
     counts = {}
     for sport in ['baseball', 'mens-basketball', 'womens-volleyball', 'baseball']:
-        with page.expect_response(lambda response: '/api/schedule?sport='+sport in response.url, timeout=90000) as result:
+        with page.expect_response(lambda response: '/schedules/'+sport+'.json' in response.url, timeout=90000) as result:
             page.locator('#sport').select_option(sport)
         response = result.value
         assert response.status == 200, response.text()
@@ -28,7 +29,7 @@ with sync_playwright() as p:
         assert data['source'] == 'https://bushnellbeacons.com/sports/'+sport+'/schedule'
         assert data['events'] and data['skipped'] == 0, data
         counts[sport] = len(data['events'])
-        page.wait_for_function("document.getElementById('sportStatus').textContent.includes('official competitions loaded')")
+        wait_js(page,"document.getElementById('sportStatus').textContent.includes('official competitions loaded')")
         chosen = page.evaluate("""() => {
             const data=JSON.parse(localStorage.getItem('beacon-planner-v1'));
             const sport=document.getElementById('sport').value;
@@ -47,7 +48,7 @@ with sync_playwright() as p:
         stored = page.evaluate("JSON.parse(localStorage.getItem('beacon-planner-v1'))")
         assert stored['events'][0]['color'] == '#8b5cf6'
         assert len([e for e in stored['datedEvents'] if e['sport'] == sport]) == counts[sport]
-        print('PASS live', sport, counts[sport], 'official competitions; next shown:', chosen['title'], chosen['start'], flush=True)
+        print('PASS saved schedule', sport, counts[sport], 'official competitions; next shown:', chosen['title'], chosen['start'], flush=True)
     page.screenshot(path=str(OUT/'desktop-official.png'), full_page=True)
     page.pdf(path=str(OUT/'official-week.pdf'), prefer_css_page_size=True, print_background=True)
     page.set_viewport_size({'width': 390, 'height': 844})
