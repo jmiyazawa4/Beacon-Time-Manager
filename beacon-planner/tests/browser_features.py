@@ -48,6 +48,19 @@ with sync_playwright() as p:
         assert page.locator('.view-buttons [data-view="'+view+'"]').get_attribute('aria-pressed') == 'true'
         page.reload()
         assert page.locator('body').get_attribute('data-planner-view') == view
+        if view == 'dashboard':
+            assert page.locator('.dashboard-agenda-card').is_visible()
+            assert not page.locator('.time-summary-card').is_visible()
+            page.locator('#agendaDays button').nth(1).click()
+            assert 'Biology 101' in page.locator('.dashboard-agenda-card').inner_text()
+            assert 'Fixture university holiday' in page.locator('.dashboard-agenda-card').inner_text()
+            page.locator('.dashboard-agenda-card .agenda-event').filter(has_text='Biology 101').click()
+            assert page.locator('#modal').is_visible()
+            assert page.locator('#evName').input_value().startswith('Biology 101')
+            page.locator('#cancel').click()
+            page.locator('#nextWeek').click()
+            assert 'January 19, 2026' in page.locator('#agendaDate').inner_text()
+            page.locator('#prevWeek').click()
         if view == 'agenda':
             assert not page.locator('.calendar-wrap').is_visible()
             page.locator('#agendaDays button').nth(1).click()
