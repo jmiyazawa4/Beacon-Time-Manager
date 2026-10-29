@@ -13,9 +13,19 @@ python server.py
 
 On Windows, `py server.py` also works. Open `http://localhost:8000` in your browser. Keep the terminal running. Both automatic schedule requests and `.ics` import require this server; opening the HTML file directly is insufficient. No JavaScript package installation is needed. A pinned local copy of jsPDF 4.2.1 is included for browser PDF creation; its MIT license is in vendor/jspdf.LICENSE. There are no third-party analytics.
 
+## Explore without installing Python
+
+A developer can create a self-contained review file with:
+
+```sh
+python tools/build_browser_preview.py --output /path/to/Beacon-Time-Manager.html --snapshots /path/to/verified-sport-json
+```
+
+The output HTML and ZIP include scripts, styles, logo, university dates, and any supplied verified official schedule snapshots. The recipient only extracts the ZIP and opens `Beacon-Time-Manager.html` in a browser; no Python, installation, or account is needed. Personal planning, colors, the daily agenda, and PDF exports work locally. The review version explicitly identifies saved schedules and disables live sports refresh, NIV loading, and server-side `.ics` import. A hosted Python service is still needed for those live features and for a normal shareable website link. Some managed computers block downloaded HTML; local file storage behavior also depends on the browser. The file was tested without API/asset network requests under an isolated browser origin; this cloud browser blocks `file://` navigation, so launching the download as a local file could not be independently exercised here.
+
 ## Website layouts, daily scripture, and schedule downloads
 
-Students use one dashboard: the weekly calendar with a compact, editable daily agenda in the sidebar. There is no website-view or theme switcher. Design/color alternatives are review previews for the project owner, not student-facing modes.
+The selected site design is **B: warm ivory and gold**, implemented in `beacon-planner/theme.css`. The university-calendar panel appears beneath the weekly calendar. Students use one dashboard: the weekly calendar with a compact, editable daily agenda in the sidebar. There is no website-view or theme switcher. Design/color alternatives are review previews for the project owner, not student-facing modes.
 
 The sidebar's **Verse of the day** requests **NIV** from Bible Gateway's public verse-of-the-day widget via the Python server. The server parses the payload as data without executing remote JavaScript, so the publisher's script cannot access personal planner data. It displays the source reference, link, and publisher attribution returned by the provider. No NIV verse collection is bundled or persisted, and another translation is never substituted. The running Python server requires internet access to `www.biblegateway.com`; responses are cached for 15 minutes. The widget is re-requested when the local date changes; the provider determines its daily selection. If the service fails, the card offers retry and a direct NIV link. PDFs may include a successfully loaded verse with its publisher attribution.
 

@@ -54,7 +54,7 @@
   const academicBanner = document.createElement('div');
   academicBanner.className = 'academic-banner no-print';
   academicBanner.innerHTML = '<div><strong>University calendar</strong><span id="academicStatus" role="status">Loading academic dates…</span></div><a href="https://bushnell.edu/academics/academic-calendars/" target="_blank" rel="noopener">Official academic calendars ↗</a>';
-  document.querySelector('.sport-panel').after(academicBanner);
+  document.querySelector('.layout > .panel').append(academicBanner);
   function renderAcademicStatus() {
     const data=window.BeaconAcademic.status();
     $('academicStatus').textContent=data.verified?[data.program,data.academicYear,'Shared across sports. Check course-session labels; holidays and breaks are shaded.'].filter(Boolean).join(' · '):data.error||'University academic dates are not available yet.';

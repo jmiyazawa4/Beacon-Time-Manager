@@ -31,6 +31,8 @@ with sync_playwright() as p:
     assert 'January 15, 2026' in page.locator('#verseDate').inner_text()
     assert page.evaluate('BeaconVerses.current().translation') == 'NIV'
     page.wait_for_function("document.getElementById('academicStatus').textContent.includes('Test fixture calendar')")
+    assert page.locator('.layout > .panel > .academic-banner').count() == 1
+    assert page.locator('.academic-banner').evaluate("e=>!!(document.querySelector('.calendar-wrap').compareDocumentPosition(e)&Node.DOCUMENT_POSITION_FOLLOWING)")
     assert page.locator('.slot[data-day="1"].academic-holiday').count() == 16
     assert page.locator('.slot[data-day="3"].academic-break').count() == 16
     assert 'Fixture university holiday' in page.locator('#calendarNotes').inner_text()

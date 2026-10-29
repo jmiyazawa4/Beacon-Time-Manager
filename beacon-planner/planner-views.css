@@ -39,3 +39,5 @@ body[data-planner-view=dashboard] .dashboard-agenda-card .agenda-view{display:bl
 .dashboard-agenda-card .agenda-empty h4{font-size:12px;margin:0 0 6px}
 .dashboard-agenda-card .agenda-empty p{font-size:10px;line-height:1.6;color:#66768c;margin:0}
 }
+
+.layout>.panel>.academic-banner{margin:18px 0 0}
