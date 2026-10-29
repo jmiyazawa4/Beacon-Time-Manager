@@ -11,7 +11,36 @@ cd beacon-planner
 python server.py
 ```
 
-On Windows, `py server.py` also works. Open `http://localhost:8000` in your browser. Keep the terminal running. Both automatic schedule requests and `.ics` import require this server; opening the HTML file directly is insufficient. The application itself has no JavaScript package dependencies or third-party analytics.
+On Windows, `py server.py` also works. Open `http://localhost:8000` in your browser. Keep the terminal running. Both automatic schedule requests and `.ics` import require this server; opening the HTML file directly is insufficient. No JavaScript package installation is needed. A pinned local copy of jsPDF 4.2.1 is included for browser PDF creation; its MIT license is in vendor/jspdf.LICENSE. There are no third-party analytics.
+
+## Website layouts, daily scripture, and schedule downloads
+
+Use **Planner view** to switch between Dashboard (weekly grid and sidebar), Calendar focus (full-width grid with tools below), and Daily agenda (day selector and larger editable activity cards). The preference stays saved in the same browser. All views use the same saved activities and official competitions.
+
+The sidebar's **Verse of the day** requests **NIV** from Bible Gateway's public verse-of-the-day widget via the Python server. The server parses the payload as data without executing remote JavaScript, so the publisher's script cannot access personal planner data. It displays the source reference, link, and publisher attribution returned by the provider. No NIV verse collection is bundled or persisted, and another translation is never substituted. The running Python server requires internet access to `www.biblegateway.com`; responses are cached for 15 minutes. The widget is re-requested when the local date changes; the provider determines its daily selection. If the service fails, the card offers retry and a direct NIV link. PDFs may include a successfully loaded verse with its publisher attribution.
+
+Live Bible Gateway access was blocked by the cloud network policy during development. A draft domain allowance for `biblegateway.com` was saved but has not been applied or published. Provider-response handling and failures were tested with clearly labeled synthetic fixtures, not real NIV text. Live service behavior remains unverified until that access is enabled.
+Use **Print / Download** to choose an actual downloadable PDF:
+
+- Weekly grid: one compact landscape page; long labels may shorten.
+- Weekly agenda: portrait lists with full activity names, times, and locations.
+- Daily pages: a portrait page per day with writing space; dense days continue onto extra pages.
+
+Choose US Letter or A4, grayscale, and whether to include today's verse. Downloads include the displayed week's saved activities and loaded competitions, including TBA entries. PDFs are created in the browser; personal data is not uploaded for export. **Preview / Print** opens the PDF in a new tab, where the browser's PDF viewer provides printing controls. The standard PDF font supports Latin text; other scripts may need an embedded-font enhancement.
+
+Optional verification, with the server running:
+
+```sh
+python beacon-planner/tests/browser_features.py
+```
+
+This exercises all three website layouts, persistent preferences, agenda editing, mobile widths, NIV payload/attribution handling, daily refresh, and provider-failure behavior, actual PDF downloads in all three layouts, A4/grayscale, and the print preview. Artifacts are written under `/tmp/beacon-feature-check`.
+
+## Shared academic dates and holiday shading
+
+University academic dates are a shared layer, separate from personal activities and sport selection. Read-only entries appear in every view and PDF export. Holiday columns use a pale gold background; break columns use pale blue, with text labels so color is not the only indication. Personal activities are preserved, including recurring classes; shading does not automatically cancel them.
+
+The central source file is `beacon-planner/academic-calendar.json`. Events use date-only `start` and exclusive `end`, an ID/title, and `kind` (`holiday`, `break`, `deadline`, or `term`). Only verified data is displayed. The official page at https://bushnell.edu/academics/academic-calendars/ was blocked by the environment network policy. No university dates have been guessed: the shipped data remains unverified and empty pending the actual on-campus academic calendar. A draft allowance for `bushnell.edu` is saved but unapplied. Browser holiday tests use clearly labeled synthetic fixtures, not official dates. Verify the program and academic year against the official source before populating this file and setting `verified` to true.
 
 ## Calendar status and dates
 
@@ -22,6 +51,10 @@ On October 29, 2026, the integration was checked against the official baseball, 
 The parser joins competition years from the page's structured event data with the **visible opponent/date/start time**. This is intentional: the baseball page displayed 11 a.m. for a competition whose embedded metadata incorrectly said 11 p.m. Unpublished start times remain TBA above the grid, and date ranges retain their days. Times without an explicit zone are interpreted in Pacific time; explicit MT/CT/ET/PT labels are honored. Confirm timezones and last-minute changes with athletics. Official durations are not published; a one-hour display block is a visual placeholder, not a promised game length.
 
 Responses are cached for 15 minutes. The integration checks `robots.txt`, respects disallowed paths, and waits at least 30 seconds between source requests. An uncached initial load may take 30–45 seconds; switching to another uncached sport can also require a wait. Source URL, last fetch time, and skipped-entry counts are available in the API; the UI shows last-check time and warnings. The adapter depends on the official page format, so athletics markup changes may require maintenance.
+
+## University and athletics wording
+
+The planner uses Bushnell's mission themes (Wisdom, Faith, Service), the university mission and vision text supplied by the project owner, and the official athletics Tri-Athlete model (Character, Classroom, Competition). The banner links to [Mission & Vision](https://bushnell.edu/about/mission-vision/) and the [Tri-Athlete model](https://bushnellbeacons.com/sports/growth). The athletics content was verified from its page; direct access to the university mission page was blocked in this development environment, so its wording was supplied by the owner. Promotional slogans have been removed.
 
 ## Classes and colors
 
@@ -39,7 +72,7 @@ From the repository root:
 python -m unittest discover -s beacon-planner/tests -v
 ```
 
-Thirteen tests cover Pacific DST and winter/summer offsets, explicit timezones and UTC, all-day dates, duplicate updates/cancellations, invalid entries, official-page parsing, visible-versus-metadata time discrepancies, TBA dates, ranked opponents, source caching, and robots rules. Minimal source excerpts in tests/fixtures are captured official examples, not fabricated games.
+Sixteen tests cover Pacific DST and winter/summer offsets, explicit timezones and UTC, all-day dates, duplicate updates/cancellations, invalid entries, official-page parsing, visible-versus-metadata time discrepancies, TBA dates, ranked opponents, source caching, robots rules, and safe NIV payload/attribution parsing. Minimal source excerpts in tests/fixtures are captured official examples, not fabricated games.
 
 Optional browser checks require Python Playwright and `/usr/bin/chromium` (both available in the prepared cloud environment). Start the server, then run:
 

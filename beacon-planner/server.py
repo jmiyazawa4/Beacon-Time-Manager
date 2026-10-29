@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 import json
 import re
 from schedule_source import load_official_schedule
+from daily_verse import load_verse
 
 SPORTS = {'baseball', 'mens-basketball', 'womens-basketball', 'mens-soccer',
           'womens-soccer', 'volleyball', 'womens-volleyball', 'beach-volleyball', 'softball',
@@ -86,6 +87,11 @@ def parse_ics(raw):
 class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         url = urlparse(self.path)
+        if url.path == '/api/verse':
+            try:
+                return self.send_json(200, load_verse())
+            except (OSError, ValueError, TypeError, AttributeError, UnicodeError):
+                return self.send_json(502, {'error': 'Unable to load the NIV verse. Retry or read it on Bible Gateway.'})
         if url.path != '/api/schedule':
             return super().do_GET()
         sport = parse_qs(url.query).get('sport', [''])[0]
