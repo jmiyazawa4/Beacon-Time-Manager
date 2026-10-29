@@ -7,7 +7,7 @@ This is a security baseline, not a guarantee against breaches or a compliance ce
 | Content | Handling |
 | --- | --- |
 | Names/nicknames, classes, goals, reminders | Browser only. Saving uses unencrypted localStorage in this browser profile. Private session keeps entries only in page memory. |
-| Imported calendar files | Parsed locally. Files and filenames are not uploaded. |
+| Imported ICS/CSV files | Parsed locally. Files and filenames are not uploaded. |
 | Sports, academic dates, KJV verses, reading references | Included public files. No live API calls, student-specific requests, or paid data services. |
 | PDF exports | Created on-device; they contain schedule information and remain wherever the user saves/shares them. |
 | Hosting metadata | GitHub Pages can receive IP/request metadata. Provider policies and administrative access still need review. |
@@ -21,6 +21,7 @@ There are no student accounts, public profiles, cloud sync, analytics, trackers,
 - The optional local/WSGI server also supplies security headers, including framing denial, no-referrer, nosniff, origin isolation, and restricted camera/microphone/location permissions. GitHub Pages does not apply that Python server's headers: notably, `frame-ancestors` cannot be enforced using a meta CSP alone.
 - Optional server file delivery uses an explicit allowlist, denies source/configuration/tests and traversal, and rejects writes without reading bodies. All live API routes are removed. It does not fetch external content when students use it.
 - Imported calendar HTML remains text. Files, lines, events, field lengths, timezone/date formats, and invalid DST times are bounded/validated. Embedded URLs and attachments are not fetched.
+- CSV fields are treated as text; imports have row/size limits and confirm counts before applying. Ambiguous times are not inferred.
 - Private sessions delete this app's durable planner entry and stop saving. Other open tabs receive the mode change. Storage failures report that older data may remain. Existing downloads, screenshots, backups, restored browser state, or copies outside this app cannot be erased by the feature.
 - A separate `--hosted-preview` build can lock private mode; the deployed `--save-on-device` build permits local saving. GitHub project sites share an owner's origin; this remains a reason to review hosting/origin choices before a real student rollout, even when the public GitHub address is retained.
 - PDFs are generated locally with pinned, vendored jsPDF. KJV data and reading-plan reference licenses/attribution are included. No remote publisher script executes in the planner.

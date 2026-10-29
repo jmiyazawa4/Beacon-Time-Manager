@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const c={window:{},Date,Intl,TextEncoder};vm.createContext(c);for(const f of ['calendar-import.js','csv-import.js'])vm.runInContext(fs.readFileSync(__dirname+'/../'+f,'utf8'),c);
+const parse=(s,year=2026)=>c.window.BeaconCSV.parse(s,{year});
+const source='Date,Event,Duration,Location,Required Attendance ,Description,,\nSeptember 1 (Tuesday),Practice,3:30-5:40pm (2:10 hrs),Hamlin,All,"Text with a comma, and ""quotes"""\nSeptember 2 (Wednesday),Camp,9:00 AM,Field,Group,"First line\nSecond line"\nSeptember 3 (Thursday),Meeting,TBD,Campus,All,Later\nSeptember 4 (Friday),Off,,,,';
+let data=parse(source);assert.equal(data.events.length,4);assert.equal(data.skipped,0);assert.equal(data.needsReview,2);
+assert.equal(Date.parse(data.events[0].end)-Date.parse(data.events[0].start),130*60000);assert.equal(data.events[0].start,'2026-09-01T22:30:00.000Z');assert.equal(data.events[0].attendance,'All');assert.equal(data.events[0].description,'Text with a comma, and "quotes"');assert.equal(data.events[1].allDay,true);assert.equal(data.events[1].timeUnknown,true);assert.equal(data.events[3].timeUnknown,false);
+assert.throws(()=>parse(source,2027),/Weekday/);assert.throws(()=>parse('Date,Event\n2026-02-30,Bad'),/Invalid date/);assert.throws(()=>parse('Date,Event\n2026-01-01,"unfinished'),/quoted/);assert.throws(()=>parse('No,Header\n1,2'),/Date and Event/);
+data=parse('Date,Event,Start Time,End Time\n2026-09-01,Practice,09:00,11:10');assert.equal(data.events[0].allDay,false);assert.equal(Date.parse(data.events[0].end)-Date.parse(data.events[0].start),130*60000);
+data=parse('Date,Event,Duration\n2026-09-01,Practice,10-12:10 (2:10 hrs)');assert.equal(data.needsReview,1);assert.equal(data.events[0].allDay,true);
+assert.throws(()=>parse('x'.repeat(2000001)),/too large/);
+console.log('PASS: quoted/multiline CSV, Pacific dates/times, exact durations, attendance/notes, no guesses for incomplete times, bad years/dates and limits');

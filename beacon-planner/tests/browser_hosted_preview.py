@@ -58,6 +58,24 @@ with sync_playwright() as p:
  page.locator('#add').click();page.locator('#evName').fill('Erase this class');page.locator('#saveEvent').click()
  page.locator('#reset').click();page.reload()
  assert 'Erase this class' not in page.locator('#calendar').inner_text()
+ page.locator('#sport').select_option('baseball')
+ wait_js(page,"document.getElementById('sportStatus').textContent.includes('official competitions')")
+ page.locator('details.sport-options').evaluate('(e)=>e.open=true')
+ csv=b'Date,Event,Duration,Location,Required Attendance,Description\n2027-01-20,Synthetic CSV Practice,3:30-5:40pm,Field,Tuesday Group,CSV example\n2027-01-20,Synthetic CSV Meeting,TBD,Campus,All,Confirm time'
+ for repeat in range(2):
+  page.locator('#sportCalendarFile').set_input_files({'name':'example.csv','mimeType':'text/csv','buffer':csv})
+  wait_js(page,"document.getElementById('sportStatus').textContent.includes('Imported or updated 2')")
+ stored=page.evaluate("JSON.parse(localStorage.getItem('beacon-planner-v1'))")
+ imported=[e for e in stored['datedEvents'] if e['title'].startswith('Synthetic CSV')]
+ assert len(imported)==2
+ known=next(e for e in imported if e['title']=='Synthetic CSV Practice')
+ assert known['category']=='Practice' and known['attendance']=='Tuesday Group'
+ page.locator('#currentWeek').click()
+ assert page.locator('.event').filter(has_text='Synthetic CSV Practice').count()==1
+ assert 'Synthetic CSV Meeting' in page.locator('#calendarNotes').inner_text()
+ assert page.locator('.help-title').filter(has_text='Counselor Coordinator').count()==1
+ assert page.locator('.help-title').filter(has_text='Tutoring Service Lead').count()==1
+
  assert all(request==url for request in requested),requested
  print('PASS: static preview supports editing, real saved sports data, academic dates and PDF downloads without APIs; browser entries survive reload; optional private mode erases saved entries; Clear all clears the planner; CSP rejects injected scripts')
  b.close()

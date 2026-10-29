@@ -122,7 +122,7 @@
           doc.setFontSize(layout === 'daily' ? 12 : 10); doc.setFont('helvetica', 'bold');
           const title = wrap(event.title, contentWidth);
           doc.setFont('helvetica', 'normal'); doc.setFontSize(9);
-          const detail = wrap([timeLabel(event), event.category, event.location].filter(Boolean).join(' | '), contentWidth);
+          const detail = wrap([timeLabel(event), event.category, event.location, event.attendance, event.description].filter(Boolean).join(' | '), contentWidth);
           const lineH = layout === 'daily' ? 15 : 12, lines = [...title.map(t => ({value: t, bold: true})), ...detail.map(t => ({value: t, bold: false}))];
           // Write line by line so unusually long event names cannot fall off a page.
           for (const line of lines) {

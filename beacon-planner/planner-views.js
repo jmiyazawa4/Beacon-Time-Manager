@@ -46,7 +46,7 @@
       if (!event.allDay && event.endKnown) {const end = document.createElement('small'); end.textContent = 'to ' + formatTime(event.end) + (event.estimated ? ' (est.)' : ''); time.append(end);}
       const body = document.createElement('span'); body.className = 'agenda-event-body';
       const title = document.createElement('strong'); title.textContent = event.title;
-      const detail = document.createElement('small'); detail.textContent = [event.category, event.location].filter(Boolean).join(' · ');
+      const detail = document.createElement('small'); detail.textContent = [event.category, event.location, event.attendance, event.description].filter(Boolean).join(' · ');
       body.append(title, detail);
       const action = document.createElement('span'); action.className = 'agenda-event-action'; action.textContent = event.personal ? 'Edit activity' : event.academic ? 'University calendar' : 'Official schedule';
       button.append(time, body, action); button.onclick = () => planner.editActivity(event.id); (event.academic?academicDetails:$('agendaEvents')).append(button);
