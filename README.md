@@ -4,7 +4,7 @@ A free static weekly planner for Bushnell student-athletes, using the selected w
 
 Review site: https://jmiyazawa4.github.io/Beacon-Time-Manager/
 
-The GitHub Pages review uses **mandatory private sessions**: example entries are not saved and disappear on reload. It is a review version, not a school-approved student release. No paid hosting, Python runtime, Bible API, or live athletics service is required by the deployed site. GitHub Pages is sufficient for this static public-repository site within its service limits. A custom domain is optional and is not being purchased.
+The GitHub Pages site now uses **Save on this device**: entries stay in this browser after reload or closing. Private session is optional and removes saved planner entries. Nothing syncs across devices; clearing browser/site data removes the planner. It is a review version, not a school-approved student release. No paid hosting, Python runtime, Bible API, or live athletics service is required by the deployed site. GitHub Pages is sufficient for this static public-repository site within its service limits. A custom domain is optional and is not being purchased.
 
 ## Included content
 
@@ -38,12 +38,12 @@ Refresh one sport or all sports, inspect the changes, then test and rebuild:
 ```sh
 python tools/update_schedules.py --sport baseball
 # Omit --sport to update all sports; the official crawl delay makes this several minutes.
-python tools/build_browser_preview.py --hosted-preview --output /path/to/publish/index.html
+python tools/build_browser_preview.py --save-on-device --output /path/to/publish/index.html
 ```
 
 The update script only reads official allowlisted sports pages, checks robots rules, and waits at least 30 seconds between source requests. Failed/unverified refreshes retain older files. The snapshot adapter joins the visible competition date/time with its year from structured metadata; this avoids a verified AM/PM error in the source's JSON-LD. Format changes need maintenance. Source IDs deduplicate refreshes and preserve personal classes. Matching calendar imports are suppressed when an official competition is already present; distinct official IDs remain separate to preserve doubleheaders. Each timed event renders as one continuous block, with stable columns for overlaps. Goals and reminders sit above the calendar, and the sport question is compact.
 
-The `gh-pages` branch publishes only a self-contained `index.html` and `.nojekyll`, with private-session mode locked for review and a meta CSP. Push updates to that branch to refresh the same public URL. The builder embeds assets, content, and license texts; it does not deploy Python or expose source/config files. A school-approved student release needs a separate privacy/security decision about saving, origin, contact/operations, and provider settings.
+The `gh-pages` branch publishes only a self-contained `index.html` and `.nojekyll`, with optional private sessions, browser-local saving, and a meta CSP. `--hosted-preview` remains available for a separate locked, non-saving review build. Push updates to that branch to refresh the same public URL. The builder embeds assets, content, and license texts; it does not deploy Python or expose source/config files. A school-approved student release needs a separate privacy/security decision about saving, origin, contact/operations, and provider settings.
 
 ## Verification
 

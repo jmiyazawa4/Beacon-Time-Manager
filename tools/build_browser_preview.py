@@ -13,7 +13,9 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1] / 'beacon-planner'
 
 
-def build(output, snapshots=None, hosted_preview=False):
+def build(output, snapshots=None, hosted_preview=False, save_on_device=False):
+    if hosted_preview and save_on_device:
+        raise ValueError("Choose either locked preview or device saving")
     html = (ROOT / 'index.html').read_text()
     academic = json.loads((ROOT / 'academic-calendar.json').read_text())
     sports = {}
@@ -55,7 +57,7 @@ def build(output, snapshots=None, hosted_preview=False):
   };
   document.addEventListener('DOMContentLoaded',()=>{
     const notice=document.createElement('div');notice.className='preview-notice';
-    notice.textContent=(window.BEACON_REVIEW_PRIVATE?'Interactive preview · Use example activities only; changes are not saved. ':'Downloaded review version · ')+' Saved official season schedules, university dates, KJV verses, and a yearly reading plan are included. Schedule changes require a manual update; confirm changes with athletics.';
+    notice.textContent=(window.BEACON_REVIEW_PRIVATE?'Interactive preview · Use example activities only; changes are not saved. ':'Save on this device · Changes stay in this browser unless you choose Private session. Clearing browser data erases them; there is no cross-device sync. ')+' Saved official season schedules, university dates, KJV verses, and a yearly reading plan are included. Schedule changes require a manual update; confirm changes with athletics.';
     document.querySelector('header').after(notice);
   });
 })();
@@ -79,8 +81,9 @@ with athletics. Changes require a new site-data update.
 
 Calendar files are parsed locally, never uploaded. PDF downloads are local.
 Normal saving uses this browser profile and is not encrypted. On shared
-computers use Private session. The hosted review locks Private session on;
-use example activities there and expect reload to clear them.
+computers use Private session. A --hosted-preview build locks Private session
+on; the --save-on-device build allows local saving and an optional private session.
+Clearing site data erases saved entries. No cloud backup or device sync exists.
 
 The ordinary downloaded file may save personal activities if the browser
 permits local-file storage. This chat may not support file downloads; use the
@@ -98,6 +101,8 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument('--output', required=True)
     parser.add_argument('--snapshots')
-    parser.add_argument('--hosted-preview',action='store_true')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--hosted-preview',action='store_true')
+    mode.add_argument('--save-on-device',action='store_true',help='Allow browser-local saving with optional private sessions')
     args = parser.parse_args()
-    print(build(args.output, args.snapshots, args.hosted_preview))
+    print(build(args.output, args.snapshots, args.hosted_preview, args.save_on_device))
