@@ -40,7 +40,11 @@ This exercises all three website layouts, persistent preferences, agenda editing
 
 University academic dates are a shared layer, separate from personal activities and sport selection. Read-only entries appear in every view and PDF export. Holiday columns use a pale gold background; break columns use pale blue, with text labels so color is not the only indication. Personal activities are preserved, including recurring classes; shading does not automatically cancel them.
 
-The central source file is `beacon-planner/academic-calendar.json`. Events use date-only `start` and exclusive `end`, an ID/title, and `kind` (`holiday`, `break`, `deadline`, or `term`). Only verified data is displayed. The official page at https://bushnell.edu/academics/academic-calendars/ was blocked by the environment network policy. No university dates have been guessed: the shipped data remains unverified and empty pending the actual on-campus academic calendar. A draft allowance for `bushnell.edu` is saved but unapplied. Browser holiday tests use clearly labeled synthetic fixtures, not official dates. Verify the program and academic year against the official source before populating this file and setting `verified` to true.
+The central source file is `beacon-planner/academic-calendar.json`. Its 54 entries were transcribed from the 2026–2027 calendar text supplied by the project owner. Events use date-only `start` and exclusive `end`, an ID/title, `appliesTo` scopes, and `kind` (`holiday`, `break`, `deadline`, or `term`). Full-term and subterm-specific deadlines are explicitly labeled. Shared holidays and ceremonies are deduplicated. Supplied inclusive ranges include their last day; for example, spring break includes March 28, 2027, and Thanksgiving includes November 27, 2026. Good Friday takes holiday-color priority within spring break.
+
+The supplied Summer 2027 commencement date of December 10, 2027 is preserved unchanged. Session 2 add/drop dates retain a note about their supplied asterisks; their footnote was not provided. The official page at https://bushnell.edu/academics/academic-calendars/ remained blocked, so these dates were checked against the owner-provided text, not independently fetched. Source/provenance metadata is stored with the data. Future academic years require updating this central file.
+
+`python beacon-planner/tests/browser_academic_dates.py` checks the actual supplied Thanksgiving/spring-break boundaries, holiday shading across sport changes, and PDF inclusion, with the local server running. The broader layout test still uses explicitly labeled synthetic academic fixtures.
 
 ## Calendar status and dates
 
@@ -72,7 +76,7 @@ From the repository root:
 python -m unittest discover -s beacon-planner/tests -v
 ```
 
-Sixteen tests cover Pacific DST and winter/summer offsets, explicit timezones and UTC, all-day dates, duplicate updates/cancellations, invalid entries, official-page parsing, visible-versus-metadata time discrepancies, TBA dates, ranked opponents, source caching, robots rules, and safe NIV payload/attribution parsing. Minimal source excerpts in tests/fixtures are captured official examples, not fabricated games.
+Twenty tests cover Pacific DST and winter/summer offsets, explicit timezones and UTC, all-day dates, duplicate updates/cancellations, invalid entries, official-page parsing, visible-versus-metadata time discrepancies, TBA dates, ranked opponents, source caching, robots rules, and safe NIV payload/attribution parsing. Minimal source excerpts in tests/fixtures are captured official examples, not fabricated games.
 
 Optional browser checks require Python Playwright and `/usr/bin/chromium` (both available in the prepared cloud environment). Start the server, then run:
 

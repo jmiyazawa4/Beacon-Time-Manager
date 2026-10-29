@@ -1,7 +1,577 @@
 {
   "source": "https://bushnell.edu/academics/academic-calendars/",
-  "program": null,
-  "academicYear": null,
-  "verified": false,
-  "events": []
+  "program": "Full-term and subterm calendars",
+  "academicYear": "2026–2027",
+  "verified": true,
+  "verificationMethod": "Transcribed from the academic calendar text supplied by the project owner on 2026-10-29; not independently fetched.",
+  "reviewedAt": "2026-10-29",
+  "notes": [
+    "Ranges supplied with inclusive end dates are stored with exclusive end dates.",
+    "Subterm-specific deadlines are labeled; students should use their course session.",
+    "December 10, 2027 commencement is preserved exactly as supplied under Summer 2027.",
+    "Asterisks on Session 2 add/drop dates were supplied without their explanatory footnote."
+  ],
+  "events": [
+    {
+      "title": "Classes Begin — Fall 2026 full term / Fall 2026 Session 1 (8 weeks)",
+      "start": "2026-08-24",
+      "end": "2026-08-25",
+      "kind": "term",
+      "appliesTo": [
+        "Fall 2026 full term",
+        "Fall 2026 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-001"
+    },
+    {
+      "title": "Last Day to Add/Drop Classes — Fall 2026 Session 1 (8 weeks)",
+      "start": "2026-09-01",
+      "end": "2026-09-02",
+      "kind": "deadline",
+      "appliesTo": [
+        "Fall 2026 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-002"
+    },
+    {
+      "title": "Last Day to Add/Drop Classes — Fall 2026 full term",
+      "start": "2026-09-04",
+      "end": "2026-09-05",
+      "kind": "deadline",
+      "appliesTo": [
+        "Fall 2026 full term"
+      ],
+      "id": "academic-2026-27-003"
+    },
+    {
+      "title": "Labor Day Holiday",
+      "start": "2026-09-07",
+      "end": "2026-09-08",
+      "kind": "holiday",
+      "appliesTo": [
+        "Fall 2026 full term",
+        "Fall 2026 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-004"
+    },
+    {
+      "title": "Embrace the Community Day",
+      "start": "2026-09-17",
+      "end": "2026-09-18",
+      "kind": "term",
+      "appliesTo": [
+        "Fall 2026 full term"
+      ],
+      "id": "academic-2026-27-005"
+    },
+    {
+      "title": "Last Day to Withdraw and Declare P/NP — Fall 2026 Session 1 (8 weeks)",
+      "start": "2026-10-02",
+      "end": "2026-10-03",
+      "kind": "deadline",
+      "appliesTo": [
+        "Fall 2026 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-006"
+    },
+    {
+      "title": "Last Day of Subterm — Fall 2026 Session 1 (8 weeks)",
+      "start": "2026-10-18",
+      "end": "2026-10-19",
+      "kind": "term",
+      "appliesTo": [
+        "Fall 2026 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-007"
+    },
+    {
+      "title": "Classes Begin — Fall 2026 Session 2 (8 weeks)",
+      "start": "2026-10-19",
+      "end": "2026-10-20",
+      "kind": "term",
+      "appliesTo": [
+        "Fall 2026 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-008"
+    },
+    {
+      "title": "Registration for Next Semester — Fall 2026 Session 2 (8 weeks)",
+      "start": "2026-10-26",
+      "end": "2026-12-19",
+      "kind": "deadline",
+      "appliesTo": [
+        "Fall 2026 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-009"
+    },
+    {
+      "title": "Reserved Registration for Juniors/Seniors — Fall 2026 full term",
+      "start": "2026-10-26",
+      "end": "2026-11-02",
+      "kind": "deadline",
+      "appliesTo": [
+        "Fall 2026 full term"
+      ],
+      "id": "academic-2026-27-010"
+    },
+    {
+      "title": "Last Day to Add/Drop Classes — Fall 2026 Session 2 (8 weeks)",
+      "start": "2026-10-27",
+      "end": "2026-10-28",
+      "kind": "deadline",
+      "appliesTo": [
+        "Fall 2026 Session 2 (8 weeks)"
+      ],
+      "note": "Date marked with an asterisk in the supplied source; consult the official academic calendar for its footnote.",
+      "id": "academic-2026-27-011"
+    },
+    {
+      "title": "Registration for Next Semester — Fall 2026 full term",
+      "start": "2026-11-02",
+      "end": "2026-11-26",
+      "kind": "deadline",
+      "appliesTo": [
+        "Fall 2026 full term"
+      ],
+      "id": "academic-2026-27-012"
+    },
+    {
+      "title": "Veteran’s Day",
+      "start": "2026-11-11",
+      "end": "2026-11-12",
+      "kind": "holiday",
+      "appliesTo": [
+        "Fall 2026 full term",
+        "Fall 2026 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-013"
+    },
+    {
+      "title": "Thanksgiving Holiday",
+      "start": "2026-11-26",
+      "end": "2026-11-28",
+      "kind": "holiday",
+      "appliesTo": [
+        "Fall 2026 full term",
+        "Fall 2026 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-014"
+    },
+    {
+      "title": "Last Day to Withdraw and Declare P/NP — Fall 2026 full term / Fall 2026 Session 2 (8 weeks)",
+      "start": "2026-11-30",
+      "end": "2026-12-01",
+      "kind": "deadline",
+      "appliesTo": [
+        "Fall 2026 full term",
+        "Fall 2026 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-015"
+    },
+    {
+      "title": "Academic Creativity & Excellence Day",
+      "start": "2026-12-02",
+      "end": "2026-12-03",
+      "kind": "term",
+      "appliesTo": [
+        "Fall 2026 full term"
+      ],
+      "id": "academic-2026-27-016"
+    },
+    {
+      "title": "Final Examinations — Fall 2026 full term",
+      "start": "2026-12-07",
+      "end": "2026-12-11",
+      "kind": "term",
+      "appliesTo": [
+        "Fall 2026 full term"
+      ],
+      "id": "academic-2026-27-017"
+    },
+    {
+      "title": "Commencement",
+      "start": "2026-12-11",
+      "end": "2026-12-12",
+      "kind": "term",
+      "appliesTo": [
+        "Fall 2026 full term",
+        "Fall 2026 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-018"
+    },
+    {
+      "title": "Last Day of Semester — Fall 2026 full term",
+      "start": "2026-12-13",
+      "end": "2026-12-14",
+      "kind": "term",
+      "appliesTo": [
+        "Fall 2026 full term"
+      ],
+      "id": "academic-2026-27-019"
+    },
+    {
+      "title": "Last Day of Subterm — Fall 2026 Session 2 (8 weeks)",
+      "start": "2026-12-13",
+      "end": "2026-12-14",
+      "kind": "term",
+      "appliesTo": [
+        "Fall 2026 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-020"
+    },
+    {
+      "title": "Interterm 2026",
+      "start": "2026-12-14",
+      "end": "2027-01-11",
+      "kind": "term",
+      "appliesTo": [
+        "Interterm 2026"
+      ],
+      "id": "academic-2026-27-021"
+    },
+    {
+      "title": "Classes Begin — Spring 2027 full term / Spring 2027 Session 1 (8 weeks)",
+      "start": "2027-01-11",
+      "end": "2027-01-12",
+      "kind": "term",
+      "appliesTo": [
+        "Spring 2027 full term",
+        "Spring 2027 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-022"
+    },
+    {
+      "title": "Martin Luther King Jr. Holiday",
+      "start": "2027-01-18",
+      "end": "2027-01-19",
+      "kind": "holiday",
+      "appliesTo": [
+        "Spring 2027 full term",
+        "Spring 2027 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-023"
+    },
+    {
+      "title": "Last Day to Add/Drop Classes — Spring 2027 Session 1 (8 weeks)",
+      "start": "2027-01-19",
+      "end": "2027-01-20",
+      "kind": "deadline",
+      "appliesTo": [
+        "Spring 2027 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-024"
+    },
+    {
+      "title": "Last Day to Add/Drop Classes — Spring 2027 full term",
+      "start": "2027-01-22",
+      "end": "2027-01-23",
+      "kind": "deadline",
+      "appliesTo": [
+        "Spring 2027 full term"
+      ],
+      "id": "academic-2026-27-025"
+    },
+    {
+      "title": "Last Day to Withdraw and Declare P/NP — Spring 2027 Session 1 (8 weeks)",
+      "start": "2027-02-19",
+      "end": "2027-02-20",
+      "kind": "deadline",
+      "appliesTo": [
+        "Spring 2027 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-026"
+    },
+    {
+      "title": "Last Day of Subterm — Spring 2027 Session 1 (8 weeks)",
+      "start": "2027-03-07",
+      "end": "2027-03-08",
+      "kind": "term",
+      "appliesTo": [
+        "Spring 2027 Session 1 (8 weeks)"
+      ],
+      "id": "academic-2026-27-027"
+    },
+    {
+      "title": "Classes Begin — Spring 2027 Session 2 (8 weeks)",
+      "start": "2027-03-08",
+      "end": "2027-03-09",
+      "kind": "term",
+      "appliesTo": [
+        "Spring 2027 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-028"
+    },
+    {
+      "title": "Registration for Next Semester — Spring 2027 Session 2 (8 weeks)",
+      "start": "2027-03-15",
+      "end": "2027-04-24",
+      "kind": "deadline",
+      "appliesTo": [
+        "Spring 2027 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-029"
+    },
+    {
+      "title": "Reserved Registration for Juniors/Seniors — Spring 2027 full term",
+      "start": "2027-03-15",
+      "end": "2027-03-22",
+      "kind": "deadline",
+      "appliesTo": [
+        "Spring 2027 full term"
+      ],
+      "id": "academic-2026-27-030"
+    },
+    {
+      "title": "Last Day to Add/Drop Classes — Spring 2027 Session 2 (8 weeks)",
+      "start": "2027-03-16",
+      "end": "2027-03-17",
+      "kind": "deadline",
+      "appliesTo": [
+        "Spring 2027 Session 2 (8 weeks)"
+      ],
+      "note": "Date marked with an asterisk in the supplied source; consult the official academic calendar for its footnote.",
+      "id": "academic-2026-27-031"
+    },
+    {
+      "title": "Spring Break",
+      "start": "2027-03-22",
+      "end": "2027-03-29",
+      "kind": "break",
+      "appliesTo": [
+        "Spring 2027 full term",
+        "Spring 2027 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-032"
+    },
+    {
+      "title": "Good Friday Holiday",
+      "start": "2027-03-26",
+      "end": "2027-03-27",
+      "kind": "holiday",
+      "appliesTo": [
+        "Spring 2027 full term",
+        "Spring 2027 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-033"
+    },
+    {
+      "title": "Registration for Next Semester — Spring 2027 full term",
+      "start": "2027-03-29",
+      "end": "2027-04-24",
+      "kind": "deadline",
+      "appliesTo": [
+        "Spring 2027 full term"
+      ],
+      "id": "academic-2026-27-034"
+    },
+    {
+      "title": "Last Day to Withdraw and Declare P/NP — Spring 2027 full term / Spring 2027 Session 2 (8 weeks)",
+      "start": "2027-04-23",
+      "end": "2027-04-24",
+      "kind": "deadline",
+      "appliesTo": [
+        "Spring 2027 full term",
+        "Spring 2027 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-035"
+    },
+    {
+      "title": "Academic Creativity & Excellence Day",
+      "start": "2027-04-28",
+      "end": "2027-04-29",
+      "kind": "term",
+      "appliesTo": [
+        "Spring 2027 full term"
+      ],
+      "id": "academic-2026-27-036"
+    },
+    {
+      "title": "Final Examinations — Spring 2027 full term",
+      "start": "2027-05-03",
+      "end": "2027-05-07",
+      "kind": "term",
+      "appliesTo": [
+        "Spring 2027 full term"
+      ],
+      "id": "academic-2026-27-037"
+    },
+    {
+      "title": "Baccalaureate Service",
+      "start": "2027-05-07",
+      "end": "2027-05-08",
+      "kind": "term",
+      "appliesTo": [
+        "Spring 2027 full term",
+        "Spring 2027 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-038"
+    },
+    {
+      "title": "Commencement",
+      "start": "2027-05-08",
+      "end": "2027-05-09",
+      "kind": "term",
+      "appliesTo": [
+        "Spring 2027 full term",
+        "Spring 2027 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-039"
+    },
+    {
+      "title": "Last Day of Semester — Spring 2027 full term",
+      "start": "2027-05-09",
+      "end": "2027-05-10",
+      "kind": "term",
+      "appliesTo": [
+        "Spring 2027 full term"
+      ],
+      "id": "academic-2026-27-040"
+    },
+    {
+      "title": "Last Day of Subterm — Spring 2027 Session 2 (8 weeks)",
+      "start": "2027-05-09",
+      "end": "2027-05-10",
+      "kind": "term",
+      "appliesTo": [
+        "Spring 2027 Session 2 (8 weeks)"
+      ],
+      "id": "academic-2026-27-041"
+    },
+    {
+      "title": "Classes Begin — Summer 2027 full term / Summer 2027 Session 1 (7 weeks)",
+      "start": "2027-05-10",
+      "end": "2027-05-11",
+      "kind": "term",
+      "appliesTo": [
+        "Summer 2027 full term",
+        "Summer 2027 Session 1 (7 weeks)"
+      ],
+      "id": "academic-2026-27-042"
+    },
+    {
+      "title": "Last Day to Add/Drop Classes — Summer 2027 Session 1 (7 weeks)",
+      "start": "2027-05-18",
+      "end": "2027-05-19",
+      "kind": "deadline",
+      "appliesTo": [
+        "Summer 2027 Session 1 (7 weeks)"
+      ],
+      "id": "academic-2026-27-043"
+    },
+    {
+      "title": "Last Day to Add/Drop Classes — Summer 2027 full term",
+      "start": "2027-05-21",
+      "end": "2027-05-22",
+      "kind": "deadline",
+      "appliesTo": [
+        "Summer 2027 full term"
+      ],
+      "id": "academic-2026-27-044"
+    },
+    {
+      "title": "Memorial Day Holiday",
+      "start": "2027-05-31",
+      "end": "2027-06-01",
+      "kind": "holiday",
+      "appliesTo": [
+        "Summer 2027 full term",
+        "Summer 2027 Session 1 (7 weeks)"
+      ],
+      "id": "academic-2026-27-045"
+    },
+    {
+      "title": "Last Day to Withdraw and Declare P/NP — Summer 2027 Session 1 (7 weeks)",
+      "start": "2027-06-11",
+      "end": "2027-06-12",
+      "kind": "deadline",
+      "appliesTo": [
+        "Summer 2027 Session 1 (7 weeks)"
+      ],
+      "id": "academic-2026-27-046"
+    },
+    {
+      "title": "Last Day of Subterm — Summer 2027 Session 1 (7 weeks)",
+      "start": "2027-06-27",
+      "end": "2027-06-28",
+      "kind": "term",
+      "appliesTo": [
+        "Summer 2027 Session 1 (7 weeks)"
+      ],
+      "id": "academic-2026-27-047"
+    },
+    {
+      "title": "Classes Begin — Summer 2027 Session 2 (7 weeks)",
+      "start": "2027-06-28",
+      "end": "2027-06-29",
+      "kind": "term",
+      "appliesTo": [
+        "Summer 2027 Session 2 (7 weeks)"
+      ],
+      "id": "academic-2026-27-048"
+    },
+    {
+      "title": "Independence Day Holiday",
+      "start": "2027-07-05",
+      "end": "2027-07-06",
+      "kind": "holiday",
+      "appliesTo": [
+        "Summer 2027 full term",
+        "Summer 2027 Session 2 (7 weeks)"
+      ],
+      "id": "academic-2026-27-049"
+    },
+    {
+      "title": "Last Day to Add/Drop Classes — Summer 2027 Session 2 (7 weeks)",
+      "start": "2027-07-06",
+      "end": "2027-07-07",
+      "kind": "deadline",
+      "appliesTo": [
+        "Summer 2027 Session 2 (7 weeks)"
+      ],
+      "note": "Date marked with an asterisk in the supplied source; consult the official academic calendar for its footnote.",
+      "id": "academic-2026-27-050"
+    },
+    {
+      "title": "Last Day to Withdraw and Declare P/NP — Summer 2027 full term / Summer 2027 Session 2 (7 weeks)",
+      "start": "2027-07-30",
+      "end": "2027-07-31",
+      "kind": "deadline",
+      "appliesTo": [
+        "Summer 2027 full term",
+        "Summer 2027 Session 2 (7 weeks)"
+      ],
+      "id": "academic-2026-27-051"
+    },
+    {
+      "title": "Last Day of Semester — Summer 2027 full term",
+      "start": "2027-08-15",
+      "end": "2027-08-16",
+      "kind": "term",
+      "appliesTo": [
+        "Summer 2027 full term"
+      ],
+      "id": "academic-2026-27-052"
+    },
+    {
+      "title": "Last Day of Subterm — Summer 2027 Session 2 (7 weeks)",
+      "start": "2027-08-15",
+      "end": "2027-08-16",
+      "kind": "term",
+      "appliesTo": [
+        "Summer 2027 Session 2 (7 weeks)"
+      ],
+      "id": "academic-2026-27-053"
+    },
+    {
+      "title": "Commencement",
+      "start": "2027-12-10",
+      "end": "2027-12-11",
+      "kind": "term",
+      "appliesTo": [
+        "Summer 2027 full term",
+        "Summer 2027 Session 2 (7 weeks)"
+      ],
+      "id": "academic-2026-27-054"
+    }
+  ]
 }

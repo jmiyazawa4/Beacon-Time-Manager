@@ -69,7 +69,7 @@
   document.querySelector('.sport-panel').after(academicBanner);
   function renderAcademicStatus() {
     const data=window.BeaconAcademic.status();
-    $('academicStatus').textContent=data.verified?[data.program,data.academicYear,'Dates apply across sports. Holidays and breaks are shaded.'].filter(Boolean).join(' · '):data.error||'University academic dates are not available yet.';
+    $('academicStatus').textContent=data.verified?[data.program,data.academicYear,'Shared across sports. Check course-session labels; holidays and breaks are shaded.'].filter(Boolean).join(' · '):data.error||'University academic dates are not available yet.';
   }
   document.addEventListener('beacon:academic',renderAcademicStatus);
   window.BeaconAcademic.load();
