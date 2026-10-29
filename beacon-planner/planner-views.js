@@ -2,6 +2,10 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const planner = window.BeaconPlanner;
+  const showAcademic=$('showAcademic');
+  function syncAcademicChoice(){showAcademic.checked=planner.getAcademicVisibility();}
+  showAcademic.onchange=()=>planner.setAcademicVisibility(showAcademic.checked);
+  document.addEventListener('beacon:render',syncAcademicChoice);syncAcademicChoice();
   $('goals').closest('section').classList.add('goals-card');
   $('reminders').closest('section').classList.add('reminders-card');
   const priorities=document.createElement('div');priorities.className='priorities-row';priorities.setAttribute('aria-label','Goals and reminders');
@@ -64,7 +68,7 @@
     const data=window.BeaconAcademic.status(),schedule=planner.getSchedule();
     const first=schedule.days[0].date,last=schedule.days.at(-1).date;
     const entries=(data.events||[]).filter(e=>e.start<=last&&e.end>first);
-    $('academicCount').textContent=data.verified?entries.length+' dates':'Unavailable';
+    $('academicCount').textContent=data.verified?entries.length+' dates'+(planner.getAcademicVisibility()?'':' · hidden from calendar'):'Unavailable';
     $('academicStatus').textContent=data.verified?[data.program,data.academicYear,'Check course-session labels.'].filter(Boolean).join(' · '):data.error||'University academic dates are not available yet.';
     $('academicWeekList').replaceChildren();
     for(const event of entries){

@@ -15,6 +15,14 @@ with sync_playwright() as p:
  page.goto(url);wait_js(page,'BeaconAcademic.status().verified');wait_js(page,"BeaconVerses.current() !== null")
  assert page.evaluate('BeaconVerses.current().translation')=='KJV'
  assert page.locator('#readingPassages a').count()==4
+ assert page.evaluate('BeaconPlanner.getSchedule().days.some(d=>d.events.some(e=>e.academic))')
+ page.locator('#showAcademic').uncheck()
+ assert page.evaluate('BeaconPlanner.getSchedule().days.every(d=>!d.holiday&&d.events.every(e=>!e.academic))')
+ page.reload();wait_js(page,'BeaconAcademic.status().verified')
+ assert not page.locator('#showAcademic').is_checked()
+ assert page.evaluate('BeaconPlanner.getSchedule().days.every(d=>d.events.every(e=>!e.academic))')
+ page.locator('#showAcademic').check()
+ assert page.evaluate('BeaconPlanner.getSchedule().days.some(d=>d.events.some(e=>e.academic))')
  assert not page.locator('#privateSession').is_checked() and not page.locator('#privateSession').is_disabled()
  assert page.locator('.view-buttons').count()==0
  page.locator('#add').click();page.locator('#evName').fill('Example review class');page.locator('#saveEvent').click()

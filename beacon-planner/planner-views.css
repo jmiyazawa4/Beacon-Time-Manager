@@ -65,3 +65,5 @@ body[data-planner-view=dashboard] .dashboard-agenda-card .agenda-view{display:bl
 @media(max-width:700px){.priorities-row{grid-template-columns:1fr;gap:12px}.priorities-row>section{padding:16px}.sport-panel{padding:12px}.sport-panel select{min-width:0;flex:1}.sport-options{margin-left:0}}
 @media print{.priorities-row{display:none!important}}
 @media screen{.priorities-row>section{background:#fffdf8;border-color:#ded6c7}}
+
+.academic-toggle{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:13px 0 6px;font-size:12px;font-weight:600;cursor:pointer}.academic-toggle input{width:16px;height:16px;accent-color:#a77e2a}.academic-toggle small{font-weight:400;color:#657184;font-size:11px}
