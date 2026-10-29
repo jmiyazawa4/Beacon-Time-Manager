@@ -2,17 +2,16 @@
 from datetime import date, datetime, timedelta, timezone
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qs, urlencode, urlparse
-from urllib.request import Request, urlopen
+from urllib.parse import parse_qs, urlparse
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 import json
 import re
+from schedule_source import load_official_schedule
 
 SPORTS = {'baseball', 'mens-basketball', 'womens-basketball', 'mens-soccer',
-          'womens-soccer', 'volleyball', 'beach-volleyball', 'softball',
+          'womens-soccer', 'volleyball', 'womens-volleyball', 'beach-volleyball', 'softball',
           'mens-cross-country', 'womens-cross-country', 'mens-track-and-field',
-          'womens-track-and-field', 'mens-golf', 'womens-golf', 'esports',
-          'mens-wrestling', 'womens-wrestling'}
+          'womens-track-and-field', 'mens-golf', 'womens-golf', 'esports'}
 MAX_FEED_BYTES = 2_000_000
 PACIFIC = ZoneInfo('America/Los_Angeles')
 
@@ -92,26 +91,18 @@ class Handler(SimpleHTTPRequestHandler):
         sport = parse_qs(url.query).get('sport', [''])[0]
         if sport not in SPORTS:
             return self.send_json(400, {'error': 'Unknown sport'})
-        source = 'https://bushnellbeacons.com/calendar.ashx?' + urlencode({'path': sport})
         try:
-            req = Request(source, headers={'User-Agent': 'BeaconStudentPlanner/1.0 (educational scheduling)',
-                                           'Accept': 'text/calendar'})
-            with urlopen(req, timeout=12) as response:
-                raw = response.read(MAX_FEED_BYTES + 1)
-            if len(raw) > MAX_FEED_BYTES:
-                raise ValueError('Calendar feed exceeds size limit')
-            result = parse_ics_result(raw.decode('utf-8-sig'))
-            result.update(source=source, fetchedAt=datetime.now(timezone.utc).isoformat())
+            result = load_official_schedule(sport)
             self.send_json(200, result)
         except HTTPError as error:
-            self.send_json(502, {'error': 'Official calendar feed unavailable',
-                                'detail': f'The athletics calendar returned HTTP {error.code}. Import an official .ics file or view the official schedule.'})
+            self.send_json(502, {'error': 'Official schedule unavailable',
+                                'detail': f'The athletics site returned HTTP {error.code}. View the official schedule or import an .ics file.'})
         except (URLError, TimeoutError, OSError):
-            self.send_json(502, {'error': 'Cannot reach the official calendar',
+            self.send_json(502, {'error': 'Cannot reach the official schedule',
                                 'detail': 'Check the connection or import an official .ics file.'})
-        except (ValueError, UnicodeError):
-            self.send_json(502, {'error': 'Unsupported official calendar response',
-                                'detail': 'Import an official .ics file or view the official schedule.'})
+        except (ValueError, UnicodeError) as error:
+            self.send_json(502, {'error': 'Official schedule could not be verified',
+                                'detail': str(error)[:200]})
 
     def do_POST(self):
         if urlparse(self.path).path != '/api/import':

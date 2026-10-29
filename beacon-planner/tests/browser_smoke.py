@@ -49,6 +49,18 @@ with sync_playwright() as p:
     assert 'Long biology class' in page.locator('#calendar').inner_text()
     assert 'Finish assignment' in page.locator('#goals').inner_text()
     assert 'Bring textbook' in page.locator('#reminders').inner_text()
+    page.locator('.event').first.click()
+    page.locator('#evName').fill('Edited biology class')
+    page.locator('#evColor').fill('#f6c642')
+    page.locator('#saveEvent').click()
+    page.reload()
+    saved = page.evaluate("JSON.parse(localStorage.getItem('beacon-planner-v1'))")
+    assert saved['events'][0]['name'] == 'Edited biology class'
+    assert saved['events'][0]['color'] == '#f6c642'
+    assert page.locator('.event').first.evaluate('(e)=>getComputedStyle(e).backgroundColor') == 'rgb(246, 198, 66)'
+    page.locator('.event').first.click()
+    page.locator('#evName').fill('Long biology class and collaborative study session')
+    page.locator('#saveEvent').click()
     page.locator('#sport').select_option('baseball')
     page.wait_for_function("document.getElementById('sportStatus').textContent.includes('Fixture feed unavailable')")
     assert 'Long biology class' in page.locator('#calendar').inner_text()
