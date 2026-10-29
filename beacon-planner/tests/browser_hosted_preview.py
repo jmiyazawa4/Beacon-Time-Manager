@@ -17,7 +17,7 @@ with sync_playwright() as p:
  assert page.locator('#readingPassages a').count()==4
  assert page.evaluate('BeaconPlanner.getSchedule().days.some(d=>d.events.some(e=>e.academic))')
  page.locator('#showAcademic').uncheck()
- assert page.evaluate('BeaconPlanner.getSchedule().days.every(d=>!d.holiday&&d.events.every(e=>!e.academic))')
+ assert page.evaluate('BeaconPlanner.getSchedule().days.every(d=>d.events.every(e=>!e.academic))&&BeaconPlanner.getSchedule().days.some(d=>d.holiday==="holiday")')
  page.reload();wait_js(page,'BeaconAcademic.status().verified')
  assert not page.locator('#showAcademic').is_checked()
  assert page.evaluate('BeaconPlanner.getSchedule().days.every(d=>d.events.every(e=>!e.academic))')
