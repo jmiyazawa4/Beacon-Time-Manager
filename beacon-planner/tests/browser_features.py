@@ -51,6 +51,9 @@ with sync_playwright() as p:
         if view == 'dashboard':
             assert page.locator('.dashboard-agenda-card').is_visible()
             assert not page.locator('.time-summary-card').is_visible()
+            assert page.locator('#hoursSummaryCard').get_attribute('hidden') is not None
+            assert 'Scheduled hours' not in page.locator('.sidebar').inner_text()
+            assert page.locator('.dashboard-agenda-card').count() == 1
             page.locator('#agendaDays button').nth(1).click()
             assert 'Biology 101' in page.locator('.dashboard-agenda-card').inner_text()
             assert 'Fixture university holiday' in page.locator('.dashboard-agenda-card').inner_text()

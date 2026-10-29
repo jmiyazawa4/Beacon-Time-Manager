@@ -15,7 +15,7 @@ body[data-planner-view=agenda]{background:#e9eef4}body[data-planner-view=agenda]
 
 .academic-banner{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;margin:-7px 0 21px;background:#f9fbfe;border:1px solid #d8e3ef;border-radius:8px;font-size:11px}.academic-banner strong{display:block;color:#344b69;font-size:11px;margin-bottom:4px}.academic-banner span{color:#66768c;line-height:1.5}.academic-banner a{font-size:10px;color:#344b69;white-space:nowrap;text-underline-offset:3px}.calendar .slot.academic-holiday{background:#fff7df}.calendar .slot.academic-break{background:#edf5ff}.calendar .dayhead.academic-holiday{background:#fcebb9;border-top:3px solid #b88b15}.calendar .dayhead.academic-break{background:#dcecff;border-top:3px solid #5d8bbd}.calendar .dayhead{flex-direction:column}.calendar .dayhead small{font-size:7px;font-weight:500;margin-top:3px}@media(max-width:650px){.academic-banner{align-items:start;flex-direction:column;gap:7px;padding:12px 15px;font-size:10px}}@media print{.academic-banner{display:none!important}.calendar .slot.academic-holiday,.calendar .slot.academic-break,.calendar .dayhead{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 
-.sidebar .dashboard-agenda-card[hidden]{display:none!important}
+.sidebar .dashboard-agenda-card[hidden],.sidebar #hoursSummaryCard[hidden]{display:none!important}
 @media screen{
 body[data-planner-view=dashboard] .time-summary-card{display:none}
 body[data-planner-view=dashboard] .dashboard-agenda-card .agenda-view{display:block}

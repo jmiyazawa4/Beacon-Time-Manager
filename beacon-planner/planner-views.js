@@ -16,10 +16,7 @@
   agenda.id = 'agendaView'; agenda.className = 'agenda-view';
   agenda.innerHTML = '<nav id="agendaDays" class="agenda-days" aria-label="Choose an agenda day"></nav><div class="agenda-heading"><div><span class="section-index">DAILY SCHEDULE</span><h3 id="agendaDate"></h3></div><button id="agendaAdd" type="button">+ Add activity</button></div><div id="agendaEvents" class="agenda-events"></div>';
   document.querySelector('.calendar-wrap').before(agenda);
-  const dashboardAgenda = document.createElement('section');
-  dashboardAgenda.className = 'dashboard-agenda-card';
-  dashboardAgenda.innerHTML = '<span class="section-index">DAILY SCHEDULE</span><h2>Daily agenda</h2>';
-  document.querySelector('.time-summary-card').before(dashboardAgenda);
+  const dashboardAgenda = $('dashboardAgendaCard');
   let selectedDay = new Date().getDay();
   function formatTime(minutes) {
     const m = minutes % 1440, h = Math.floor(m / 60);
@@ -59,6 +56,7 @@
     const safe = names[view] ? view : 'dashboard';
     document.body.dataset.plannerView = safe; store('beacon-planner-view', safe);
     dashboardAgenda.hidden = safe !== 'dashboard';
+    $('hoursSummaryCard').hidden = safe === 'dashboard';
     if (safe === 'dashboard') dashboardAgenda.append(agenda);
     else document.querySelector('.calendar-wrap').before(agenda);
     document.querySelector('.section-heading h2').textContent = safe === 'agenda' ? 'Daily agenda' : 'Weekly calendar';
