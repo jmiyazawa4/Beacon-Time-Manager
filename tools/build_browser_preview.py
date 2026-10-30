@@ -59,7 +59,7 @@ def build(output, snapshots=None, hosted_preview=False, save_on_device=False):
   };
   document.addEventListener('DOMContentLoaded',()=>{
     const notice=document.createElement('div');notice.className='preview-notice';
-    notice.textContent=(window.BEACON_REVIEW_PRIVATE?'Interactive preview · Use example activities only; changes are not saved. ':'Save on this device · Changes stay in this browser unless you choose Private session. Clearing browser data erases them; there is no cross-device sync. ')+' Saved official season schedules, university dates, KJV verses, and a yearly reading plan are included. Schedule changes require a manual update; confirm changes with athletics.';
+    notice.textContent=window.BEACON_REVIEW_PRIVATE?'Private session · Changes are not saved.':'Saves on this device unless Private session is on.';
     document.querySelector('header').after(notice);
   });
 })();
