@@ -35,6 +35,8 @@ def build(output, snapshots=None, hosted_preview=False, save_on_device=False):
     html = re.sub(r'<script src="([^\"]+)"></script>', inline_script, html)
     logo = 'data:image/png;base64,' + b64encode((ROOT / 'assets/beacon-b.png').read_bytes()).decode()
     html = html.replace('assets/beacon-b.png', logo)
+    triangle = 'data:image/png;base64,' + b64encode((ROOT / 'assets/tri-athlete-model.png').read_bytes()).decode()
+    html = html.replace('assets/tri-athlete-model.png', triangle)
     payload = json.dumps({'academic': academic, 'sports': sports,'plan':json.loads((ROOT/'reading-plan.json').read_text()),'verses':json.loads((ROOT/'daily-verses.json').read_text())}, ensure_ascii=True).replace('<', '\\u003c')
     bootstrap = r'''<script>
 (() => {
