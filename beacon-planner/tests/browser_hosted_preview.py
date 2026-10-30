@@ -78,6 +78,7 @@ with sync_playwright() as p:
  assert page.locator('.help-title').filter(has_text='Counselor Coordinator').count()==1
  assert page.locator('.help-contact strong').filter(has_text='Tutoring Center').count()==1
  assert page.locator('a[href="mailto:tutoring@bushnell.edu"]').count()==1
+ assert page.locator('a[href="https://my.bushnell.edu/ICS/Campus_Life/Tutoring.jnz"]').count()==1
  assert page.locator('a[href*="christi-cameron"]').count()==0
 
  assert all(request==url for request in requested),requested
